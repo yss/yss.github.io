@@ -1,0 +1,11 @@
+---
+layout: blog
+title : 文章列表
+---
+{% for post in site.posts %}
+    <div class="item">
+        <h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <p class="desc">{{ post.summary }}...</p>
+        <p class="other"><span class="time">发布时间：{{ post.date | date_to_string }}</span><a href="{{ post.url }}">全文阅读 &raquo;</a></p>
+    </div>
+{% endfor %}
