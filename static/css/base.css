@@ -40,8 +40,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #nav li { float:left; padding-right:20px; }
 #bd { min-height:512px; background:#FFF; border-radius:8px; }
 #ft { padding:10px 0; text-align:center; }
-#rain-drops { position:relative; padding-top:512px; width:1024px; height:0; overflow:hidden; border-radius:5px; background:url(i/rainDrops.jpg) no-repeat; }
-#rain-drops p { position:absolute; }
+#rain-drops { padding-top:512px; width:1024px; height:0; overflow:hidden; border-radius:5px; background:url(i/rainDrops.jpg) no-repeat; font-size:24px; font-weight:bold; white-space:nowrap; color:#E000E0; }
 #content { float:left; width:700px; padding:30px; }
 #content h2 { padding-bottom:20px; text-align:center; }
 #content .item {  }

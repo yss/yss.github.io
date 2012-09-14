@@ -14,5 +14,5 @@ title: 首页
     <p>而那/过去了的，</p>
     <p>就会成为/亲切的/怀恋。</p>
 </div>
-<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+<script src="/static/js/jquery-1.8.1.min.js"></script>
 <script src="/static/js/index.js"></script>
