@@ -5,10 +5,11 @@ html { color:#000; background:#DCE0E4 url(i/bg-body.png); }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
 table { border-collapse:collapse; border-spacing:0; }
 fieldset, img { border:0; vertical-align:top; }
-ol,ul { list-style:none; }
+ul { list-style: circle inside none; }
+ol { list-style: decimal inside none; }
 h1 { font-size:24px; }
 h2 { font-size:20px; }
-h3 { font-size:16px; }
+h3 { font-size:18px; }
 h4, h5, h6 { font-size:14px; }
 sup { vertical-align:text-top; }
 sub { vertical-align:text-bottom; }
@@ -16,10 +17,10 @@ caption,th,td { text-align:center; }
 input,textarea,select { font-family:inherit; font-size:inherit; font-weight:inherit; *font-size:100%; }
 legend { color:#000; }
 a, a:link, a:visited { color:#666; text-decoration:none; }
-a:hover { text-decoration:underline; }
+a:hover { color:#369; text-decoration:underline; }
 /* common.css */
-.cf:after { content:''; display:block; height:0; clear:both; }
-.cf { zoom:1 }
+.cf:after, #bd:after, #hd:after { content:''; display:block; height:0; clear:both; }
+.cf, #bd, #hd { zoom:1 }
 .hidden { display:none; }
 .tri { position:absolute; width:0; height:0; line-height:0; font-size:0; border:5px dashed transparent; }
 body { font:14px/1.5 Helvetica,Arial,'Microsoft Yahei',sans-serif; }
@@ -36,15 +37,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #hd h2 { padding-bottom:12px; }
 #hd a { color:#FFF; }
 #hd a:hover { color:#94D4D6; }
-#nav { float:left; margin-top:-24px; letter-spacing:1px; }
+#nav { float:left; margin-top:-30px; letter-spacing:1px; font-size:16px; }
 #nav li { float:left; padding-right:20px; }
 #bd { min-height:512px; background:#FFF; border-radius:8px; }
 #ft { padding:10px 0; text-align:center; }
 #rain-drops { padding-top:512px; width:1024px; height:0; overflow:hidden; border-radius:5px; background:url(i/rainDrops.jpg) no-repeat; font-size:24px; font-weight:bold; white-space:nowrap; color:#E000E0; }
 #content { float:left; width:700px; padding:30px; }
 #content h2 { padding-bottom:20px; text-align:center; }
-#content .item {  }
 #content .item .desc { text-indent:2em; }
-#content .item .other { text-align:right; }
-#content .item .time { float:left; }
-#sidebar { float:right; width:240px; }
+#content .item .read { float:right; }
+#content .item .time { padding-right:16px; }
+#content h3 { padding: 9px 0; }
+#content h4 { padding:5px 0; }
+#content p { padding:5px 0; }
+#sidebar { float:right; padding:20px 0;  width:240px; }
+#sidebar h3 { padding:10px 0; }
