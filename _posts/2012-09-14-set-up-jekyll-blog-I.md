@@ -15,7 +15,7 @@ _config.yml是jekyll的配置文件。具体包括：(...此处省略很多..)�
 
 1.  permalink：这个规定了你博客的URL地址 。默认是date
 
-    一般像我是这样配置是：/:year/:month/:day/:title
+    一般像我是这样配置是：/:year/:month/:day/:title.html
 
     就代表着你博客显示的URL应该是类似这样子的：http://yansong.me/2012/09/15/test-blog.html
 
@@ -29,7 +29,7 @@ _config.yml是jekyll的配置文件。具体包括：(...此处省略很多..)�
 
 #### 最后的代码
 
-    permalink: /:year/:month/:day/:title
+    permalink: /:year/:month/:day/:title.html
     # 当修改文件时重新生成站点
     auto: true
     markdown: rdiscount
