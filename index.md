@@ -3,6 +3,10 @@ layout: default
 title: 首页 
 ---
 <div id="rain-drops">
+    <hgroup class="ignore">
+        <h2>假如，生活欺骗了你</h2>
+        <p>-- 普希金 --</p>
+    </hgroup>
     <p>假如/生活欺骗了你，</p>
     <p>不要/悲伤，不要/心急!</p>
     <p>忧郁的/日子里需要镇静：</p>
@@ -15,4 +19,5 @@ title: 首页
     <p>就会成为/亲切的/怀恋。</p>
 </div>
 <script src="/static/js/jquery-1.8.1.min.js"></script>
-<script src="/static/js/index.js"></script>
+<script src="/static/js/writePoetry.min.js"></script>
+<script>$.writePoetry('#rain-drops', {ignoreClass: '.ignore'});</script>
