@@ -5,3 +5,10 @@ auto: true
 markdown: rdiscount
 pygments: true
 
+author:
+    name : yss
+    email : yss.nelson@gmail.com
+    github : https://github.com/yss
+    weibo: http://weibo.com/yssnelson
+    company: http://www.meituan.com
+
