@@ -41,11 +41,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #nav li { float:left; padding-right:20px; }
 #bd { min-height:512px; background:#FFF; border-radius:8px; }
 #ft { padding:10px 0; text-align:center; }
+#page-nav { clear:both; height:20px; padding:30px 0; }
+#page-nav .prev { float:left; }
+#page-nav .next { float:right; }
 #rain-drops { padding-top:512px; width:1024px; height:0; border-radius:5px; background:url(i/rainDrops.jpg) no-repeat; overflow:hidden; font-size:24px; font-weight:bold; white-space:nowrap; color:#E000E0; }
 #rain-drops .ignore { position:relative; z-index:2; margin-top:-444px; text-align:center; color:#248; }
 #rain-drops .ignore h2 { font-size:24px; }
 #rain-drops .ignore p { font-size:18px; }
-#content { float:left; width:700px; padding:30px; }
+/* blog */
+#blog { padding:30px; }
+#content { float:left; width:700px; }
 #content h2 { padding-bottom:20px; text-align:center; }
 #content .item .desc { text-indent:2em; }
 #content .item .read { float:right; }
@@ -53,5 +58,5 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #content h3 { padding: 9px 0; }
 #content h4 { padding:5px 0; }
 #content p { padding:5px 0; }
-#sidebar { float:right; padding:20px 0;  width:240px; }
+#sidebar { float:right; margin-right:-30px; padding:20px 0;  width:240px; }
 #sidebar h3 { padding:10px 0; }

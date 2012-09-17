@@ -1,31 +1,45 @@
 ---
 layout: default
 ---
-<section id="content">
-    <h2>{{ page.title }}</h2>
-    {{content}}
+<section id="blog">
+    <section id="content">
+        <h2>{{ page.title }}</h2>
+        {{content}}
+    </section>
+    <aside id="sidebar">
+        <section class="profile box">
+            <h3>个人简介</h3>
+            <div class="cont">
+            </div>
+        </section>
+        <section class="box">
+            <h3>博客分类</h3>
+            <ul>
+                {% for category in site.categories %}
+                <li>{{ category[0] }}</a>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="box">
+            <h3>全站标签</h3>
+            <ul>
+                {% for tag in site.tags %}
+                    <li>{{ tag.[0] }}</li>
+                {% endfor %}
+            </ul>
+    </aside>
+    <div id="page-nav">
+    {% if page.previous %}
+        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" class="prev">&larr; {{page.previous.title}}</a>
+    {% else %}
+        <span class="prev">| 第一篇了 |</span>
+    {% endif %}
+    {% if page.next %}
+        <a href="{{ BASE_PATH }}{{ page.next.url}}" title="{{ page.next.title }}" class="next">{{page.next.title}} &rarr;</a>
+    {% else %}
+        <span class="next">等待作者啃笔头吧 &rarr;</span>
+    {% endif %}
+    </div>
+    <div id="uyan_frame"></div>
+    <script id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1681855" async></script>
 </section>
-<aside id="sidebar">
-    <section class="profile box">
-        <h3>个人简介</h3>
-        <div class="cont">
-        </div>
-    </section>
-    <section class="box">
-        <h3>博客分类</h3>
-        <ul>
-            {% for category in site.categories %}
-            <li>{{ category[0] }}</a>
-            {% endfor %}
-        </ul>
-    </section>
-    <section class="box">
-        <h3>全站标签</h3>
-        <ul>
-            {% for tag in site.tags %}
-                <li>{{ tag.[0] }}</li>
-            {% endfor %}
-        </ul>
-</aside>
-<div id="uyan_frame"></div>
-<script id="UYScript" src="http://v1.uyan.cc/js/iframe.js?UYUserId=1681855" async></script>
