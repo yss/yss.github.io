@@ -1,7 +1,8 @@
 ---
 layout: blog
 title: LESS可行性方案
-categories: [less, report]
+tags: [less, report]
+categories: [less]
 summary: less是编程化的样式语言，可以很方便并快速的编写CSS样式。但是它是需要进行编译的，在真实应用中就需要解决这个问题，怎么去做就是本文要讨论的
 ---
 ### 什么是LESS
@@ -33,4 +34,4 @@ less本质上就是css的另一种变化，正常情况下，写less跟写css并
 * 
 
 ### 对于自己（LESS的推动者）
-    要推广less，首页要保证自己对less足够熟悉，以应对开发过程中所碰到，所发生的问题。
+要推广less，首页要保证自己对less足够熟悉，以应对开发过程中所碰到，所发生的问题。

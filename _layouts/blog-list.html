@@ -16,7 +16,7 @@ layout: default
             <h3>博客分类</h3>
             <ul>
                 {% for category in site.categories %}
-                <li>{{ category[0] }}</a>
+                <li><a href="{{ BASE_PATH }}/categories.html#{{ category[0] }}">{{ category[0] }}</a></a>
                 {% endfor %}
             </ul>
         </section>
@@ -24,7 +24,7 @@ layout: default
             <h3>全站标签</h3>
             <ul>
                 {% for tag in site.tags %}
-                    <li>{{ tag.[0] }}</li>
+                    <li><a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}">{{ tag.[0] }}</a></li>
                 {% endfor %}
             </ul>
     </aside>

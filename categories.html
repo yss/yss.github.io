@@ -1,0 +1,16 @@
+---
+layout: default
+title: 标签分类
+---
+<section id="list" class="pg-content">
+    <h2>{{ page.title }}</h2>
+    {% for categories in site.categories %}
+    <h3 id="{{ categories[0] }}">{{ categories[0] }}</h3>
+    <ul>
+        {% for categorie in categories[1] %}
+        <li><a href="{{BASE_PATH}}{{categorie.url}}" title="{{categorie.title}}">{{categorie.title}}</a></li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</section>
+
