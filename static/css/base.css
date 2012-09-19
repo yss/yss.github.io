@@ -16,6 +16,8 @@ sub { vertical-align:text-bottom; }
 caption,th,td { text-align:center; }
 input,textarea,select { font-family:inherit; font-size:inherit; font-weight:inherit; *font-size:100%; }
 legend { color:#000; }
+strong, em { font-weight:bold; color:#C30; }
+cite { padding:10px; border:1px dashed #008080; color:#008080; }
 a, a:link, a:visited { color:#666; text-decoration:none; }
 a:hover { color:#369; text-decoration:underline; }
 pre { padding:10px; border:1px dashed #000369; background:#EEE; color:green; }
@@ -65,6 +67,5 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #blog h4 { padding:5px 0; }
 #blog p { padding:5px 0; }
 /* 关于我的页面 */
-#about { margin:200px auto; width:700px;}
 #list li { padding-bottom:15px; }
 #list pre { margin-top:15px; }

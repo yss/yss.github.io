@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+
+/**
+ * 在_post文件夹下生成基于Jekyll规范的md文件
+ * 使用方法：./jekyllpost create jekyll file
+ * 这样就在_post文件夹下生成：2012-11-11-create-jekyll-file.md文件，其中2012-11-11为你机器的日期
+ * 注意1：命令需要在基于Jekyll的站点根目录下执行
+ * 换句话说就是，你执行环境的当前目录有_post文件夹
+ * 注意2：使用时，需要运行chmod +x jekyllpost
+ */
+var exec = require('child_process').exec,
+    argv = process.argv,
+    fs = require('fs'),
+    path = require('path');
+
+var filename = argv.slice(2).join('-'),
+    postPath = path.join(process.cwd(), '_posts');
+
+var timer = new Date(),
+    year = timer.getFullYear(),
+    month = timer.getMonth() + 1,
+    day = timer.getDate();
+
+if (month < 10) month = '0' + month;
+if (day < 10) day = '0' + day;
+
+// 根据需要自行修改成自己需要默认设置
+var tplData = [
+    '---',
+    'layout: blog',
+    'title: ',
+    'tags: ',
+    'categories: ',
+    'summary: ',
+    '---'
+].join('\n');
+
+if (!fs.existsSync(postPath)) { // 不存在时执行
+    fs.mkdirSync(postPath);
+}
+
+filename = path.join(postPath, [year, month, day, filename].join('-') + '.md');
+
+fs.writeFile(filename, tplData, 'utf-8', function(err) {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("\033[32m" + filename + ' is created! \033[0m');
+    }
+});
+
+/* vim set filetype=javascript */
