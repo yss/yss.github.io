@@ -1,6 +1,9 @@
 ---
 layout: blog
 title: 理解Jekyll
+tags: [jekyll, 理解]
+categories: [jekyll]
+summary: Jekyll是一种静态的站点生成程序
 ---
 ### Jekyll是什么
 Jekyll是一种静态的站点生成程序。
