@@ -60,7 +60,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #blog-list .item .desc { padding:10px 0; text-indent:2em; }
 #blog-list .item .read { float:right; }
 #blog-list .item .time { padding-right:16px; }
-#blog-list #sidebar { float:right; margin-right:-30px; padding:20px 0;  width:240px; }
+#blog-list #sidebar { float:right; margin-right:-10px; padding:20px 0;  width:240px; }
 #blog-list #sidebar h3 { padding:10px 0; }
 /* 博客页面 */
 #blog h3 { padding: 9px 0; }
