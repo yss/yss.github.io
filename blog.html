@@ -9,3 +9,7 @@ title : 博客列表
         <p class="other"><a href="{{ BASE_PATH }}{{ post.url }}" class="read">全文阅读 &raquo;</a><span class="time">发布时间：{{ post.date | date: "%Y-%m-%d" }}</span><span class="tags">标签：{{ post.tags | join: ' , ' }}</span></p>
     </div>
 {% endfor %}
+<!--
+I am very very sad for use paginator in Jekyll in github. 
+because of paginator only support for index.html.
+-->

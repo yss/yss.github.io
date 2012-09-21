@@ -20,7 +20,7 @@ strong, em { font-weight:bold; color:#C30; }
 cite { padding:10px; border:1px dashed #008080; color:#008080; }
 a, a:link, a:visited { color:#666; text-decoration:none; }
 a:hover { color:#369; text-decoration:underline; }
-pre { padding:10px; border:1px dashed #000369; background:#EEE; color:green; }
+pre { padding:10px; border:1px dashed #000369; background:#EEE; border-radius:5px; }
 /* common.css */
 .cf:after, #bd:after, #hd:after { content:''; display:block; height:0; clear:both; }
 .cf, #bd, #hd { zoom:1 }
