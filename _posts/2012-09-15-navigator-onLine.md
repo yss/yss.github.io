@@ -23,10 +23,10 @@ navigator.onLine是HTML5定义用来检测设备是在线还是离线。对应�
 
 ### online&offLine事件
 HTML5定义了online&offline事件用于监听网络状态变化。
-{% highlight javascript }
+{% highlight javascript %}
 window.addEventListener('online', callback); // 离线到上线
 window.addEventListener('offline', callback); // 上线到离线
-{ endhighlight %}
+{% endhighlight %}
 
 目前除了IE（IE只支持navigator.onLine属性）外，其他最新浏览器都支持这个事件。
 

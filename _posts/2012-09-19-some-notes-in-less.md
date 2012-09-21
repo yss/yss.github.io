@@ -12,10 +12,10 @@ filter是IE特有的属性，写法很多，很复杂。这个时候就需要调
 IE HACK主要是用于特殊情况的IE处理，正确情况下，应该是避免尽量少的使用。但是怎么去避免使用呢？这好像不是本文的话题。我之前写过一篇文章《论HTML的重要性》主要就是为了阐明这方面问题。;)
 
 说多了...忘了说此时说的IE HACK指的其实是两种：\0 \9。比如：
-{% highlight css }
-line-height:20px\0; // only IE 8
-line-height:19px\9; // all of IE
-{ endhiglight %}
+
+    line-height:20px\0; /* only IE 8 */
+    line-height:19px\9; /* all of IE */
+
 这个时候的解决办法和第一点的filter相同。
 
 ### 第三点：mixin

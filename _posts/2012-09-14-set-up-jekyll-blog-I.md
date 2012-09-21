@@ -28,12 +28,12 @@ _config.yml是jekyll的配置文件。具体包括：(...此处省略很多..)�
     像其他人一样，我使用的是rdiscount，为什么呢？我想是因为maruku不是很灵活，特别是在里面加入html标签，是有问题的。
 
 #### 最后的代码
-{% highlight javascript }
+{% highlight javascript %}
 permalink: /:year/:month/:day/:title.html
 # 当修改文件时重新生成站点
 auto: true
 markdown: rdiscount
-{ endhighlight %}
+{% endhighlight %}
 
 ### 后记
 其实你不做任何配置也是没有关系的。;)
