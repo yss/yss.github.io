@@ -1,6 +1,6 @@
 _site/
 _cache/
-
+syntax.css
 .DS_Store
 *.swp
 *~
