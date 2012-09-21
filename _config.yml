@@ -4,6 +4,7 @@ permalink: /:year/:month/:day/:title.html
 auto: true
 markdown: rdiscount
 pygments: true
+paginate: 12
 
 author:
     name : yss
