@@ -8,7 +8,7 @@ layout: default
     </section>
     <aside id="sidebar">
         <section class="profile box">
-            <h3>个人简介</h3>
+            <h3>个人数据</h3>
             <div class="cont">
 {% highlight javascript %}
 var yansong = {
@@ -29,17 +29,17 @@ yansong["邮箱"] =
             <h3>博客分类</h3>
             <ul>
                 {% for category in site.categories %}
-                <li><a href="{{ BASE_PATH }}/categories.html#{{ category[0] }}">{{ category[0] }}</a></a>
+                <li><a href="{{ BASE_PATH }}/categories.html#{{ category[0] }}">{{ category[0] }}(<span class="num">{{ category[1] | size }}</span>)</a></a>
                 {% endfor %}
             </ul>
         </section>
         <section class="box">
             <h3>全站标签</h3>
-            <ul>
+            <div class="tags">
                 {% for tag in site.tags %}
-                    <li><a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}">{{ tag.[0] }}</a></li>
+                    <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tag[1] | size }}">{{ tag.[0] }}</a>
                 {% endfor %}
-            </ul>
+            </div>
     </aside>
     <div id="page-nav">
     {% if page.previous %}
