@@ -36,8 +36,20 @@ yansong["邮箱"] =
         <section class="box">
             <h3>全站标签</h3>
             <div class="tags">
+                {% assign tagClass = 'tag' %}
                 {% for tag in site.tags %}
-                    <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tag[1] | size }}">{{ tag.[0] }}</a>
+                    {% assign tagSize = tag[1] | size %}
+                    {% case tagSize %}
+                    {% when 1 %}
+                        {% assign tagClass = 'tag' %}
+                    {% when 2 or 3 or 4 %}
+                        {% assign tagClass = 'tag-small' %}
+                    {% when 5 or 6 or 7 or 8 %}
+                        {% assign tagClass = 'tag-big' %}
+                    {% else %}
+                        {% assign tagClass = 'tag-bob' %}
+                    {% endcase %}
+                    <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tagClass }}">{{ tag.[0] }}</a>
                 {% endfor %}
             </div>
     </aside>

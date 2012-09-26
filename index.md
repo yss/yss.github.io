@@ -19,5 +19,8 @@ title: 首页
     <p>就会成为/亲切的/怀恋。</p>
 </div>
 <script src="/static/js/jquery.min.js"></script>
-<script src="/static/js/writePoetry.min.js"></script>
-<script>$.writePoetry('#rain-drops', {ignoreClass: '.ignore'});</script>
+<script src="/static/js/writePoetry.min.js?t=20120926"></script>
+<script>
+var wp = $.writePoetry('#rain-drops', {ignoreClass: '.ignore'});
+wp.appendData('<p>Test it is ok?</p>');
+</script>

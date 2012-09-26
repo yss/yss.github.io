@@ -20,7 +20,6 @@ strong, em { font-weight:bold; color:#C30; }
 cite { padding:10px; border:1px dashed #008080; color:#008080; }
 a, a:link, a:visited { color:#108080; text-decoration:none; }
 a:hover { color:#369; text-decoration:underline; }
-pre { padding:10px; border:1px dashed #000369; background:#EEE; border-radius:5px; }
 /* common.css */
 .cf:after, #bd:after, #hd:after { content:''; display:block; height:0; clear:both; }
 .cf, #bd, #hd { zoom:1 }
@@ -64,6 +63,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #sidebar h3 { padding:10px 0; }
 #sidebar .num { color:green; }
 #sidebar .tags a { padding-right:10px; line-height:30px; white-space:nowrap; }
+#sidebar .tags .tag-small { font-size:16px; font-weight:bold; color:green; }
+#sidebar .tags .tag-big { font-size:24px; font-weight:bold; color:orange; }
+#sidebar .tags .tag-bob { font-size:32px font-weight:bold; color:#CA0101; }
 /* 博客页面 */
 #blog h3 { padding: 9px 0; }
 #blog h4 { padding:5px 0; }
