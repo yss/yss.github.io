@@ -26,7 +26,7 @@ a:hover { color:#369; text-decoration:underline; }
 .hidden { display:none; }
 .tri { position:absolute; width:0; height:0; line-height:0; font-size:0; border:5px dashed transparent; }
 body { font:14px/1.5 Helvetica,Arial,'Microsoft Yahei',sans-serif; }
-#doc-mask { position:absolute; width:100%; height:50%; background:#000; filter:Alpha(opacity=94); opacity:.94;
+#doc-mask { position:absolute; width:100%; height:320px; background:#000; filter:Alpha(opacity=94); opacity:.94;
 background-image:-webkit-linear-gradient(top, #000, #444);
 background-image:-moz-linear-gradient(top, #000, #444);
 background-image:linear-gradient(top, #000, #444);
