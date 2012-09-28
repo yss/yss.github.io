@@ -65,7 +65,7 @@ fes csstoless test.css > base.less # 在对应的test.css目录下生成base.les
 {% endhighlight %}
 意见？？？
 ### less的注意事项
-直接转到：[用LESS需要注意的几点]: {{ BASE_PATH }}/2012/09/19/some-notes-in-less.html
+直接转到：[用LESS需要注意的几点]({{ BASE_PATH }}/2012/09/19/some-notes-in-less.html)
 ### 商家后台推行LESS方案
 #### 拆分
 商家后台目前只引用一个base.css文件，现在分别拆分成4个文件：
