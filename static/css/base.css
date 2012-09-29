@@ -7,10 +7,10 @@ table { border-collapse:collapse; border-spacing:0; }
 fieldset, img { border:0; vertical-align:top; }
 ul { list-style: circle inside none; }
 ol { list-style: decimal inside none; }
-h1 { font-size:24px; }
-h2 { font-size:20px; }
-h3 { font-size:18px; }
-h4, h5, h6 { font-size:14px; }
+h1 { font-size:32px; }
+h2 { font-size:28px; }
+h3 { font-size:22px; }
+h4, h5, h6 { font-size:18px; }
 sup { vertical-align:text-top; }
 sub { vertical-align:text-bottom; }
 caption,th,td { text-align:center; }
@@ -25,7 +25,7 @@ a:hover { color:#369; text-decoration:underline; }
 .cf, #bd, #hd { zoom:1 }
 .hidden { display:none; }
 .tri { position:absolute; width:0; height:0; line-height:0; font-size:0; border:5px dashed transparent; }
-body { font:14px/1.5 Helvetica,Arial,'Microsoft Yahei',sans-serif; }
+body { font:16px/1.5 Helvetica,Arial,'Microsoft Yahei',sans-serif; }
 #doc-mask { position:absolute; width:100%; height:320px; background:#000; filter:Alpha(opacity=94); opacity:.94;
 background-image:-webkit-linear-gradient(top, #000, #444);
 background-image:-moz-linear-gradient(top, #000, #444);
@@ -38,11 +38,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #hd { color:#AAA; text-align:right; text-shadow:0 1px 1px #222; }
 #hd h1 { padding:16px 0; }
 #hd h1 a:hover { text-decoration:none; }
-#hd h2 { padding-bottom:12px; }
+#hd h2 { padding-bottom:12px; line-height:30px; }
 #hd a { color:#FFF; }
 #hd a:hover { color:#94D4D6; }
 #nav { float:left; margin-top:-30px; letter-spacing:1px; font-size:16px; }
-#nav li { float:left; padding-right:20px; }
+#nav li { float:left; padding-right:20px; font-size:18px; }
 #bd { min-height:512px; background:#FFF; border-radius:8px; }
 #bd h2 { padding-bottom:20px; text-align:center; }
 #ft { padding:10px 0; text-align:center; }
