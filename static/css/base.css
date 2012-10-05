@@ -4,13 +4,13 @@
 html { color:#000; background:#DCE0E4 url(i/bg-body.png); }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
 table { border-collapse:collapse; border-spacing:0; }
-fieldset, img { border:0; vertical-align:top; }
+fieldset, img { border:1px solid #DDD; vertical-align:top; }
 ul { list-style: circle inside none; }
 ol { list-style: decimal inside none; }
-h1 { font-size:32px; }
-h2 { font-size:28px; }
-h3 { font-size:22px; }
-h4, h5, h6 { font-size:18px; }
+h1 { font-size:28px; }
+h2 { font-size:22px; }
+h3 { font-size:18px; }
+h4, h5, h6 { font-size:16px; }
 sup { vertical-align:text-top; }
 sub { vertical-align:text-bottom; }
 caption,th,td { text-align:center; }
@@ -69,7 +69,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 /* 博客页面 */
 #blog h3 { padding: 9px 0; }
 #blog h4 { padding:5px 0; }
-#blog p { padding:5px 0; }
+#blog p { padding:5px 1em; }
 /* 关于我的页面 */
 #list ul { padding:8px 6px; }
 #list li { line-height:24px; }
