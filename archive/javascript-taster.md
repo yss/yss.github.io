@@ -23,3 +23,4 @@ summary: 这是一块存储Javascript的田园
 {% endhighlight %}
 * 关于-1的处理：~str.indexOf('a') ? true : false; // ~-1 === 0
 * 最短小的代码判断是否是IE：var isIE = !-[1,]; && var isIE = !+"\v1";
+* 在调用第三方库的时候，很可能做了这么一个操作：JSON.parse(JSON.parse(str))，然后可能报这么个错：SyntaxError: Unexpected token o

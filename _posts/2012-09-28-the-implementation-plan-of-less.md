@@ -104,7 +104,7 @@ ErrorDocument 404 /static404.php
 
 最后，如果配置virtualHost，需要找SA帮忙重启apache服务器。因为我们没有权限。;)
 
-#### 方案二：配置.vimrc文件
+#### 方案二：配置.vimrc文件*（放弃）*
 我们现在都是基于vim开发，所以提供一个非常方便vim的解决办法，避免去配置virtualHost文件以及写对应的中转文件。
 
 只需要在~/.vimrc最后面加上下面这句话：
@@ -115,6 +115,8 @@ nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 " 即保存是检测到为less文件就进行解析
 autocmd BufWritePost,FileWritePost *.less !lessc % <afile>:r.css
 {% endhighlight %}
+
+* 方案是好，但是漏洞太大*，比如，我修改了common/base.less但是我需要更新的是base.less
 
 ### 商家后台推行LESS方案
 #### 拆分
