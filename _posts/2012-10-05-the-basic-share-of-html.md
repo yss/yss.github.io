@@ -1,8 +1,8 @@
 ---
 layout: blog
-title: 基础html讲解
-tags: [html]
-categories: [html]
+title: 【分享】基础html讲解
+tags: [html, 分享]
+categories: [html, 分享]
 summary: html是书写网页所必知比会的东西。html看似很少，但是它的组合变幻相当强劲有力。请听我分解
 ---
 ### 什么是html
@@ -140,4 +140,6 @@ html的结构就是一颗倒立的树，也可以认为它是一个族谱;)
 html是一个看似很简单的东西，但是其中的奥妙非凡，需要慢慢体会。
 能写出一个漂亮的html是我所求的。;_
 
-所有的网站都是建立在html的基础之上的，同理javascript，css都是以来于html的。
+可能现在很多公司的前端都不是很注重这块，但是我想，做为一个合格的前端工程师，你有必要深入的学习了解这些个东西。
+
+所有的网站都是建立在html的基础之上的，同理javascript的Dom操作，css都是基于html的。

@@ -35,7 +35,7 @@ var tplData = [
     '---'
 ].join('\n');
 
-if (!fs.existsSync(postPath)) { // 不存在时执行
+if (!path.existsSync(postPath)) { // 不存在时执行
     fs.mkdirSync(postPath);
 }
 

@@ -88,7 +88,7 @@ fes csstoless test.css > base.less # 在对应的test.css目录下生成base.les
 ### less的注意事项
 直接转到：[用LESS需要注意的几点]({{ BASE_PATH }}/2012/09/19/some-notes-in-less.html)
 ### 开发环境中针对LESS解析成CSS的方案
-#### 方案一：更改对应的virtualHost配置
+#### 方案一：更改对应的virtualHost配置*（临时方案）*
 找到对应的配置文件，在下面加上下面这句话：
 {% highlight html %}
 Alias /static404.php /home/yansong/mt/webroot/static404.php
@@ -117,6 +117,14 @@ autocmd BufWritePost,FileWritePost *.less !lessc % <afile>:r.css
 {% endhighlight %}
 
 * 方案是好，但是漏洞太大*，比如，我修改了common/base.less但是我需要更新的是base.less
+
+#### 方案三：理解解决方案，改动大
+1. 首先针对之前开发环境下的服务器做好相关配置，默认请求的CSS都转向一个处理文件，每次请求都进行一次LESS解析（当然，如果有必要的话可以加缓存，但是毕竟是开发环境，使用的人不多，压力不大）。
+
+2. 我们使用的是git管理我们的代码，这样的话，我们通过在.gitignore文件加入：*.css => 即忽略掉所有的css文件。这样做的目的避免用户操作处理CSS文件。
+
+3. 在我们的发布脚本里加上LESS解析处理所有有改动的less文件（最好的做法就是根据一定规则编译所有不是通用的LESS文件），这样做的目的就是让线上的服务器是直接请求对应的css文件。
+    当然这块也想过不去解析LESS文件，但是毕竟你要用CDN嘛。；）
 
 ### 商家后台推行LESS方案
 #### 拆分
