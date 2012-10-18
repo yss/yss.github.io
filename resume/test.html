@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<title>template page</title>
+	<meta charset="gbk" />
+	<link rel="stylesheet" href="http://img1.cache.netease.com/cnews/css07/style.css" />
+<style>
+#tt{background-color:#000;color:#ccc;}
+li{height:20px;width:200px;background-color:#ccc;}
+</style>
+</head>
+<body>
+<ul>
+	<li></li>
+	<li></li>
+	<li id="aa" class="t">aaaaaaa</li>
+	<li id="tt">
+		<span>aa</span>
+		<span>aaa</span>
+		<i>sss</i>
+	</li>
+	<li></li>
+	<li></li>
+</ul>
+<script src="ntes_jslib_1.x.js"></script>
+<script src="ntes_extend.js"></script>
+<script>
+function log(a){window.console?console.log(a):alert(a);}
+var tt = $('#tt');
+/*
+log(tt.prev());
+log(tt.prev('li'));
+log(tt.prev('.t'));
+log(tt.child())
+log(tt.first().innerHTML)
+log(tt.last().innerHTML)
+
+$.doWhileExist('span', function(){log(true)})
+$.doWhileExist('div', function(){log(true)})
+$.doWhileExist('#tt', function(){log(true)})
+$.localStorage.setItem('a', 1);
+log($.localStorage.getItem('a'))
+tt
+*/
+//$.animate({node:'li', duration:2, css:{opacity: 0.4, width:'400px'}, easing: 'ease'})
+//$.animate({node:'#tt', duration:2, css:{opacity: 0.4, padding:'12px 42px 52px'}, easing: 'ease-in'})
+//tt.fadeOut(function(){this.fadeIn()});;
+$.animate({node:tt, duration:3, css:{color:'#f00', padding: '20px', margin: '300px'}}, function(){
+	this.fadeOut(function(){this.fadeIn()});
+})
+
+</script>
+</body>
+</html>
