@@ -49,9 +49,18 @@ yansong["邮箱"] =
                     {% else %}
                         {% assign tagClass = 'tag-bob' %}
                     {% endcase %}
-                    <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tagClass }}">{{ tag.[0] }}</a>
+                    <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tagClass }}">{{ tag.[0] }}<sub>{{tagSize}}</sub></a>
                 {% endfor %}
             </div>
+        </section>
+        <section class="box">
+            <h3>有朋自远方来</h3>
+            <ul>
+                <li><a href="http://www.shi-tou.net/" target="_blank" title="石头的个人博客">石头记</a></li>
+                <li><a href="http://www.bokeyy.com/" target="_blank" title="袁源（歪歪）的个人博客">博客歪歪</a></li>
+                <!-- <li><a href="" target="_blank" title=""></a></li> -->
+            </ul>
+        </section>
     </aside>
     <div id="page-nav">
     {% if page.previous %}
