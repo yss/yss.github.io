@@ -1,0 +1,35 @@
+---
+layout: blog-list
+title : 博客列表 
+---
+{% for post in paginator.posts %}
+    <div class="item">
+        <h3><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <p class="desc">{{ post.summary }}...</p>
+        <p class="other"><a href="{{ BASE_PATH }}{{ post.url }}" class="read">全文阅读 &raquo;</a><span class="time">发布时间：{{ post.date | date: "%Y-%m-%d" }}</span><span class="tags">标签：
+        {% for tag in post.tags %}
+            <a href="{{ BASE_PATH }}/tags.html#{{ tag }}" class="tag">{{ tag }}</a>
+        {% endfor %}</span></p>
+    </div>
+{% endfor %}
+    <div id="page-nav">
+        {% if paginator.previous_page %}
+            {% if paginator.previous_page == 1 %}
+                <a href="{{ BASE_PATH }}/" class="prev">&#8672; 第一步</a>
+            {% else %}
+                <a href="{{ BASE_PATH }}/page{{paginator.previous_page}}" class="prev">&#8672; 向前一步</a>
+            {% endif %}
+        {% else %}
+            <span class="prev">起始 &#9786;</span>
+        {% endif %}
+        <span class="curr">{{ paginator.page }}</span>
+        {% if paginator.next_page %}
+            {% if paginator.next_page == paginator.total_page %}
+                <a href="{{ BASE_PATH }}/page{{paginator.next_page}}" class="next">最后一步 &#8674</a>
+            {% else %}
+                <a href="{{ BASE_PATH }}/page{{paginator.next_page}}" class="next">向后一步 &#8674</a>
+            {% endif %}
+        {% else %}
+            <span class="next">&#9792; 完结</span>
+        {% endif %}
+    </div>
