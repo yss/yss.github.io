@@ -14,7 +14,7 @@ h2 { font-size:22px; }
 h3 { font-size:18px; }
 h4, h5, h6 { font-size:16px; }
 sup { vertical-align:text-top; }
-sub { padding-left:2px; vertical-align:text-bottom; }
+sub { vertical-align:text-bottom; }
 input,textarea,select { font-family:inherit; font-size:inherit; font-weight:inherit; *font-size:100%; }
 legend { color:#000; }
 strong, em { font-weight:bold; color:#C30; }
@@ -64,10 +64,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #sidebar { float:right; margin-right:-10px; padding:20px 0;  width:240px; }
 #sidebar h3 { padding:10px 0; }
 #sidebar .num { color:green; }
-#sidebar .tags a { padding-right:10px; line-height:30px; white-space:nowrap; }
+#sidebar .tags a { display:inline-block; *zoom:1; padding:0 5px; margin:0 5px 5px 0; line-height:30px; white-space:nowrap; background:#EEE; border-radius:15px; }
 #sidebar .tags .tag-small { font-size:16px; font-weight:bold; color:green; }
 #sidebar .tags .tag-big { font-size:24px; font-weight:bold; color:orange; }
 #sidebar .tags .tag-bob { font-size:32px font-weight:bold; color:#CA0101; }
+#sidebar .tags .sup { padding-left:2px; vertical-align:text-bottom; color:#108080; text-decoration:none; }
 /* 博客页面 */
 #blog h3 { padding: 9px 0; }
 #blog h4 { padding:5px 0; }
