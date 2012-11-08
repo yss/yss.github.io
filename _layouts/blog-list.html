@@ -37,7 +37,7 @@ yansong["邮箱"] =
             <div class="tags">
                 {% assign tagClass = 'tag' %}
                 {% for tag in site.tags %}
-                    {% assign tagSize = tag[1] | size %}
+                    {% assign tagSize = (tag[1] | size) %}
                     {% case tagSize %}
                     {% when 1 %}
                         {% assign tagClass = 'tag' %}
@@ -48,7 +48,7 @@ yansong["邮箱"] =
                     {% else %}
                         {% assign tagClass = 'tag-bob' %}
                     {% endcase %}
-                    <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tagClass }}">{{ tag[0] }}<span class="sup">{{ tagSize }}</span></a>
+                        <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tagClass }}">{{ tag[0] }}<sub>{{ tagSize }}</sub></a>
                 {% endfor %}
             </div>
         </section>
