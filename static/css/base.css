@@ -79,7 +79,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #blog h4:before,
 #blog h5:before { float:left; margin-top:12px; margin-right:10px; content:''; height:5px; width:128px; background-color:#3060c0; }
 #blog h4:before { margin-top:-2px; width:6px; height:24px; }
-#blog h5:before { width:4px; height:20px; background-color:#408040; }
+#blog h5:before { margin-top:1px; width:4px; height:20px; background-color:#408040; }
 #blog h4 { padding:1em 0; color:#333; }
 #blog h5 { padding:1em 0; color:#444; }
 #blog p { padding:5px 0; color:#404040; }

@@ -110,7 +110,7 @@ ErrorDocument 404 /static404.php
 只需要在~/.vimrc最后面加上下面这句话：
 {% highlight vim %}
 " 1、快捷键方案 即按esc键后，再按, m这两个键
-nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
+nnoremap ,m :w <BAR> !lessc % > %:p:r.css<CR><space>
 " 2、保存后方案 即你按esc键后，再按:w这两个键
 " 即保存是检测到为less文件就进行解析
 autocmd BufWritePost,FileWritePost *.less !lessc % <afile>:r.css
