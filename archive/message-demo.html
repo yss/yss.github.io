@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+<title>Message Demo</title>
+<link rel="stylesheet" href="http://a.tbcdn.cn/tbsp/tbsp.css" type="text/css" />
+<style type="text/css">
+    h1, h2, h3 {
+        font-size: 26px;
+        color: #00859D;
+        font-family: Constantia, serif;
+    }
+    h1 { text-align: center; }
+    h2, h3 { font-size: 14px; color: #555; font-family: 'Courier New', monospace;}
+    h1, h2, h3, h4, h5, h6 { margin: 1em 0 0.5em; }
+    textarea {
+        font-family: 'Courier New',monospace;
+        line-height: 120%;
+        font-size: 13px;
+        color: #555;
+        padding: 10px;
+        border: none;
+    }
+
+    #header, #footer {
+        margin: 20px;
+        text-align: center;
+    }
+    #content {
+        padding-top: 30px;
+    }
+    .section-content {
+        margin: 10px 20px 30px;
+    }
+    .msg, .msg24 {
+        margin: 10px;
+        clear: both;
+    }
+
+</style>
+</head>
+<body>
+<div id="page3">
+    <div id="header">
+        <h1>Message Demo</h1>
+        <a href="assets/msg_colors.png" style="float: right">视觉参考图</a>
+    </div>
+    <div id="content" class="grid-c">
+
+        <h2>16x16</h2>
+
+        <div class="section-content">
+            <div class="msg"><p class="error">错误信息error，比如：请正确选择省市区</p></div>
+            <div class="msg"><p class="stop">禁止信息stop，比如：对不起，你是小二，不能出价</p></div>
+            <div class="msg"><p class="alert">警示信息alert，比如：淘宝网12月25日凌晨1:00 - 3:00将停机维护</p></div>
+            <div class="msg"><p class="attention">提醒信息attention，比如：建议您联系卖家咨询货物是否已经发出</p></div>
+            <div class="msg"><p class="tips">提示信息tips，比如：您可以在该类目下直接发宝贝哦</p></div>
+            <div class="msg"><p class="ok">成功信息ok，比如：交易成功</p></div>
+            <div class="msg"><p class="notice">公告信息notice，比如：你有3条信息未读</p></div>
+            <div class="msg"><p class="question">疑问question，比如：什么是宝贝成色</p></div>
+            <div class="msg"><p class="tips">可以有2行，最大高度为50px<br />瞧瞧第二行</p></div>
+            <div class="msg"><span class="tips">里面的元素也可以用span哦，具体用什么元素自己把握，保证class名正确即可</span></div>
+			<div class="msg"><p class="tips naked">可以在class中加入naked, 去除边框和背景色</p></div>
+			<div class="msg"><p class="help naked">帮助信息help，比如：<a href="#">查看帮助</a></p></div>
+			<div class="msg"><p class="small-help naked">12x12版的帮助信息help，比如：<a href="#">查看帮助</a></p></div>
+        </div>
+
+        <h2>24x24</h2>
+
+        <div class="section-content">
+            <div class="msg24"><p class="error">错误信息error，比如：请正确选择省市区</p></div>
+            <div class="msg24"><p class="attention">提醒信息attention，比如：建议您联系卖家咨询货物是否已经发出</p></div>
+            <div class="msg24"><p class="tips">提示信息tips，比如：您可以在该类目下直接发宝贝哦</p></div>
+            <div class="msg24"><p class="ok">成功信息ok，比如：交易成功</p></div>
+            <div class="msg24"><p class="question">疑问question，比如：什么是宝贝成色</p></div>
+            <div class="msg24"><p class="error">可以有多行哦（不超过三行）<br>我就是传说中的第二行<br>我是神话中的第三行</p></div>
+            <div class="msg24"><p class="error naked">可以在class中加入naked, 去除边框和背景色</p></div>
+            <div class="msg24"><p class="tips naked naked-tips">这个特殊，还要加入naked-tips, 才能裸掉</p></div>
+            <div class="msg24"><p class="ok naked naked-ok">这个也特殊，还要加入naked-ok, 才能裸掉</p></div>
+        </div>
+
+        
+
+    </div>
+
+    <div id="footer">
+       
+    </div>
+</div>
+</body>
+</html>
+
