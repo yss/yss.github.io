@@ -6,10 +6,17 @@ categories: [nodejs]
 summary: nodejs本身是javascript语言，可以理解为是在以服务器为宿主环境，基于javascript进行的一次扩容
 ---
 ### 前言
-#### 什么是nodejs？
+#### nodejs是什么？
 在我看来，它就是javascript。不同的是它的宿主环境变了，从浏览器变成了服务器，以至于增加很多后端的功能。比如操作文件，处理网络相关服务。
 
+官方的说明是：
+
+    Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+
 其他看法？
+#### nodejs可以做写什么
+1. 编写服务器端的脚本
+2. 作为web服务器
 ### 那些个全局变量
 #### global
 {% highlight js %}
@@ -21,10 +28,12 @@ xxx = 1;
 #### process
 进程的对象，存放着当前的运行环境参数。
 其中需要说明的是三个。
+
 * process.cwd() 指代的是当前运行这个js的绝对路径
 * process.exit(code) code是一个number，一切非0值都不属于正常退出。也就意味着只有当为0时，才是正常退出。
   它的好处就在于可以中止程序的执行。
 * process.nextTick(callback) 相当于setTimeout(callback, 0);更高效。
+
 其他的用得不是很多，简单看看即可。
 #### console
 就是往命令行下输出一些个信息。
@@ -34,7 +43,7 @@ xxx = 1;
 本质就是加载其他你需要的文件。很多时候你可以认为它就是一次include或者parse
 ##### require加载规则之相对或绝对路径
 {% highlight js %}
-var a = require('./a'); // 同理require('/a')
+var a = require('./a');
 // a
 // a.js
 // a.json
