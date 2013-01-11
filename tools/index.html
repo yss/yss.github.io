@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YSS控制台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <style>
+    form>* { line-height:24px; }
+    #p {
+        width:100%;
+        height:200px;
+        color:green;
+        /*
+        overflow-y:scroll;
+        -webkit-overflow-scrolling: touch;
+        */
+    }
+    </style>
+</head>
+<body>
+<form name="evalForm">
+	<textarea name="w" required cols="30" rows="5">navigator.userAgent</textarea>
+	<button type="submit">eval</button>
+</form>
+<div id="p"></div>
+<script>
+var p = document.getElementById('p');
+document.forms.evalForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var val = eval('(' + this.w.value + ')'),
+        content = document.createElement('p');
+
+    if (typeof val === 'object') {
+        val = JSON.stringify(val);
+    }
+    content.innerHTML = val;
+    p.insertBefore(content, p.firstChild);
+}, false);
+</script>
+</body>
+</html>
