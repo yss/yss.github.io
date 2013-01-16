@@ -11,7 +11,9 @@ summary: nodejs本身是javascript语言，可以理解为是在以服务器为�
 
 官方的说明是：
 
+{% highlight html %}
     Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+{% endhighlight %}
 
 其他看法？
 #### nodejs可以做写什么

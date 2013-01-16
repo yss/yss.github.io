@@ -32,5 +32,9 @@ window.addEventListener('offline', callback); // 上线到离线
 
 ### 后记
 
-虽然Web app的发展功能越来越好，但是Native app依旧很强大，加之最近的fackbook指明他们犯了一个严重的错误在把大部分精力放在web app上，让Web app之路，越来越迷茫。总之任重道远！
+虽然Web app的发展功能越来越好，但是Native app依旧很强大，加之最近的fackbook指明他们犯了一个严重的错误在把大部分精力放在web app上，让Web app之路，越来越迷茫。
 
+总之任重道远！
+
+### 参考
+[Online and offline events](https://developer.mozilla.org/en-US/docs/Online_and_offline_events)
