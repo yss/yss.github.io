@@ -7,8 +7,8 @@ table { border-collapse:collapse; border-spacing:0; }
 td, th { padding:5px 10px; border:1px solid #888; background:#EFEFEF; }
 th { background:#DDD; }
 fieldset, img { border:1px solid #DDD; vertical-align:top; }
-ul { list-style: circle inside none; }
-ol { list-style: decimal inside none; }
+ul { padding-left:1em; list-style: circle inside none; }
+ol { padding-left:1em; list-style: decimal inside none; }
 h1 { font-size:28px; }
 h2 { font-size:24px; }
 h3 { font-size:20px; }
