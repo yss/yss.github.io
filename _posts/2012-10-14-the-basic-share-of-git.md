@@ -27,11 +27,13 @@ PS：我个人是不建议在windows下使用git的。
 4. （如果是要clone远程分支，则忽略这行）进入文件夹，右键，选中git init here
 
 #### 以下是用于ssh login without password
+
 1. 然后右键，选中git bash
 2. 输入：ssh-keygen -t rsa（创建rsa密钥），然后一直回车即可。
 3. 输入：vim ~/.ssh/id_rsa.pub 把里面的内容复制到远程git服务器的.ssh/authorized_key里即可。
 
 ### git的一些个命令
+
 1. git init ： 初始化代码仓库
 2. git status ：当前代码的状态，会显示出你现在改动的文件信息，如,modify , delete, new file
 3. git add : 增加你需要提交的代码到缓存区
@@ -41,6 +43,7 @@ PS：我个人是不建议在windows下使用git的。
 7. git push: 把你本地提交的代码推送到远程代码仓库
 
 ### git的基本使用
+
 1. 找到你代码的文件目录（cd ~/project/）
 2. 输入git init（初始化，这个时候就相当于创建了一个.git文件夹）
 3. 输入git status（查看文件状态，这个时候你会发现所有当前文件目录下的文件都为待提交状态）

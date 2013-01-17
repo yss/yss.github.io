@@ -6,7 +6,9 @@ categories: [nodejs]
 summary: nodejs本身是javascript语言，可以理解为是在以服务器为宿主环境，基于javascript进行的一次扩容
 ---
 ### 前言
+
 #### nodejs是什么？
+
 在我看来，它就是javascript。不同的是它的宿主环境变了，从浏览器变成了服务器，以至于增加很多后端的功能。比如操作文件，处理网络相关服务。
 
 官方的说明是：
@@ -37,13 +39,21 @@ xxx = 1;
 * process.nextTick(callback) 相当于setTimeout(callback, 0);更高效。
 
 其他的用得不是很多，简单看看即可。
+
 #### console
+
 就是往命令行下输出一些个信息。
+
 #### buffer
+
 处理二进制文件的一些个方法，正常情况下是用不到的。
+
 #### require
+
 本质就是加载其他你需要的文件。很多时候你可以认为它就是一次include或者parse
+
 ##### require加载规则之相对或绝对路径
+
 {% highlight js %}
 var a = require('./a');
 // a
@@ -82,29 +92,43 @@ var a = require('a');
 // /node_modules/a
 ...
 {% endhighlight %}
+
 ##### require加载规则之NODE_PATH
+
 {% highlight bash %}
 " 在 .bashrc | .bash_profile | /ect/profile 文件中增加下面这句
 export NODE_PATH=/usr/local/lib/node_modules/
 {% endhighlight %}
 有了NODE_PATH后，找不到模块就寻找此目录下是否存在对应的模块
+
 #### __filename
+
 这个指代的是你使用node运行的js文件的绝对路径，亦是最顶级js文件。
 {% highlight bash %}
 " 在命令行下执行这个js，__filename === {path of app.js}/app.js
 node app.js
 " 如果app.js还有require('user.js'), __filename也为app.js的绝对路径
 {% endhighlight %}
+
 #### __dirname
+
 跟__filename保持一致，只是它为路径，或者说是文件夹
+
 #### module
+
 你可以认为它是一个function，然后return exports;
 
 说白了就是当前执行的js文档内容。nodejs里每个js都被看着是一个module，除了最顶层的，也就是运行的。
+
 ##### module.exports
+
 相当于一个对象，用于最后返回给require它的module。
+
 #### exports === module.exports
 #### setTimeout & clearTimeout
+
 一次性的定时操作
+
 #### setInterval & clearInterval
+
 重复性的定时操作
