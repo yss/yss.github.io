@@ -6,6 +6,8 @@ markdown: rdiscount
 pygments: true
 paginate: 12
 
+production_url: http://yansong.me
+
 author:
     name : yss
     email : yss.nelson@gmail.com

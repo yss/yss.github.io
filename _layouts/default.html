@@ -9,6 +9,7 @@
     <meta name="generator" content="Jekyll" />
     <meta name="jekyll" content="I am very sad for paginator only works in index.html file." />
     <meta name="lastUpdatedTime" content="{{ 'now' | date: "%Y-%m-%d %H:%M:%S" }}" />
+    <meta name="source" content="{{ site.source }}" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/base.css?t={{ 'now' | date:"%Y%m%d%H%M%S" }}" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml">
@@ -17,6 +18,10 @@
 <body>
 <div id="doc-mask"></div>
 <!--[if lt IE 9]><div id="ie-browser">为了达到最好的预览效果，建议您使用Chrome浏览器。点击下载：<a href="http://www.google.com/chrome" target="_blank">Google Chrome</a></div><![endif]-->
+{% if site.source contains "yss" %}
+{% else %}
+{% BASE_PATH = site.production_url %}
+{% endif %}
 <div id="doc">
     <div id="hd">
     	<h1>
@@ -37,6 +42,7 @@
     </div>
     <div id="ft">
         <p>&copy; 2012 - <script>document.write(new Date().getFullYear());</script> Created & Designed by <a href="https://github.com/yss" target="_blank">YSS</a>. Based on <a href="https://github.com/mojombo/jekyll/wiki" target="_blank">Jekyll</a></p>
+        <p class="hidden"><a href="{{ site.production_url }}" title="严松的博客">yss</a></p>
     </div>
 </div>
 <script>window._gaq = [['_setAccount', 'UA-31716874-1'],['_trackPageview']]</script>

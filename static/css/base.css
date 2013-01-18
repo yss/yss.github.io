@@ -7,8 +7,8 @@ table { border-collapse:collapse; border-spacing:0; }
 td, th { padding:5px 10px; border:1px solid #888; background:#EFEFEF; }
 th { background:#DDD; }
 fieldset, img { border:1px solid #DDD; vertical-align:top; }
-ul { padding-left:1em; list-style: circle inside none; }
-ol { padding-left:1em; list-style: decimal inside none; }
+ul { list-style: circle inside none; }
+ol { list-style: decimal inside none; }
 h1 { font-size:28px; }
 h2 { font-size:24px; }
 h3 { font-size:20px; }
@@ -84,6 +84,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #blog h5 { padding:1em 0; color:#444; }
 #blog p { padding:5px 0; color:#404040; }
 #blog blockquote { padding-left:1.5em; }
+#blog ol, #blog ul { padding:1em; }
 /* 关于我的页面 */
 #list ul { padding:8px 6px; }
 #list li { line-height:24px; }
