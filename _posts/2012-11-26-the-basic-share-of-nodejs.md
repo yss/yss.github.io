@@ -33,7 +33,7 @@ xxx = 1;
 进程的对象，存放着当前的运行环境参数。
 其中需要说明的是三个。
 
-* process.cwd() 指代的是当前运行这个js的绝对路径
+* process.cwd() 指代的是当前node运行的绝对路径
 * process.exit(code) code是一个number，一切非0值都不属于正常退出。也就意味着只有当为0时，才是正常退出。
   它的好处就在于可以中止程序的执行。
 * process.nextTick(callback) 相当于setTimeout(callback, 0);更高效。
