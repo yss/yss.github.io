@@ -3,3 +3,5 @@ Disallow: /static/
 Disallow: CNAME
 Allow: /archive/
 Allow: /archive/javascript-taster.html
+站点地图：http://yansong.me/sitemap.xml
+http://yansong.me/sitemap_me.xml
