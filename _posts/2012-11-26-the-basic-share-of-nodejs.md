@@ -13,14 +13,14 @@ summary: nodejs本身是javascript语言，可以理解为是在以服务器为�
 
 官方的说明是：
 
-{% highlight html %}
-    Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
-{% endhighlight %}
+> Node.js is a platform built on Chrome&apos;s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 
 其他看法？
 #### nodejs可以做写什么
+
 1. 编写服务器端的脚本
 2. 作为web服务器
+
 ### 那些个全局变量
 #### global
 {% highlight js %}
@@ -34,7 +34,7 @@ xxx = 1;
 其中需要说明的是三个。
 
 * process.cwd() 指代的是当前node运行的绝对路径
-* process.exit(code) code是一个number，一切非0值都不属于正常退出。也就意味着只有当为0时，才是正常退出。
+* process.exit(code) code是一个number，一切非0值都不属于正常退出。也就意味着只有当为0时，才是正常退出。  
   它的好处就在于可以中止程序的执行。
 * process.nextTick(callback) 相当于setTimeout(callback, 0);更高效。
 

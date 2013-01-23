@@ -18,15 +18,20 @@ pagination顾名思义就是分页，需要在_config.yml设置（如：paginate
 具体可以参考：<a href="https://github.com/mojombo/jekyll/wiki/Pagination" target="_blank">Pagination</a>
 
 ### highlight in jekyll
-你需要这么设置：
-{\% highlight language \%}
-your code
-{\% endhighlight \%}
+你需要这么写：
+
+> {&#37; highlight language %}
+
+> your code
+
+> {&#37; endhighlight %}
+
 并且，需要在_config.yml里加pygments:true。最后再在css文件里加上对应的css。可以参考本文所用的css。
 
 但是，很纳闷的是不支持CSS？highlight css这样的写法，在运行jekyll --no-auto会报错：
-../lib/jekyll/convertible.rb:81:in `do_layout': undefined method `name' for <Post: /2012/09/19/some-notes-in-less>:Jekyll::Post (NoMethodError)
+> ../lib/jekyll/convertible.rb:81:in `do_layout': undefined method `name' for <Post: /2012/09/19/some-notes-in-less>:Jekyll::Post (NoMethodError)
 
 *后期，突然某天发现可以正常使用css了。* ;)
 
-### 希望此篇文章对新学jekyll的你有帮助
+### 后记
+希望此篇文章对新学jekyll的你有帮助

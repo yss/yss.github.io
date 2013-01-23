@@ -7,8 +7,8 @@ table { border-collapse:collapse; border-spacing:0; }
 td, th { padding:5px 10px; border:1px solid #888; background:#EFEFEF; }
 th { background:#DDD; }
 fieldset, img { border:1px solid #DDD; vertical-align:top; }
-ul { list-style: circle inside none; }
-ol { list-style: decimal inside none; }
+ul, ol { margin-left:1em; list-style: circle outside none; }
+ol { list-style-type: decimal; }
 h1 { font-size:28px; }
 h2 { font-size:24px; }
 h3 { font-size:20px; }
@@ -38,10 +38,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #ie-browser { position:absolute; z-index:9; color:#FFF; text-align:center; }
 #hd { color:#AAA; text-align:right; text-shadow:0 1px 1px #222; }
 #hd h1 { padding:16px 0; }
-#hd h1 a:hover { text-decoration:none; }
 #hd h2 { padding-bottom:12px; line-height:30px; }
 #hd a { color:#FFF; }
-#hd a:hover { color:#94D4D6; }
+#hd a:hover { color:#94D4D6; text-decoration:none; }
 #nav { float:left; margin-top:-30px; letter-spacing:1px; font-size:16px; }
 #nav li { float:left; padding-right:20px; font-size:18px; }
 #bd { min-height:512px; background:#FEFEFE; border-radius:8px; }
@@ -83,7 +82,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #blog h4 { padding:1em 0; color:#333; }
 #blog h5 { padding:1em 0; color:#444; }
 #blog p { padding:5px 0; color:#404040; }
-#blog blockquote { padding-left:1.5em; }
+#blog blockquote { padding-left:1.5em; font-style:italic; }
+#blog blockquote p { color:green; }
 #blog ol, #blog ul { padding:1em; }
 #blog #copyright { margin:10px 0; padding:10px 20px; border-radius:5px; background:#AAD2F0; }
 /* 关于我的页面 */
