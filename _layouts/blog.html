@@ -20,13 +20,33 @@ layout: default
         <p>原文网址：<a href="{{ site.production_url }}{{ page.url }}">{{ site.production_url }}{{ page.url }}</a></p>
         <p>转载请注明。谢谢~</p>
     </div>
+    <div id="comment-box" class="cf">
+        <a href="#uyan_frame" class="uyan" title="能不分享内容到微博吗？谁有更好的推荐给我哈~">使用有言评论</a>
+        <a href="#disqus_thread" class="disqus" title="try again~">使用DISQUS评论</a>
+    </div>
     <div id="uyan_frame"></div>
+    <div id="disqus_thread"></div>
     <script>
-        if (~window.location.host.indexOf('yansong.me')) {
-            var script = document.createElement('script');
-            script.src = 'http://v1.uyan.cc/js/iframe.js?UYUserId=1681855';
-            script.async = true;
-            document.getElementsByTagName('head')[0].appendChild(script);
-        }
+        // if (~window.location.host.indexOf('yansong.me')) {
+            var commentBox = document.getElementById('comment-box');
+            commentBox.onclick = function (e) {
+                e = e || window.event;
+                var target = e.target || e.srcElement,
+                    url;
+                if (target.className === 'uyan') {
+                    target.style.display = 'none';
+                    url = 'http://v1.uyan.cc/js/iframe.js?UYUserId=1681855';
+                } else if (target.className === 'disqus') {
+                    target.style.display = 'none';
+                    url = 'http://yansong.disqus.com/embed.js';
+                }
+                if (url) {
+                    var script = document.createElement('script');
+                    script.src = url;
+                    script.async = true;
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                }
+            }
+        // }
     </script>
 </section>

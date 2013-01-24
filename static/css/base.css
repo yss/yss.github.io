@@ -85,7 +85,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #blog blockquote { padding-left:1.5em; font-style:italic; }
 #blog blockquote p { color:green; }
 #blog ol, #blog ul { padding:1em; }
-#blog #copyright { margin:10px 0; padding:10px 20px; border-radius:5px; background:#AAD2F0; }
+#blog #copyright { margin:10px 0; padding:10px 20px; line-height:1; border-radius:5px; background:#AAD2F0; }
+#blog #comment-box { margin-top:20px; padding:0 10px; text-align:center; }
+#blog #comment-box a { display:inline-block; *zoom:1; margin:0 40px; padding:0 10px; height:24px; line-height:24px; border:1px solid #ccc; border-radius:12px; color:#36c; }
 /* 关于我的页面 */
 #list ul { padding:8px 6px; }
 #list li { line-height:24px; }
