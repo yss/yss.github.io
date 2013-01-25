@@ -1,7 +1,7 @@
 permalink: /:year/:month/:day/:title.html
 
 # 当修改文件时重新生成站点
-auto: false
+auto: true
 markdown: rdiscount
 pygments: true
 paginate: 12

@@ -41,8 +41,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #hd h2 { padding-bottom:12px; line-height:30px; }
 #hd a { color:#FFF; }
 #hd a:hover { color:#94D4D6; text-decoration:none; }
-#nav { float:left; margin-top:-30px; letter-spacing:1px; font-size:16px; }
-#nav li { float:left; padding-right:20px; font-size:18px; }
+#nav { position:relative; margin-top:-30px; letter-spacing:2px; font-size:16px; }
+#nav li { float:left; padding-right:20px; list-style-position:inside; font-size:18px; }
 #bd { min-height:512px; background:#FEFEFE; border-radius:8px; }
 #bd h2 { padding-bottom:16px; text-align:center; color:#706409; }
 #ft { padding:10px 0; text-align:center; }
