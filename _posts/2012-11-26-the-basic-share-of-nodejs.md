@@ -24,7 +24,7 @@ summary: nodejs本身是javascript语言，可以理解为是在以服务器为�
 ### 那些个全局变量
 #### global
 {% highlight js %}
-global xxx = 1;
+// global xxx = 1; global是一个表意符。
 xxx = 1;
 {% endhighlight %}
 需要说明的是在全局的作用域下，使用var xxx = 1;也不是全局变量。
@@ -35,8 +35,8 @@ xxx = 1;
 
 * process.cwd() 指代的是当前node运行的绝对路径
 * process.exit(code) code是一个number，一切非0值都不属于正常退出。也就意味着只有当为0时，才是正常退出。  
-  它的好处就在于可以中止程序的执行。
-* process.nextTick(callback) 相当于setTimeout(callback, 0);更高效。
+  它的好处就在于可以在任意一个地方中止程序的执行。
+* process.nextTick(callback) 相当于setTimeout(callback, 0);却也是用来替代它的方法。官方的说明是更高效。
 
 其他的用得不是很多，简单看看即可。
 
@@ -78,7 +78,7 @@ var a = require('/a');
 // /a.js
 ...
 {% endhighlight %}
-虽然看起来非常灵活，但是使用的时候尽量去使用去路径方式，尽量少的去使用这种写法，因为不利用维护和查阅。
+虽然看起来非常灵活以及方便，但是使用的时候尽量去使用完整路径方式，尽量少的去使用这种写法，因为不利用维护和查阅。
 ##### require加载规则之文件名
 {% highlight js %}
 var a = require('a');
@@ -95,19 +95,20 @@ var a = require('a');
 
 ##### require加载规则之NODE_PATH
 
-{% highlight bash %}
+{% highlight sh %}
 " 在 .bashrc | .bash_profile | /ect/profile 文件中增加下面这句
+" 不过注意了，在使用screen下.bash_profile里的配置是不生效的，一般.bash_profile都是直接引用的.bashrc
 export NODE_PATH=/usr/local/lib/node_modules/
 {% endhighlight %}
 有了NODE_PATH后，找不到模块就寻找此目录下是否存在对应的模块
 
 #### __filename
 
-这个指代的是你使用node运行的js文件的绝对路径，亦是最顶级js文件。
-{% highlight bash %}
+这个指代的是你使用node运行的*当前运行的js文件*的绝对路径。
+{% highlight sh %}
 " 在命令行下执行这个js，__filename === {path of app.js}/app.js
 node app.js
-" 如果app.js还有require('user.js'), __filename也为app.js的绝对路径
+" 如果app.js还有require('../xxx/user.js'), __filename就为user.js的绝对路径
 {% endhighlight %}
 
 #### __dirname
@@ -118,7 +119,7 @@ node app.js
 
 你可以认为它是一个function，然后return exports;
 
-说白了就是当前执行的js文档内容。nodejs里每个js都被看着是一个module，除了最顶层的，也就是运行的。
+说白了就是当前执行的js文档内容。nodejs里每个js都被看着是一个module。
 
 ##### module.exports
 
