@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html manifest="yss.manifest">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>{{ page.title }} - 严松的个人博客</title>
-    <meta name="description" content="严松的个人博客之所看所想所感" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="严松的个人博客之所看、所想、所感" />
     <meta name="keywords" content="{{ page.title }}，{{ page.tags | join:"，" }}，yss，web前端，前端，技术，Jekyll，分享，经验，积累，个人博客" />
     <meta name="author" content="yansong" />
     <meta name="generator" content="Jekyll" />
     <meta name="jekyll" content="I am very sad for paginator only works in index.html file." />
     <meta name="lastUpdatedTime" content="{{ 'now' | date: "%Y-%m-%d %H:%M:%S" }}" />
     <meta name="source" content="{{ site.source }}" />
+    <meta name="learning" content="english, english document, english blog, all the english" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/static/css/base.css?t={{ 'now' | date:"%Y%m%d%H%M%S" }}" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="/static/css/base.css?t={{ 'now' | date:"%Y%m%d%H%M%S" }}" />
 </head>
 <body>
 <div id="doc-mask"></div>
@@ -43,7 +45,7 @@
         <p class="hidden">
             <a href="{{ site.production_url }}" title="严松的个人博客">yss</a>
             <span class="motto">有得必有失，我只是不想得不尝失。</span>
-            <span class="desc">幻想多多，思考多多。努力奋进！</span>
+            <span class="desc">幻想多多，思考多多，努力奋进！</span>
             <span>;-)(-;</span>
         </p>
     </div>

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 【分享】基本nodejs知识
-tags: [分享,nodejs]
+tags: [分享, nodejs]
 categories: [nodejs]
 summary: nodejs本身是javascript语言，可以理解为是在以服务器为宿主环境，基于javascript进行的一次扩容
 ---

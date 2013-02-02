@@ -34,7 +34,7 @@ background-image:linear-gradient(top, #000, #444);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#444444');
 }
 .pg-content { padding:32px; }
-#doc { position:relative; margin:0 auto; width:1024px; }
+#doc { position:relative; margin:0 auto; max-width:1024px; _width:1024px; }
 #ie-browser { position:absolute; z-index:9; color:#FFF; text-align:center; }
 #hd { color:#AAA; text-align:right; text-shadow:0 1px 1px #222; }
 #hd h1 { padding:16px 0; }
