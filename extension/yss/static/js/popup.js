@@ -12,6 +12,7 @@ $(function() {
                 body.innerHTML = '<iframe src="' + url +'" height="' + height + '" width="' + width + '" frameborder="0" allowtransparent="true" scrolling="yes"></iframe>';
             }
         }, [this.time.value.trim(), this.url.value.trim()]);
+        window.close();
     });
     // 放到页面执行脚本
     function exec(fn, args) {
