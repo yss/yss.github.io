@@ -1,0 +1,12 @@
+{
+    "name": "游脚印应用",
+    "version": "1.0.0",
+    "manifest_version": 2,
+
+    "description": "用程序来替代人力成本，用技术来改变生活。",
+    "icons": {
+        "16": "img/icon-16.png",
+        "48": "img/icon-48.png",
+        "128": "img/icon-128.png"
+    },
+}
