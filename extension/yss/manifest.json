@@ -21,5 +21,6 @@
         "http://*/*"
     ],
 
-    "update_url": "http://yansong.me/extension"
+    "homepage_url": "http://yansong.me/extension",
+    "update_url": "http://yansong.me/extension",
 }

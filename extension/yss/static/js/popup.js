@@ -5,10 +5,10 @@ $(function() {
             url = url || window.location.href;
             setInterval(run, time * 1000);
             run();
+            var doc = document.documentElement,
+                height = doc.clientHeight,
+                width = doc.clientWidth;
             function run() {
-                var body = document.body,
-                    height = body.clientHeight,
-                    width = body.clientWidth;
                 body.innerHTML = '<iframe src="' + url +'" height="' + height + '" width="' + width + '" frameborder="0" allowtransparent="true" scrolling="yes"></iframe>';
             }
         }, [this.time.value.trim(), this.url.value.trim()]);
