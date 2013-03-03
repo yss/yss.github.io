@@ -49,9 +49,6 @@ forever start -l forever.log -a app.js
 // 5. 监听当前文件夹下的所有文件改动
 forever start -w app.js
 
-// 6. 监听一个目录下的所有文件改动
-forever start --watchDirectory controller/ app.js
-
 {% endhighlight %}
 
 #### 文件改动监听并自动重启
@@ -59,9 +56,6 @@ forever start --watchDirectory controller/ app.js
 {% highlight js %}
 // 1. 监听当前文件夹下的所有文件改动（不太建议这样）
 forever start -w app.js
-
-// 2. 监听一个目录下的所有文件改动（建议）
-forever start --watchDirectory controller/ app.js
 
 {% endhighlight %}
 
@@ -97,7 +91,7 @@ forever stop [id]
 // 开发环境下
 forever start -l forever.log -o out.log -e err.log -a app.js
 // 线上环境下
-forever start -l forever.log -o out.log -e err.log --watchDirectory controller/ -a app.js
+forever start -l ~/.forever/forever.log -o ~/.forever/out.log -e ~/.forever/err.log -w -a app.js
 {% endhighlight %}
 
 ### 后记
