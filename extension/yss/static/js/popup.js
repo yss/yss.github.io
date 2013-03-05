@@ -3,7 +3,7 @@ var POP_STATUS = true;
 function showPop(startMsg, endMsg) {
     if (POP_STATUS) {
         POP_STATUS = false;
-        exec(function showMsg(msg) {
+        exec(function showMsg(startMsg, endMsg) {
             var popId = 'ys-pop';
                 pop = document.getElementById(popId);
             if (!pop) {
@@ -15,12 +15,12 @@ function showPop(startMsg, endMsg) {
             pop.innerHTML = startMsg;
             pop.style.opacity = 1;
             setTimeout(function() {
-                endMsg && pop.innerHTML = endMsg;
+                endMsg && (pop.innerHTML = endMsg);
                 pop.style.opacity = 0;
             }, 3000);
         });
     }
-    exec('showMsg("' + ('' + msg) + '");');
+    execFn('showMsg', [startMsg, endMsg]);
     
 }
 /**
@@ -65,25 +65,28 @@ function execFn(fnName, args, assignName) {
             str += stringify(args);
         }
         str += ');';
+        console.log(str);
         exec(str);
     }
 }
 
 function arrayToArgs(arr) {
-    var str = '';
     if ($.isArray(arr)) {
         arr = arr.map(function(item) {
             return stringify(item);
         });
         return arr.join(',');
     }
-    return str;
+    return '';
 }
 
 function stringify(any) {
     if (typeof any === 'function') {
         return any.toString();
     } else {
+        if (typeof any === 'undefined') {
+            return '""';
+        }
         return JSON.stringify(any);
     }
 }
