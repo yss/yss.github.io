@@ -8,13 +8,14 @@
         .refresh-form input { width:190px; }
         .refresh-form button { height:24px; }
     </style>
-    <link rel="stylesheet" href="static/css/bootstrap-responsive.css" type="text/css" />
+    <!--<link rel="stylesheet" href="static/css/bootstrap-responsive.css" type="text/css" />-->
 </head>
 <body>
 <form action="" name="refreshForm" class="refresh-form">
     <p><label>时间：<input type="text" name="time" placeholder="定时刷新的间隔时间，不填默认6秒" /></label></p>
-    <p><label>地址：<input type="text" name="url" placeholder="输入网页地址，不填默认为当前网页地址。" /></label></p>
-    <button type="submit">定时刷新</button>
+    <p><label>网址：<input type="text" name="url" placeholder="输入网页地址，不填默认为当前网页地址。" /></label></p>
+    <button type="submit">点击定时刷新</button>
+    <button type="button" id="stop-refresh">停止刷新</button>
 </form>
 
 <script src="static/js/zepto.js"></script>
