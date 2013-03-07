@@ -9,8 +9,8 @@ summary:
 1. 打开在chrome下打开：<a href="chrome://extensions/">chrome://extensions/</a>（应该需要复制到浏览器的地址栏中）。
 
     其他打开方式：点击右上角的三道杠 =》 工具 =》 扩展程序即可
-2. 点击下载：<a href="yss.crx">yss.crx</a>，然后在下载文件夹找到这个文件，拖到上面打开的页面即可。
-3. 点击确定后，你就可以看到chrome的右上角有个旋风的标志：![feng](yss/static/img/icon-48.png)
+2. 点击下载：<a href="https://github.com/yss/extension/blob/master/yss.crx">yss.crx</a>，然后在下载文件夹找到这个文件，拖到上面打开的页面即可。
+3. 点击确定后，你就可以看到chrome的右上角有个旋风的标志：![feng](icon-48.png)
 4. 点击即可进行操作。
 
 ### 功能说明
@@ -22,6 +22,8 @@ summary:
 #### 其他功能
 
 需求收集中，请反馈给我哈~
+
+邮箱：yss.nelson[at]gmail.com
 
 ### 关于更新
 
