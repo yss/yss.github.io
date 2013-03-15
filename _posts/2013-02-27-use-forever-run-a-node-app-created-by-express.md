@@ -89,15 +89,19 @@ forever stop [id]
 
 {% highlight js %}
 // 开发环境下
-forever start -l forever.log -o out.log -e err.log -a app.js
+NODE_ENV=development forever start -l forever.log -e err.log -a app.js
 // 线上环境下
-forever start -l ~/.forever/forever.log -o ~/.forever/out.log -e ~/.forever/err.log -w -a app.js
+NODE_ENV=production forever start -l ~/.forever/forever.log -e ~/.forever/err.log -w -a app.js
 {% endhighlight %}
+
+上面加上NODE_ENV为了让app.js辨认当前是什么环境用的。不加它可能就不知道哦？
 
 ### 后记
 
 毋庸置疑，拥有了Github就拥有了世界。
 
-{% highlight js %}
+### 参考
 
-{% endhighlight %}
+* <https://github.com/nodejitsu/forever>
+* <http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever>
+* <https://github.com/nodejitsu/forever/issues/116>
