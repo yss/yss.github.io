@@ -102,6 +102,6 @@ NODE_ENV=production forever start -l ~/.forever/forever.log -e ~/.forever/err.lo
 
 ### 参考
 
-* <https://github.com/nodejitsu/forever>
-* <http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever>
-* <https://github.com/nodejitsu/forever/issues/116>
+1. <https://github.com/nodejitsu/forever>
+2. <http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever>
+3. <https://github.com/nodejitsu/forever/issues/116>

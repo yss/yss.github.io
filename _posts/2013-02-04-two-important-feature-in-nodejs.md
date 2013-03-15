@@ -197,5 +197,5 @@ AsyncProxy.prototype.wait = function(evtname, callback) {
 希望这篇文章对你有帮助。
 
 ### 参考
-<http://www.infoq.com/cn/articles/tyq-nodejs-event>
-<https://github.com/DoubleSpout/node.js---AsyncProxy>
+1. <http://www.infoq.com/cn/articles/tyq-nodejs-event>
+2. <https://github.com/DoubleSpout/node.js---AsyncProxy>
