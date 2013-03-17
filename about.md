@@ -15,8 +15,5 @@ title: 关于我
         <h3>欢迎使用Jekyll搭建博客的同学们，来跟我交流。;-)</h3>
         <p><br /></p>
         <h3>之前的博客地址：<a href="http://blog.csdn.net/Do_it__" target="_blank">http://blog.csdn.net/Do_it__</a></h3>
-        <div id="resume" class="hidden">
-            <a href="/resume/index.html">严松的个人简历</a>
-        </div>
     </section>
 </div>
