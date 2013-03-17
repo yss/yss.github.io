@@ -52,7 +52,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #page-nav .next { float:right; }
 #page-nav span.prev,
 #page-nav span.next { color:#CCC; }
-#rain-drops { padding-top:512px; width:1024px; height:0; border-radius:5px; background:url(i/rainDrops.jpg) no-repeat; overflow:hidden; font-size:24px; font-weight:bold; white-space:nowrap; color:#E000E0; }
+#rain-drops { padding-top:512px; width:1024px; height:0; border-radius:5px; background:#c3d4e4 url(i/rainDrops.jpg) no-repeat; overflow:hidden; font-size:24px; font-weight:bold; white-space:nowrap; color:#E000E0; }
 #rain-drops .ignore { position:absolute; z-index:2; margin-top:-444px; width:100%; text-align:center; color:#248; }
 #rain-drops .ignore h2 { font-size:24px; }
 #rain-drops .ignore p { font-size:18px; }
