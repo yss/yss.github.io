@@ -20,6 +20,7 @@ legend { color:#000; }
 strong, em { font-weight:bold; color:#C30; }
 cite { padding:10px; border:1px dashed #008080; color:#008080; }
 a, a:link, a:visited { color:#108080; text-decoration:none; }
+a { -webkit-transition:color .5s ease-in; -moz-transition:color .5s ease-in; transition:color .5s ease-in; }
 a:hover { color:#369; text-decoration:underline; }
 /* common.css */
 .cf:after, #bd:after, #hd:after { content:''; display:block; height:0; clear:both; }
@@ -39,9 +40,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #hd { color:#AAA; text-align:right; text-shadow:0 1px 1px #222; }
 #hd h1 { padding:16px 0; }
 #hd h2 { padding-bottom:12px; line-height:30px; }
-#hd a { color:#FFF; }
+#hd a { color:#FFF; white-space:nowrap; }
 #hd a:hover { color:#94D4D6; text-decoration:none; }
-#nav { position:relative; margin-top:-30px; letter-spacing:2px; font-size:16px; }
+#nav { position:relative; margin-top:-30px; line-height:30px; letter-spacing:2px; font-size:16px; }
 #nav li { float:left; padding-right:20px; list-style-position:inside; font-size:18px; }
 #bd { min-height:512px; background:#FEFEFE; border-radius:8px; }
 #bd h2 { padding-bottom:16px; text-align:center; color:#706409; }
