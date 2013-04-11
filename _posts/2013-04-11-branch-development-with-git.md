@@ -3,8 +3,9 @@ layout: blog
 title: Git中的分支开发模式
 tags: [git]
 categories: [git]
-summary: 在git中使用分支进行开发
+summary: 是时候使用git进行分支开发
 ---
+
 分支的开发模式，在svn上就用得很多。
 
 但git和svn在分支管理上还是有很大区别的。
@@ -15,7 +16,7 @@ summary: 在git中使用分支进行开发
 
 ### 创建远程分支
 
-{% highlight shell %}
+{% highlight sh %}
 git clone yansong@git:touch
 git co -b test # master => test
 
@@ -26,7 +27,7 @@ git push origin test:test
 
 ### 具体实现
 这里我自己用代码展示了：
-{% highlight shell %}
+{% highlight sh %}
 git clone yansong@git:touch # 把源服务器分支下下来
 git co develop # 类似于git co origin/develop 但差别很大
 git co -b myBranch # 切换到新分支

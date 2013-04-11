@@ -5,6 +5,7 @@ tags: [git]
 categories: [git]
 summary: 常用Git，所以你需要更好的去配置你自己的Git，所谓工欲善其事，必先利其器
 ---
+
 常见的配置有两个：
 
 1. 一个是.gitignore文件，用来忽略的不需要加入到git仓库的文件或路径。
@@ -33,7 +34,7 @@ summary: 常用Git，所以你需要更好的去配置你自己的Git，所谓�
 
 这里简单说一下比较常用的配置：
 
-{% highlight shell %}
+{% highlight sh %}
 # 定义用户信息
 [user]
 	email = yss.nelson@gmail.com

@@ -6,6 +6,8 @@ markdown: rdiscount
 pygments: true
 paginate: 12
 
+plugins: ./_plugins
+
 production_url: http://yansong.me
 
 author:
