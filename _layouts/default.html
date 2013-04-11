@@ -4,8 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>{{ page.title }} - 严松的个人博客</title>
     <meta name="viewpoint" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="description" content="严松的个人博客之所看、所想、所感" />
-    <meta name="keywords" content="{{ page.title }}，{{ page.tags | join:"，" }}，yss，web前端，前端，技术，Jekyll，分享，经验，积累，个人博客" />
+    {% if page.summary %}
+        {% assign summary = page.summary %}
+    {% else %}
+        {% assign summary = '严松的个人博客之所看、所想、所感。' %}
+    {% endif %}
+    <meta name="description" content="{{ summary }}" />
+    <meta name="keywords" content="{{ page.title }}，{{ page.tags | join:"，" }}，yss，web前端，前端，技术，Jekyll，分享，经验，积累，个人博客，github" />
     <meta name="author" content="yansong" />
     <meta name="generator" content="Jekyll" />
     <meta name="jekyll" content="I am very sad for paginator only works in index.html file." />

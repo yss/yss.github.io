@@ -27,6 +27,10 @@ summary: 使用LESS是为了更好更方便的进行我们的前端开发
         <param-name>compress</param-name>
         <param-value>false</param-value>
     </init-param>
+    <init-param>
+        <param-name>cache</param-name>
+        <param-value>false</param-value>
+    </init-param>
     <load-on-startup>1</load-on-startup>
 </servlet>
 <servlet-mapping>
@@ -37,6 +41,8 @@ summary: 使用LESS是为了更好更方便的进行我们的前端开发
 如果你要压缩的话，在<param-name>compress</param-name>下的param-value设置为true。
 
 当然，你也可以直接删掉compress。因为不设置compress的值时，默认为true。
+
+另外，开发环境下，一定要记得将cache值设为false。
 
 ### 注意一点：
 url-pattern只支持三种格式：
