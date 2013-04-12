@@ -35,6 +35,8 @@ git co -b myBranch # 切换到新分支
 # coding...
 # complete
 
+# 这里，如果是自己创建的develop(git co -b develop)
+# 则需要在develop分支上运行：git branch --set-upstream develop origin/develop
 git co develop # 切换到主分支
 git pull # 更新主分支
 git merge myBranch --squash # 使用不保留提交信息的方式，合并自己的分支
