@@ -6,14 +6,14 @@ layout: default
     {{content}}
     <div id="page-nav">
     {% if page.next %}
-        <a href="{{ BASE_PATH }}{{ page.next.url}}" title="{{ page.next.title }}" class="next">{{page.next.title}} &rarr;</a>
+        <a href="{{ BASE_PATH }}{{ page.next.url}}" title="{{ page.next.title }}" class="prev">&larr; {{page.next.title}}</a>
     {% else %}
-        <span class="next">等待作者啃笔头吧 |</span>
+        <span class="prev">等待作者啃笔头吧 |</span>
     {% endif %}
     {% if page.previous %}
-        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" class="prev">&larr; {{page.previous.title}}</a>
+        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" class="next">{{page.previous.title}} &rarr;</a>
     {% else %}
-        <span class="prev">| 第一篇了 |</span>
+        <span class="next">| 第一篇了 |</span>
     {% endif %}
     </div>
     <div id="copyright">

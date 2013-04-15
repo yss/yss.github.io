@@ -36,6 +36,8 @@ summary: 常用Git，所以你需要更好的去配置你自己的Git，所谓�
 
 {% highlight sh %}
 # 定义用户信息
+# 对应的命令：
+# git config --global user.email yss.nelson@gmail.com
 [user]
 	email = yss.nelson@gmail.com
 	name = yss
