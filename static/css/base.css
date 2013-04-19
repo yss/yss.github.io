@@ -59,7 +59,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #rain-drops .ignore h2 { font-size:24px; }
 #rain-drops .ignore p { font-size:18px; }
 /* 博客列表 */
-#blog-list #content { float:left; width:700px }
+#blog-list #content { float:left; width:700px; }
 #blog-list .item { margin-bottom:15px; border-bottom:1px solid #ccc; }
 #blog-list .item h3 a { color:#706409; }
 #blog-list .item .desc { padding:10px 0; text-indent:2em; }
@@ -100,13 +100,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #list li { line-height:24px; }
 #list pre { margin-top:15px; }
 
+@media screen and (min-width:800px) and (max-width:1024px) {
+    #doc { width:1024px; }
+}
 @media screen and (max-width: 799px) {
     #hd { padding-right:1em; }
     #hd h1 { padding:0; }
     #hd h2 { padding:0; }
     #nav { margin-top:0; }
     #ft .base { display:block; }
-    #blog-list #content { width:auto; }
+    #blog-list #content { float:none; width:auto; }
     #sidebar { width:auto; border-top:3px solid #706409; }
 }
 
