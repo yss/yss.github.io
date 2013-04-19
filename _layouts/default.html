@@ -26,7 +26,7 @@
 <div id="doc-mask"></div>
 <!--[if lt IE 9]><div id="ie-browser">为了达到最好的预览效果，建议您使用Chrome浏览器。点击下载：<a href="http://www.google.com/chrome" target="_blank">Google Chrome</a></div><![endif]-->
 <div id="doc">
-    <div id="hd">
+    <header id="hd">
     	<h1>
     		<a href="{{ BASE_PATH }}/">YSS</a>
     	</h1>
@@ -41,19 +41,19 @@
                 <!-- <li><a href="{{ BASE_PATH }}/resume">Resume</a> -->
             </ul>
         </nav>
-    </div>
-    <div id="bd">
+    </header>
+    <main id="bd">
         {{content}}
-    </div>
-    <div id="ft">
-        <p>&copy; 2012 - <script>document.write(new Date().getFullYear());</script> Created & Designed by <a href="https://github.com/yss" target="_blank">YSS</a>. Based on <a href="https://github.com/mojombo/jekyll/wiki" target="_blank">Jekyll</a></p>
+    </main>
+    <footer id="ft">
+        <p>&copy; 2012 - <script>document.write(new Date().getFullYear());</script> Created & Designed by <a href="https://github.com/yss" target="_blank">YSS</a>. <span class="base">Based on <a href="https://github.com/mojombo/jekyll/wiki" target="_blank">Jekyll</a>.</span></p>
         <p class="hidden">
             <a href="{{ site.production_url }}" title="严松的个人博客">yss</a>
             <span class="motto">有得必有失，我只是不想得不尝失。</span>
             <span class="desc">幻想多多，思考多多，努力奋进！</span>
             <span>;-)(-;</span>
         </p>
-    </div>
+    </footer>
 </div>
 <script src="http://hm.baidu.com/h.js?d925e33e4b349e3a29ea4b89a0bfe15b" async></script>
 <script>_gaq = [['_setAccount', 'UA-31716874-1'],['_trackPageview']]</script>

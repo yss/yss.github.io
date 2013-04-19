@@ -50,6 +50,22 @@ summary: 常用Git，所以你需要更好的去配置你自己的Git，所谓�
     br = branch
 {% endhighlight %}
 
+### 自动补全
+首先，找到git-completion.bash，一般是在这个位置：`/usr/local/git/contrib/completion/git-completion.bash`。不过最好你还是先`which git`，我自己的git文件安装目录是在：`/usr/local/git/bin/git`。
+
+然后，在你~（$HOME）目录，找到你的.bashrc或者.bash_profile在里面加上一句：`sourch /usr/local/git/contrib/completion/git-completion.bash`。
+
+不过很多时候我们可能会放到全局的profile文件里：`/etc/profile`。这样大家就能用了。
+
+当然，有时会要求方便管理，会把这些自动补全的命令都放在一个固定的目录下，比如：`/etc/bash_completion.d/`，然后在profile里配置：
+{% highlight sh %}
+for i in /etc/bash_completion.d/* ; do
+    if [ -r "$i" ]; then
+        . $i
+    fi
+done
+{% endhighlight %}
+
 ### Continue...
 
 持续补充...
