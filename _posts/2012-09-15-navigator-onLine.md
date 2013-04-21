@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 离线检测之navigator.onLine
-categories: [js]
+categories: [javascript]
 tags: [离线检测, navigator.online]
 summary: 支持离线Web应用开发是HTML5的另一个重点。所谓离线Web应用，就是在设备不能上网的情况下仍然可以运行的运用
 ---

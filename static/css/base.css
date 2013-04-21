@@ -64,16 +64,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #blog-list .item h3 a { color:#706409; }
 #blog-list .item .desc { padding:10px 0; text-indent:2em; }
 #blog-list .item .read { float:right; margin-top:3px; }
-#blog-list .item .time { padding-right:16px; }
+#blog-list .item .time { padding-right:16px; font-family:Georgia; }
 #sidebar { float:right; margin-right:-10px; padding:20px 0;  width:240px; }
 #sidebar h3 { padding:10px 0; }
 #sidebar .num { color:green; }
 #blog-list .item .tag,
-#sidebar .tags a { display:inline-block; *zoom:1; padding:0 5px; margin:0 5px 5px 0; line-height:30px; white-space:nowrap; background:#EEE; border-radius:15px; }
+#sidebar .tags a { display:inline-block; *zoom:1; padding:0 5px; margin:0 5px 5px 0; line-height:30px; white-space:nowrap; background:#EEE; border-radius:15px; font-family:Georgia, Tahoma; }
 #sidebar .tags .tag-small { font-size:16px; font-weight:bold; color:green; }
 #sidebar .tags .tag-big { font-size:24px; font-weight:bold; color:orange; }
 #sidebar .tags .tag-bob { font-size:32px font-weight:bold; color:#CA0101; }
-#sidebar .tags .sup { padding-left:2px; vertical-align:text-bottom; text-decoration:none; }
+#sidebar .tags sub { padding-left:2px; vertical-align:text-bottom; text-decoration:none; }
 /* 博客页面 */
 #blog h3 { padding:12px 0; }
 #sidebar h3:before,

@@ -2,7 +2,7 @@
 layout: blog
 title: 理解history.pushState&history.replaceState
 tags: [history, 分享, 理解]
-categories: [js]
+categories: [javascript]
 summary: history.pushState和history.replaceState的存在解决了什么问题呢
 ---
 ### 一、说明
