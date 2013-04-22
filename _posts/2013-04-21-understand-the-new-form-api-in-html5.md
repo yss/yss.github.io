@@ -112,15 +112,12 @@ HTML5发展越来越壮大，加之现在很多公司越来越重视移动端，
 
 通过invalid事件我们可以在html标签上写对应的处理。经典的例子是：
 
-**pattern和oninvalid的结合：**
+**required，pattern和oninvalid的结合：**
 
 {% highlight html %}
-<input type="text" name="code" pattern="\d{4}" oninvalid="setCustomValidity('请输入正确的4位数验证码')" />
+<input type="text" name="code" required pattern="\d{4}" oninvalid="setCustomValidity('请输入正确的4位数验证码')" />
 {% endhighlight %}
-
-**required和invalide的结合：**
-
-她俩结合好像很不爽的样子。我在chrome下尝试的结果是，如果我第一次不输入任何东西点提交后，下次我不管是输入还是没有输入值，它都一直提示我。 :-(
+她们的结合好像很不爽的样子。我在chrome下尝试的结果是，如果我第一次不输入任何东西或者输入错误点提交后，下次我不管是输入还是没有输入值，它都一直提示我。 :-(
 
 ### 表单伪类样式
 类型 | 含义
@@ -139,3 +136,9 @@ optional | 没有标记required的表单元素
     border:1px solid red;
 }
 {% endhighlight %}
+
+### 后记
+以上所谈及的很多新属性和新方法在移动端也是用不了的。
+移动端手机对HTML5 Form API的支持还有待继续增强。
+
+所以，现在请慎用，虽然我们相信未来是光明的。
