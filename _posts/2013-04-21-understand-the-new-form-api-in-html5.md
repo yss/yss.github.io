@@ -77,9 +77,9 @@ HTML5发展越来越壮大，加之现在很多公司越来越重视移动端，
 这里不需要填值，也可以写上required。
 
 #### pattern
-这个就是正则表达式，用来检测输入的值是否和当前的正则匹配，如果不匹配就不让提交，并提示错误。
+这个就是正则表达式，用来检测输入的值是否和当前的正则匹配，如果不匹配就不让提交，并提示错误。跟js中的正则保持一致。
 
-对应的值为正则表达式，如：/^\d+$/
+对应的值为正则表达式，如：\d+
 
 #### title
 这个是用来在出错的时候，展示提示信息的。但实际情况中，是追加到浏览器默认提示的后面。比如：`<input type="text" name="w" required title="单词不能为空" >`
@@ -115,7 +115,7 @@ HTML5发展越来越壮大，加之现在很多公司越来越重视移动端，
 **pattern和oninvalid的结合：**
 
 {% highlight html %}
-<input type="text" name="code" pattern="/^\d{4}$/" oninvalid="setCustomValidity('请输入正确的4位数验证码')" />
+<input type="text" name="code" pattern="\d{4}" oninvalid="setCustomValidity('请输入正确的4位数验证码')" />
 {% endhighlight %}
 
 **required和invalide的结合：**
