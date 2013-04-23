@@ -54,10 +54,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #page-nav .next { float:right; }
 #page-nav span.prev,
 #page-nav span.next { color:#CCC; }
-#rain-drops { padding-top:512px; height:0; border-radius:5px; background:#c3d4e4 url(i/rainDrops.jpg) no-repeat center center; overflow:hidden; font-size:24px; font-weight:bold; white-space:nowrap; color:#E000E0; }
-#rain-drops .ignore { position:absolute; z-index:2; margin-top:-444px; width:100%; text-align:center; color:#248; }
-#rain-drops .ignore h2 { font-size:24px; }
-#rain-drops .ignore p { font-size:18px; }
+.a-letter { padding-top:512px; height:0; border-radius:5px; background:#c3d4e4 url(i/rainDrops.jpg) no-repeat center center; overflow:hidden; font-size:24px; font-weight:bold; white-space:nowrap; color:#E000E0; background-size:100% 100%; }
+.a-letter .ignore { position:absolute; z-index:2; margin-top:-444px; width:100%; text-align:center; color:#248; }
+.a-letter .ignore h2 { font-size:24px; }
+.a-letter .ignore p { font-size:18px; }
+.a-desire { padding-top:673px; background-color:#101010; background-image:url(i/desire.jpg); }
+.a-desire .ignore { margin-top:-600px; }
+#bd .a-desire h2 { color:rgb(73, 64, 0); }
 /* 博客列表 */
 #blog-list #content { float:left; width:700px; }
 #blog-list .item { margin-bottom:15px; border-bottom:1px solid #ccc; }
