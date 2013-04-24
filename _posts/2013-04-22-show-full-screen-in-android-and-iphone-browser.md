@@ -1,8 +1,8 @@
 ---
 layout: blog
 title: android和iphone下的全屏实现
-tags: [全屏，android, iphone]
-categories: [browser]
+tags: [全屏, fullscreen, android, iphone]
+categories: [javascript]
 summary: 总所周知，手机浏览器屏幕很小，如果能争取全屏显示那无疑是最好的
 ---
 正常情况下，当你用手机浏览器打开网页时，导航就停留在上面，这样实际展示的屏幕就变小了。
@@ -59,7 +59,3 @@ window.addEventListener('DOMContentLoaded', function() {
 ### 参考
 1. [Configuring Web Applications](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 2. [Hide the address bar in a fullscreen iPhone or Android web app](https://gist.github.com/1172490)
-
-
-{% highlight html %}
-{% endhighlight %}

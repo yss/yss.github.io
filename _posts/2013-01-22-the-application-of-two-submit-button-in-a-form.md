@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 实例解析form中两个submit的应用
-tags: [form]
+tags: [form, two submit, 提交]
 categories: [html] 
 summary: form中使用两个submit？很迷惑吧，那就进来看一下吧
 ---

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Nodejs中两个非常重要并且实用的功能
-tags: [nodejs, 功能]
+tags: [nodejs, 异步, 功能]
 categories: [nodejs]
 summary: Nodejs最重要的一点是什么？异步！说来说去都逃不了这一点。所以
 ---

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 配置你用的Git
-tags: [git]
+tags: [git, 配置]
 categories: [git]
 summary: 常用Git，所以你需要更好的去配置你自己的Git，所谓工欲善其事，必先利其器
 ---

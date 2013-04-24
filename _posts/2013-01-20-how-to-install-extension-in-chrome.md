@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: chrome下安装外部扩展程序
-tags: [chrome, 扩展]
+tags: [chrome, 安装, 扩展]
 categories: [chrome]
 summary: chrome下安装外部扩展程序方法方式
 ---

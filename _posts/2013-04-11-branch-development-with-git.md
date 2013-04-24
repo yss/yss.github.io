@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Git中的分支开发模式
-tags: [git]
+tags: [git, 分支开发]
 categories: [git]
 summary: 是时候使用git进行分支开发
 ---

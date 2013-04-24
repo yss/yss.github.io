@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: HTML5中的Forms API
-tags: [html, html5]
+tags: [html, html5, forms api]
 categories: [html]
 summary: 越来越多的浏览器已经支持HTML5表单中的新API和元素了，特别是在移动端开发
 ---
