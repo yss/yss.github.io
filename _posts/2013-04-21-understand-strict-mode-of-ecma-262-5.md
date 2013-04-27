@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 理解ECMA-262-5中的严格模式
-tags: [ecma, ecma5, 严格模式, 理解]
+tags: [ecma, ecma5, strict mode, 严格模式, 理解]
 categories: [javascript]
 summary: ECMA 5中的严格模式到底是怎么回事呢
 ---
