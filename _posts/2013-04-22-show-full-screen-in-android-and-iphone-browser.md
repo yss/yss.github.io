@@ -36,6 +36,11 @@ summary: 总所周知，手机浏览器屏幕很小，如果能争取全屏显�
 {% endhighlight %}
 还想了解具体的设置可以参考苹果的官网说明：[Configuring Web Applications](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 
+当然，对启动图，我推荐的做法是只使用一张114*114的图片即可。即：
+{% highlight html %}
+<link rel="apple-touch-icon-precomposed" href="startup/apple-touch-icon-114x114-precomposed.png" />
+{% endhighlight %}
+
 ### 全屏
 {% highlight js %}
 window.addEventListener('DOMContentLoaded', function() {
