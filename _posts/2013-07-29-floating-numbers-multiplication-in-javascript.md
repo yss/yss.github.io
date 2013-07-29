@@ -22,16 +22,8 @@ function FxF(f1, f2) {
     if (f2Len) {
         f2 = f2.replace('.', '');
     }
-    return f1 * f2 / factorial(10, f1Len + f2Len);
+    return f1 * f2 / Math.pow(10, f1Len + f2Len);
 };
-
-// 阶乘
-function factorial(num, count) {
-    if (count < 2) {
-        return num;
-    }
-    return num * this.factorial(num, --count);
-}
 {% endhighlight js %}
 
 ### 基本思想
