@@ -13,8 +13,8 @@ summary: 使用LESS是为了更好更方便的进行我们的前端开发
 {% highlight xml %}
 <dependency>
     <groupId>com.asual.lesscss</groupId>
-    <artifactId>lesscss-engine</artifactId>
-    <version>1.3.0</version>
+    <artifactId>lesscss-servlet</artifactId>
+    <version>1.3.3</version>
 </dependency>
 {% endhighlight %}
 
@@ -43,6 +43,8 @@ summary: 使用LESS是为了更好更方便的进行我们的前端开发
 当然，你也可以直接删掉compress。因为不设置compress的值时，默认为true。
 
 另外，开发环境下，一定要记得将cache值设为false。
+
+#### 最后，重启你的idea吧。
 
 ### 注意一点：
 url-pattern只支持三种格式：
