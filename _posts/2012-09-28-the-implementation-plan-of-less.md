@@ -52,7 +52,7 @@ fes csstoless test.css # 在对应的test.css目录下生成test.less
 fes csstoless test.css > base.less # 在对应的test.css目录下生成base.less
 {% endhighlight %}
 #### 问题
-* 多个注释会合并到顶级节点的位置，如：
+* 多个注释会合并到顶级节点的位置，如： 
 {% highlight css %}
 /* comment 1 */
 #nav { ... }

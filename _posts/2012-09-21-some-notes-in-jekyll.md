@@ -6,6 +6,9 @@ categories: [jekyll]
 summary: 总结自己在使用jekyll所碰到那的些个问题，并且分享给大家，希望对大家有帮助。
 ---
 ### jekyll --no-auto
+**新的jekyll变成了使用jekyll serve去启动你的程序*
+**jekyll build去编译你的blog*
+**如果jekyll build出错的话，加一个-t参数，追踪错误的堆栈信息*
 运行：jekyll --no-auo相当于build整个目录，通过运行这个命令可以知道你博客是不是有错误发生。
 
 正常情况下，我们使用jekyll --auto --server只是简单的运行本机服务器，然后--auto是检测当前目录下是否有文件变动，如果有就重新生成对应变动的文件。有问题的话，你也不会导致你不能访问你的网站。因为网站指向的是_site目录，错误的请求下，你依旧访问的是之前生成的文件。
