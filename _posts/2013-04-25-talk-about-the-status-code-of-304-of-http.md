@@ -12,7 +12,7 @@ summary: 我们都知道HTTP的304状态码代表的是Not Modified，但是它�
 
 这里需要谈谈HTTP中的几个HEADER。
 
-### Cache-Control
+### 第一个：Cache-Control
 顾名思义就是缓存控制。有四个对应的值，分别为：
 
 1. public 指代的是响应数据可以被任何客户端缓存。
