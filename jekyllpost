@@ -29,8 +29,8 @@ var tplData = [
     '---',
     'layout: blog',
     'title: ',
-    'tags: ',
-    'categories: ',
+    'tags: []',
+    'categories: []',
     'summary: ',
     '---'
 ].join('\n');
