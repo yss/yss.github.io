@@ -1,9 +1,9 @@
 ---
 layout: blog
 title: 关于前端代码发布对应的依赖关系说明
-tags: [依赖关系，前端发布]
+tags: [依赖关系, 前端发布]
 categories: [前端发布]
-summary:
+summary: 前端发布说明
 ---
 ### 一些说明
 目前项目中static.ftl使用的对应关系是：一个静态文件名对应一个key值，且key值为排除后缀后的文件名。例如：“key”: pathofkey/key.js
