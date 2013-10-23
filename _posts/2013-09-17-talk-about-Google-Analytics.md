@@ -3,7 +3,7 @@ layout: blog
 title: 谈谈Google Analytics
 tags: [Google Analytics]
 categories: [GA]
-summary: 
+summary: Google Analytics是一个很有意思的分享工具，强大，好用！
 ---
 ### 简介
 目前Google Analytics有两种类型的统计代码：analytics.js 和 ga.js

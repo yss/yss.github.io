@@ -40,18 +40,18 @@ require 'rexml/document'
 module Jekyll
 
   # Change MY_URL to reflect the site you are using
-  MY_URL = "http://yansong.me"
+  MY_URL = "http://www.mysite.com"
 
   # Change SITEMAP_FILE_NAME if you would like your sitemap file
   # to be called something else
   SITEMAP_FILE_NAME = "sitemap.xml"
 
   # Any files to exclude from being included in the sitemap.xml
-  EXCLUDED_FILES = ["atom.xml", "problem-list.html"]
+  EXCLUDED_FILES = ["atom.xml"]
 
   # Any files that include posts, so that when a new post is added, the last
   # modified date of these pages should take that into account
-  PAGES_INCLUDE_POSTS = ["index.html", "resume/"]
+  PAGES_INCLUDE_POSTS = ["index.html"]
 
   # Custom variable names for changefreq and priority elements
   # These names are used within the YAML Front Matter of pages or posts
@@ -145,7 +145,7 @@ module Jekyll
     def fill_posts(site, urlset)
       last_modified_date = nil
       site.posts.each do |post|
-        if !excluded?(post.name)
+        if !excluded?(site, post.name)
           url = fill_url(site, post)
           urlset.add_element(url)
         end
@@ -164,7 +164,7 @@ module Jekyll
     # Returns last_modified_date of index page
     def fill_pages(site, urlset)
       site.pages.each do |page|
-        if !excluded?(page.name)
+        if !excluded?(site, page.name)
           path = page.full_path_to_source
           if File.exists?(path)
             url = fill_url(site, page)
@@ -241,7 +241,7 @@ module Jekyll
         lastmod.text = latest_date.iso8601
       else
         # This is a page
-        if posts_included?(page_or_post.name)
+        if posts_included?(site, page_or_post.name)
           # We want to take into account the last post date
           final_date = greater_date(latest_date, @last_modified_post_date)
           lastmod.text = final_date.iso8601
@@ -285,12 +285,16 @@ module Jekyll
     # Is the page or post listed as something we want to exclude?
     #
     # Returns boolean
-    def excluded?(name)
-      EXCLUDED_FILES.include? name
+    def excluded?(site, name)
+      excluded = site.config['sitemap']['exclude'] if site.config['sitemap']
+      excluded ||= EXCLUDED_FILES
+      excluded.include? name
     end
 
-    def posts_included?(name)
-      PAGES_INCLUDE_POSTS.include? name
+    def posts_included?(site, name)
+      include_posts = site.config['sitemap']['include_posts'] if site.config['sitemap']
+      include_posts ||= PAGES_INCLUDE_POSTS
+      include_posts.include? name
     end
 
     # Is the change frequency value provided valid according to the spec

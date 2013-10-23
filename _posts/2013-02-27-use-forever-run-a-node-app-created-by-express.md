@@ -81,6 +81,10 @@ forever stop [id]
 
 #### 重启操作
 重启操作跟停止操作保持一致。
+{% highlight js %}
+// 1. 启动所有
+forever restartall
+{% endhighlight %}
 
 #### 更多一些
 上面的一些解释足够平常使用，还有待之后继续补充。
@@ -95,6 +99,15 @@ NODE_ENV=production forever start -l ~/.forever/forever.log -e ~/.forever/err.lo
 {% endhighlight %}
 
 上面加上NODE_ENV为了让app.js辨认当前是什么环境用的。不加它可能就不知道哦？
+
+### 一些注意点
+有可能你需要使用unix下的crontab（定时任务）
+
+这个时候需要注意配置好环境变量。
+{% highlight bash %}
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+{% endhighlight %}
 
 ### 后记
 
