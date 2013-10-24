@@ -64,6 +64,40 @@ _gaq.push(['_setDomainName', 'meituan.com']);
 _gaq.push(['_trackPageview']);
 {% endhighlight %}
 
+### GA Event监听
+GA Event一般用来统计点击量，是一个非常实用的方案。
+也是最最常用的布点方式。
+
+Google Analytics还专门有一个事件流呢？！
+
+{% highlight js %}
+// 可能的HTML代码片段：
+// <a href="xxx" gaevent="ft/logo"><span>logo</span></a>
+var GA = {
+    // 初始化跟踪GA统计事件
+    trackGAEvent: function () {
+        // 这块最最好使用框架内部定义的事件代理
+        $(body).on('click', '[gaevent]', function() {
+            GA.sendGA.apply(null, this.getAttribute('gaevent').split('|'));
+        });
+    },
+
+    // 供Js调用的发送GA统计事件方法
+    sendGA:function() {
+        var arrTrack = ['_trackEvent'],
+            attrs = [].slice.call(arguments);
+
+        if (attrs.length === 1) {
+            // InnerLink & Click 是默认的事件类别和操作
+            arrTrack.push('InnerLink', 'Click', attrs[0]);
+        } else {
+            arrTrack = arrTrack.concat(attrs);
+        }
+        _gaq.push(arrTrack);
+    }
+};
+{% endhighlight %}
+
 ### 加载位置
 以前我们可能对应GA初始化的地方或者说何时去加载，会有很多疑惑。
 
