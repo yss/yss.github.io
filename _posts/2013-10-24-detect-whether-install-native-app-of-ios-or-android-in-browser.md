@@ -23,7 +23,8 @@ summary: 我们希望更多的用户用我们的产品，更希望能留住更�
 
 当然，更具体的描述，请参看苹果的开发者平台文档：[Promoting Apps with Smart App Banners](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html)
 
-那IOS6以下呢？
+**那IOS6以下呢？**
+
 我的回答是：直接展示一个下载banner吧。
 
 #### Android
