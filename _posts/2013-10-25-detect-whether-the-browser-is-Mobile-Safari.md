@@ -11,8 +11,10 @@ summary: 本文要阐述的是如何在iPhone下如何检查当前浏览器是�
 为什么要这样做能？因为有个meta表情属性只能在Mobile Safari下使用，具体可以看我的这篇文章：[Android和IOS上检测是否安装客户端](http://yansong.me/2013/10/24/detect-whether-install-native-app-of-ios-or-android-in-browser.html)
 
 先看看可能的User-Agent。
+
 ### User-Agent列表
 先列举一下iPhone(IOS版本v7.0.3)下所有我发现的浏览器的User-Agent:
+
 #### Mobile Safari
 
 {% highlight html %}
@@ -21,6 +23,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KH
 
 #### 跟原生极其相似的
 这叫我如何区分你们？
+
 ##### Home screen app (通过Mobile Safari的添加到主屏幕功能)
 
 {% highlight html %}
@@ -30,6 +33,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KH
 当然，全屏模式下，我们可以通过`window.navigator.standalone`这个属性去判断
 
 另外这种情况下，其实也可以认为它是末尾一派，因为后面跟Mobile Safari是不一样的。
+
 ##### 海豚浏览器
 
 {% highlight html %}
@@ -44,6 +48,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KH
 
 #### 这是自成一派的
 很容易就区别出来。
+
 ##### UC
 
 {% highlight html %}
@@ -58,6 +63,7 @@ MQQBrowser/44 Mozilla/5.0 (iPhone 5; CPU iPhone OS 7_0_3 like Mac OS X) AppleWeb
 
 #### 末尾一派
 把自己的身份放到最后。
+
 ##### Chrome
 
 {% highlight html %}
@@ -67,6 +73,7 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_3 like Mac OS X) AppleWebKit/537.51.1 (KH
 题外话：Chrome的做法其实就是Google Analytics提倡的。Google Analytics会认为这种User-Agent是Safari(in-app)
 
 不过Chrome最好还是要通过CriOS这个标识去判断。
+
 ##### 浏览器
 
 {% highlight html %}
