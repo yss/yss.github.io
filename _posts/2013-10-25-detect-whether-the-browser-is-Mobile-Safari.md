@@ -113,6 +113,7 @@ function isMobileSafari() {
         if (!~ua.indexOf('CriOS')) {
             // 开头必须为Mozilla
             if (!ua.indexOf('Mozilla')) {
+                // 结尾需为：Safari/xxx.xx
                 if (/Safari\/[\d\.]+$/.test(ua)) {
                     return true;
                 }
