@@ -45,3 +45,125 @@ summary: 这个时候我们就需要尝试性的去打开客户端，如果打�
  但发现不管客户端有没有安装都是error。即调用onerror方法。
 2. 另一个是创建iframe标签，基本思路和上面一致。      
  但发现不管安没安装客户端，都不会触发onload和onerror事件。
+
+### 给出一个实现
+
+{% highlight js %}
+var Banner = {
+    link: 'meituanmovie://www.meituan.com/filmlist',
+    COOKIE_NAME: 'cld',
+    COOKIE_EXPIRED: 24 * 60 * 60 * 1000,
+    NOT_INSTALLED: 1,
+    INSTALLED: 2,
+    UNUSED: 3,
+    show: function() {
+        if (!Banner.status) {
+            setTimeout(Banner.show, 500);
+        } else {
+            Banner._show();
+        }
+    },
+    isSafari: function() {
+        var ua = navigator.userAgent;
+        // IOS系统
+        if (~ua.indexOf('OS ')) {
+            // 不是Chrome
+            if (!~ua.indexOf('CriOS')) {
+                // 开头必须为Mozilla
+                if (!ua.indexOf('Mozilla')) {
+                    if (/Safari\/[\d\.]+$/.test(ua)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    },
+    _show: function() {
+        var status = this.status,
+            $bd = $('#bd'),
+            link = $bd.data('link'),
+            src,
+            html;
+        if (status === this.UNUSED) {
+            return this.show = function(){};
+        } else if (status === this.INSTALLED) {
+            src = $bd.data('opensrc');
+            html = '<a href="' + this.link + '">';
+        } else {
+            src = $bd.data('dlsrc');
+            html = '<a href="' + this.link + '" data-link="' + link + '">';
+        }                                                                                                           
+        if (!this.$banner) {
+            if (!src || !link) {
+                return;
+            }
+            this.$banner = $('<div id="client-banner"/>');
+            html += '<span class="close"></span>';
+            html += '<img src="' + src + '" width="320" height="65" />';
+            html += '</a>';
+            this.$banner.html(html)
+                .insertBefore('#hd').find('.close').click(function() {
+                    Banner.$banner.remove();
+                    Banner.$banner = null;
+                    $.Cookie.set(Banner.COOKIE_NAME, Banner.COOKIE_EXPIRED);
+                    return false;
+                });
+            this.$banner.find('a').click(function() {
+                    var link = this.getAttribute('data-link');
+                    if (!link) {
+                        return;
+                    }
+                    setTimeout(function() {
+                        location.href = link;
+                    }, 600);
+                });
+        }
+        this.show = function(){
+            this.$banner.show();
+        };
+    },
+    // 隐藏banner
+    hide: function() {
+        if (this.$banner) {
+            this.$banner.hide();
+        }
+    },
+    // 检测是否安装客户端
+    _detect: function() {
+        var script = document.createElement('script');
+
+        script.src = 'http://127.0.0.1:9517/sendintent?packagename=com.sankuai.movie&query=true';
+        // 基本思路就是状态是否是200
+        script.onload = function() {
+            Banner.status = Banner.INSTALLED;
+        };
+        script.onerror = function() {
+            Banner.status = Banner.NOT_INSTALLED;
+        };
+        document.body.appendChild(script);
+    },
+    init: function() {
+        if ($.Cookie.get(this.COOKIE_NAME)) {
+            this.status = this.UNUSED;
+            return;
+        }
+        var os = $.os;
+
+        if (os.ios) {
+            if (os.version >= '6' && this.isSafari()) {
+                this.status = this.UNUSED;
+            } else {
+                this.status = this.NOT_INSTALLED;
+            }
+        } else {
+            if (os.android) {
+                this._detect();
+            } else {
+                this.status = this.NOT_INSTALLED;
+            }
+        }
+    }
+};
+Banner.init();
+{% endhighlight %}
