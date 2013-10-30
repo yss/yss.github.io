@@ -24,19 +24,23 @@ summary: 这个时候我们就需要尝试性的去打开客户端，如果打�
 {% highlight js %}
 (function() {
     var appUrl = 'app_url_scheme://app_index_url',
-        downloadUrl = 'http://_go_to_download_';
+        downloadUrl = 'http://_go_to_download_',
+        startTime = Date.now(),
+        iframe = document.getElementById('someIframe');
 
-    window.location.href = appUrl;
+    iframe.src = appUrl;
 
     setTimeout(function() {
-        window.location.href = downloadUrl;
-    }, 500);
+        if (Date.now() - startTime < 500) {
+            window.location.href = downloadUrl;
+        }
+    }, 400);
 })();
 {% endhighlight %}
 
-但是在尝试的过程中，我发现一个问题就是我去到了客户端，然后我又回到浏览器时，setTimeout里的内容依旧被执行（就是自动下载了）。
+这其中有一个非常巧妙的地方就是，通过判断触发的时间与执行settimeout的时间差值是否小于设置的定时时间加上一个浮动值（一般设为100）。
 
-这种状况非常不好，希望有更好的方式去做这个事情。
+所以，就有了上面的例子。`Date.now() - startTime < 500`
 
 ### 其他说明
 除了上面例子，我还做了其他两个方案。
@@ -89,10 +93,10 @@ var Banner = {
             return this.show = function(){};
         } else if (status === this.INSTALLED) {
             src = $bd.data('opensrc');
-            html = '<a href="' + this.link + '">';
+            html = '<a href="' + this.link + '" target="BannerFrame">';
         } else {
             src = $bd.data('dlsrc');
-            html = '<a href="' + this.link + '" data-link="' + link + '">';
+            html = '<a href="' + this.link + '" data-link="' + link + '" target="BannerFrame">';
         }                                                                                                           
         if (!this.$banner) {
             if (!src || !link) {
@@ -102,6 +106,7 @@ var Banner = {
             html += '<span class="close"></span>';
             html += '<img src="' + src + '" width="320" height="65" />';
             html += '</a>';
+            html += '<iframe name="BannerFrame" style="display:none;"></iframe>';
             this.$banner.html(html)
                 .insertBefore('#hd').find('.close').click(function() {
                     Banner.$banner.remove();
@@ -110,13 +115,16 @@ var Banner = {
                     return false;
                 });
             this.$banner.find('a').click(function() {
-                    var link = this.getAttribute('data-link');
+                    var link = this.getAttribute('data-link'),
+                        startTime = Date.now();
                     if (!link) {
                         return;
                     }
                     setTimeout(function() {
-                        location.href = link;
-                    }, 600);
+                        if (Date.now() - startTime < 500) {
+                            location.href = link;
+                        }
+                    }, 400);
                 });
         }
         this.show = function(){
