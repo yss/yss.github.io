@@ -1,25 +1,9 @@
 ---
 layout: default
 ---
-<section id="blog" class="pg-content">
-    <h2>{{ page.title }}</h2>
-    {{content}}
-    <div id="page-nav">
-    {% if page.next %}
-        <a href="{{ BASE_PATH }}{{ page.next.url}}" title="{{ page.next.title }}" class="prev">&larr; {{page.next.title}}</a>
-    {% else %}
-        <span class="prev">等待作者啃笔头吧 |</span>
-    {% endif %}
-    {% if page.previous %}
-        <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}" class="next">{{page.previous.title}} &rarr;</a>
-    {% else %}
-        <span class="next">| 第一篇了 |</span>
-    {% endif %}
-    </div>
-    <div id="copyright">
-        <p>原文网址：<a href="{{ site.production_url }}{{ page.url }}">{{ site.production_url }}{{ page.url }}</a></p>
-        <p>转载请注明。谢谢~</p>
-    </div>
+<script src="/static/js/jquery.min.js"></script>
+<section class="pg-content">
+    {{ content }}
     <div id="comment-box" class="cf">
         <a href="#uyan_frame" class="uyan" title="能不分享内容到微博吗？谁有更好的推荐给我哈~">没有DISQUS？使用有言评论</a>
         <!--<a href="#disqus_thread" class="disqus" title="try again~">使用DISQUS评论</a>-->
