@@ -14,13 +14,13 @@
     <meta name="author" content="yansong" />
     <meta name="generator" content="Jekyll" />
     <meta name="jekyll" content="I am very sad for paginator only works in index.html file." />
-    <meta name="lastUpdatedTime" content="{{ 'now' | date: "%Y-%m-%d %H:%M:%S" }}" />
+    <meta name="lastUpdatedTime" content="{{ site.time | date_to_xmlschema }}" />
     <meta name="source" content="{{ site.source }}" />
     <meta name="learning" content="english, english document, english blog, all the english" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="/static/css/base.css?t={{ 'now' | date:"%Y%m%d%H%M%S" }}" />
+    <link rel="stylesheet" href="/static/css/base.css?t={{ site.time | date:"%Y%m%d%H%M%S" }}" />
 </head>
 <body>
 <div id="doc-mask"></div>
