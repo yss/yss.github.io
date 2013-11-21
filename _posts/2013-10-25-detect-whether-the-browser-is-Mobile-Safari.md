@@ -108,7 +108,7 @@ function isMobileSafari() {
     var ua = navigator.userAgent;
 
     // IOS系统
-    if (~ua.indexOf('OS ')) {
+    if (/ OS \d/.test(ua)) {
         // 不是Chrome
         if (!~ua.indexOf('CriOS')) {
             // 开头必须为Mozilla
