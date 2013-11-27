@@ -20,6 +20,7 @@ window.history.go(-1);
 window.history.forward();
 window.history.go(1);
 {% endhighlight %}
+
 #### 参数说明
 history.pushState和history.replaceState使用的是相同的参数。
 
@@ -62,9 +63,11 @@ window.addEventListener('popstate', function(e) {
 当应用场景需要额外的js处理情况，还有其他很多。
 
 ### 六、浏览器兼容情况
+
 Chrome | FireFox | Internet Explorer | Opera | Safari
 ----|-----|----|------|-----
 5 | 4.0 | 10 | 11.5 | 5.0
+
 ### 七、参考
 [http://www.welefen.com/use-ajax-and-pushstate.html](使用ajax和history.pushState无刷新改变页面URL)
 

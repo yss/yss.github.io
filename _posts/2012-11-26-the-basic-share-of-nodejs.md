@@ -16,12 +16,14 @@ summary: nodejs本身是javascript语言，可以理解为是在以服务器为�
 > Node.js is a platform built on Chrome&apos;s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 
 其他看法？
+
 #### nodejs可以做写什么
 
 1. 编写服务器端的脚本
 2. 作为web服务器
 
 ### 那些个全局变量
+
 #### global
 {% highlight js %}
 // global xxx = 1; global是一个表意符。
@@ -29,6 +31,7 @@ xxx = 1;
 {% endhighlight %}
 需要说明的是在全局的作用域下，使用var xxx = 1;也不是全局变量。
 更确切来说就是nodejs里没有一个真正意义上的最顶级变量。
+
 #### process
 进程的对象，存放着当前的运行环境参数。
 其中需要说明的是三个。
@@ -79,6 +82,7 @@ var a = require('/a');
 ...
 {% endhighlight %}
 虽然看起来非常灵活以及方便，但是使用的时候尽量去使用完整路径方式，尽量少的去使用这种写法，因为不利用维护和查阅。
+
 ##### require加载规则之文件名
 {% highlight js %}
 var a = require('a');
@@ -126,6 +130,7 @@ node app.js
 相当于一个对象，用于最后返回给require它的module。
 
 #### exports === module.exports
+
 #### setTimeout & clearTimeout
 
 一次性的定时操作

@@ -10,6 +10,7 @@ summary: 任何东西的出现都有着它的原因
 使用data uri的方式可以减少一次http的请求，但带来的是文件变大。
 
 ### 详解
+
 #### 格式
 Data URI的格式：`data:[<MIME-type>][;charset=<encoding>][;base64],<data>`
 

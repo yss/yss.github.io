@@ -51,6 +51,7 @@ summary: 常用Git，所以你需要更好的去配置你自己的Git，所谓�
 {% endhighlight %}
 
 ### 自动补全
+
 #### 单独配置
 首先，找到git-completion.bash，一般是在这个位置：`/usr/local/git/contrib/completion/git-completion.bash`。不过最好你还是先`which git`，我自己的git文件安装目录是在：`/usr/local/git/bin/git`。
 
@@ -66,6 +67,21 @@ for i in /etc/bash_completion.d/* ; do
         . $i
     fi
 done
+{% endhighlight %}
+
+### 显示git分支名
+比如，我自己的`.bashrc`里的配置：
+{% highlight bash %}
+# 用于获取git分支名
+function parse_git_branch () {
+    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+GREEN="\[\033[0;32m\]"
+YELLOW="\[\033[0;33m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+NO_COLOR="\[\033[0m\]"
+# 配置你的目录显示
+PS1="$GREEN\w$NO_COLOR$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 {% endhighlight %}
 
 ### Continue...

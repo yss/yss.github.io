@@ -26,8 +26,10 @@ less就是可编程化的CSS。简单给个例子：
 }
 {% endhighlight %}
 详细请参考：[http://www.lesscss.net/](http://www.lesscss.net/)
+
 ### 基于nodejs的csstoless
 最开始打算使用github上一个用rb写的css2less。但是输出的结果完全乱套了，所以还是决定自己重写。
+
 #### 基本思路
 css文件 --解析成--> JSON对象 --生成--> less文件
 JSON对象大概是这样子的：
@@ -46,11 +48,13 @@ JSON对象大概是这样子的：
     }
 }
 {% endhighlight %}
+
 #### 使用
 {% highlight sh %}
 fes csstoless test.css # 在对应的test.css目录下生成test.less
 fes csstoless test.css > base.less # 在对应的test.css目录下生成base.less
 {% endhighlight %}
+
 #### 问题
 * 多个注释会合并到顶级节点的位置，如： 
 {% highlight css %}
@@ -72,6 +76,7 @@ fes csstoless test.css > base.less # 在对应的test.css目录下生成base.les
 这样做的目的就是为了避免生成空表达式的css。会在之后的less注意事项里详细讲解。
 
 * 或许还有更多，等待发现。
+
 ### less的书写规范
 依照之前的CSS规范来说，就应该是这样：
 {% highlight css %}
@@ -85,9 +90,12 @@ fes csstoless test.css > base.less # 在对应的test.css目录下生成base.les
 }
 {% endhighlight %}
 意见？？？ => 采用LESS官方写法，也就是上面的那种写法。
+
 ### less的注意事项
 直接转到：[用LESS需要注意的几点]({{ BASE_PATH }}/2012/09/19/some-notes-in-less.html)
+
 ### 开发环境中针对LESS解析成CSS的方案
+
 #### 方案一：更改对应的virtualHost配置*（临时方案）*
 找到对应的配置文件，在下面加上下面这句话：
 {% highlight html %}
@@ -127,6 +135,7 @@ autocmd BufWritePost,FileWritePost *.less !lessc % <afile>:r.css
     当然这块也想过不去解析LESS文件，但是毕竟你要用CDN嘛。；）
 
 ### 商家后台推行LESS方案
+
 #### 拆分
 商家后台目前只引用一个base.css文件，现在分别拆分成4个文件：
 {% highlight html %}

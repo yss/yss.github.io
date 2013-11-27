@@ -53,6 +53,7 @@ js
 {% endhighlight %}
 
 当然，需要说明的是：加入文件目录是"/js/account/other/a.js" 对应的key值也未："account-a"。
+
 ### 最后
 最后说明的是，上面的对应实现都通过grunt任务机制实现了。
 

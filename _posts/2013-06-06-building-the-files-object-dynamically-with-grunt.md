@@ -65,5 +65,6 @@ grunt.initConfig({
 });
 {% endhighlight %}
 上面的例子就是把static目录下所有的less编译成对应的css文件。
+
 ### 最后
 如果您有任何疑问，可以留言跟我交流。
