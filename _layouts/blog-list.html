@@ -28,7 +28,7 @@ yansong["邮箱"] =
             <h3>博客分类</h3>
             <ul>
                 {% for category in site.categories %}
-                <li><a href="{{ BASE_PATH }}/categories.html#{{ category[0] }}">{{ category[0] }}(<span class="num">{{ category[1] | size }}</span>)</a></a>
+                <li><a href="{{ site.baseurl }}/categories.html#{{ category[0] }}">{{ category[0] }}(<span class="num">{{ category[1] | size }}</span>)</a></a>
                 {% endfor %}
             </ul>
         </section>
@@ -48,7 +48,7 @@ yansong["邮箱"] =
                     {% else %}
                         {% assign tagClass = 'tag-bob' %}
                     {% endcase %}
-                        <a href="{{ BASE_PATH }}/tags.html#{{ tag[0] }}" class="{{ tagClass }}">{{ tag[0] }}<sub>{{ tag[1] | size }}</sub></a>
+                        <a href="{{ site.baseurl }}/tags.html#{{ tag[0] }}" class="{{ tagClass }}">{{ tag[0] }}<sub>{{ tag[1] | size }}</sub></a>
                 {% endfor %}
             </div>
         </section>

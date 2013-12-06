@@ -92,7 +92,7 @@ fes csstoless test.css > base.less # 在对应的test.css目录下生成base.les
 意见？？？ => 采用LESS官方写法，也就是上面的那种写法。
 
 ### less的注意事项
-直接转到：[用LESS需要注意的几点]({{ BASE_PATH }}/2012/09/19/some-notes-in-less.html)
+直接转到：[用LESS需要注意的几点]({{ site.baseurl }}/2012/09/19/some-notes-in-less.html)
 
 ### 开发环境中针对LESS解析成CSS的方案
 
