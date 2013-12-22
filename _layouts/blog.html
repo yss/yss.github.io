@@ -6,18 +6,18 @@ layout: default
     {{content}}
     <div id="page-nav">
     {% if page.next %}
-        <a href="{{ BASE_URL }}{{ page.next.url}}" title="{{ page.next.title }}" class="prev">&larr; {{page.next.title}}</a>
+        <a href="{{ page.next.url}}" title="{{ page.next.title }}" class="prev">&larr; {{page.next.title}}</a>
     {% else %}
         <span class="prev">等待作者啃笔头吧 |</span>
     {% endif %}
     {% if page.previous %}
-        <a href="{{ BASE_URL }}{{ page.previous.url }}" title="{{ page.previous.title }}" class="next">{{page.previous.title}} &rarr;</a>
+        <a href="{{ page.previous.url }}" title="{{ page.previous.title }}" class="next">{{page.previous.title}} &rarr;</a>
     {% else %}
         <span class="next">| 第一篇了 |</span>
     {% endif %}
     </div>
     <div id="copyright">
-        <p>原文网址：<a href="{{ site.production_url }}{{ page.url }}">{{ site.production_url }}{{ page.url }}</a></p>
+        <p>原文网址：<a href="{{ page.url }}">{{ page.url }}</a></p>
         <p>转载请注明。谢谢~</p>
     </div>
     <div id="comment-box" class="cf">
