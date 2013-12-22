@@ -4,20 +4,20 @@ title : 博客列表
 ---
 {% for post in paginator.posts %}
     <div class="item">
-        <h3><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
         <p class="desc">{{ post.summary }}...</p>
-        <p class="other"><a href="{{ site.baseurl }}{{ post.url }}" class="read">全文阅读 &raquo;</a><span class="time">发布时间：{{ post.date | date: "%Y-%m-%d" }}</span><span class="tags">标签：
+        <p class="other"><a href="{{ post.url }}" class="read">全文阅读 &raquo;</a><span class="time">发布时间：{{ post.date | date: "%Y-%m-%d" }}</span><span class="tags">标签：
         {% for tag in post.tags %}
-            <a href="{{ site.baseurl }}/tags.html#{{ tag }}" class="tag">{{ tag }}</a>
+            <a href="/tags.html#{{ tag }}" class="tag">{{ tag }}</a>
         {% endfor %}</span></p>
     </div>
 {% endfor %}
     <div id="page-nav">
         {% if paginator.previous_page %}
             {% if paginator.previous_page == 1 %}
-                <a href="{{ site.baseurl }}/" class="prev">&#8672; 第一步</a>
+                <a href="/" class="prev">&#8672; 第一步</a>
             {% else %}
-                <a href="{{ site.baseurl }}/page{{paginator.previous_page}}" class="prev">&#8672; 向前一步</a>
+                <a href="/page{{paginator.previous_page}}" class="prev">&#8672; 向前一步</a>
             {% endif %}
         {% else %}
             <span class="prev">起始 &#9786;</span>
@@ -25,9 +25,9 @@ title : 博客列表
         <span class="curr">{{ paginator.page }}</span>
         {% if paginator.next_page %}
             {% if paginator.next_page == paginator.total_page %}
-                <a href="{{ site.baseurl }}/page{{paginator.next_page}}" class="next">最后一步 &#8674</a>
+                <a href="/page{{paginator.next_page}}" class="next">最后一步 &#8674</a>
             {% else %}
-                <a href="{{ site.baseurl }}/page{{paginator.next_page}}" class="next">向后一步 &#8674</a>
+                <a href="/page{{paginator.next_page}}" class="next">向后一步 &#8674</a>
             {% endif %}
         {% else %}
             <span class="next">&#9792; 完结</span>

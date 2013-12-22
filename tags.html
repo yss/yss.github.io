@@ -8,7 +8,7 @@ title: 标签分类
     <h3 id="{{ tags[0] }}">{{ tags[0] }}</h3>
     <ul>
         {% for tag in tags[1] %}
-        <li><a href="{{site.baseurl}}{{tag.url}}" title="{{tag.title}}">{{tag.title}}</a></li>
+        <li><a href="{{tag.url}}" title="{{tag.title}}">{{tag.title}}</a></li>
         {% endfor %}
     </ul>
     {% endfor %}

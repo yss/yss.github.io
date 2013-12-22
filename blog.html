@@ -4,9 +4,9 @@ title : 博客列表
 ---
 {% for post in site.posts %}
     <div class="item">
-        <h3><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
         <p class="desc">{{ post.summary }}...</p>
-        <p class="other"><a href="{{ site.baseurl }}{{ post.url }}" class="read">全文阅读 &raquo;</a><span class="time">发布时间：{{ post.date | date: "%Y-%m-%d" }}</span><span class="tags">标签：{% for tag in post.tags %}<a href="{{ site.baseurl }}/tags.html#{{ tag }}" class="tag">{{ tag }}</a>{% endfor %}</span></p>
+        <p class="other"><a href="{{ post.url }}" class="read">全文阅读 &raquo;</a><span class="time">发布时间：{{ post.date | date: "%Y-%m-%d" }}</span><span class="tags">标签：{% for tag in post.tags %}<a href="/tags.html#{{ tag }}" class="tag">{{ tag }}</a>{% endfor %}</span></p>
     </div>
 {% endfor %}
 <!--
