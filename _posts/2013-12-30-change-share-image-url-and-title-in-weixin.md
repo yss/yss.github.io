@@ -28,7 +28,7 @@ summary: 从客户端分享到微信后，进入到页面再次分享时，图�
 
 {% highlight js %}
 var config = {
-    appid: 'APP_ID', // 分享给朋友时可以用到
+    appid: 'APP_ID', // 公共账号ID？
     img_url: 'http://IMG_URL',
     img_width: 'IMG_WIDTH',
     img_height: 'IMG_HEIGHT',
@@ -64,5 +64,48 @@ document.addEventListener('WeixinJSBridgeReady', function() {
 
 这样一来就达到了自定义分享了。
 
+### 其他接口
+
+#### 隐藏微信中网页右上角按钮
+
+某些时候，在有需要时（如不需要用户分享某个页面），可在网页中通过JavaScript代码隐藏网页右上角按钮。
+
+{% highlight js %}
+document.addEventListener('WeixinJSBridgeReady', function() {
+    // 隐藏按钮，对应的展示参数是：showOptionMenu
+    WeixinJSBridge.call('hideOptionMenu');
+});
+{% endhighlight %}
+
+#### 隐藏微信中网页底部导航栏
+
+某些时候，在有需要时（如认为用户在该页面不会用到浏览器前进后退功能），可在网页中通过JavaScript代码隐藏网页底部导航栏。
+
+{% highlight js %}
+document.addEventListener('WeixinJSBridgeReady', function() {
+    // 隐藏导航栏，对应的展示参数是：showToolbar
+    WeixinJSBridge.call('hideToolbar');
+});
+{% endhighlight %}
+
+#### 网页获取用户网络状态
+
+这个接口可以让我们在网页中使用JavaScript代码调用来获取网络状态，可以方便我们根据用户的网络状态来提供不同质量的服务。
+
+{% highlight js %}
+document.addEventListener('WeixinJSBridgeReady', function() {
+    var connection = WeixinJSBridge.invoke('getNetworkType',{}, function(e){
+        WeixinJSBridge.log(e.err_msg);
+    });
+});
+// connection.network_type:wifi wifi网络
+// connection.network_type:edge 非wifi,包含3G/2G
+// connection.network_type:fail 网络断开连接
+// connection.network_type:wwan（2g或者3g）
+
+{% endhighlight %}
+
 ### 参考
-<http://mp.weixin.qq.com/qa/index.php?qa=3163&qa_1=%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE-%E9%93%BE%E6%8E%A5-%E6%A0%87%E9%A2%98%E5%92%8C%E6%91%98%E8%A6%81>
+
+1. <http://mp.weixin.qq.com/qa/index.php?qa=3163&qa_1=%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE-%E9%93%BE%E6%8E%A5-%E6%A0%87%E9%A2%98%E5%92%8C%E6%91%98%E8%A6%81>
+2. <http://mp.weixin.qq.com/wiki/index.php>
