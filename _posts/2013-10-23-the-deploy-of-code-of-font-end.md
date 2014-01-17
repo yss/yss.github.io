@@ -3,6 +3,7 @@ layout: blog
 title: 前端代码发布详解
 tags: [发布, 详解, 前端发布]
 categories: [前端发布]
+published: false
 summary: 前端代码发布已从shell方式转向了node+grunt。这是一小步，却也是一个大步。让我们纵情向前吧~
 ---
 关于代码发布的事情，一直是我们前端自己在做。

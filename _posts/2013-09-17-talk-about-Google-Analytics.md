@@ -25,6 +25,9 @@ Cookie名|过期时间|描述
 _ga|2 years|用于区分用户
 
 #### ga.js中的cookie
+
+Cookie名|过期时间|描述
+:-------|:-------|:-----
 __utma|2 years|用于区分用户和会话（对应GA中的唯一身份）
 __utmb|30mins|用于检测是否新的会话（对应GA中的访问次数）
 __utmc|end of browser session|- Not used in ga.js
@@ -34,6 +37,7 @@ __utmv|2 years|存储自定义变量的数据。（对应GA中的自定义变量
 *由于目前的业务统计需要，我们都将使用并可能长期使用ga.js。*
 
 ### ga.js配置
+
 {% highlight js %}
 var _gaq = _gaq || [];
 // 设置账号，其中UA-43949337后的-1需要根据不同项目设置不一样的值
@@ -57,7 +61,7 @@ _gaq.push(['_addOrganic', 'youdao', 'q']);
  
 // 如果我们有多个子域的话，建议加上这句。
 // 在现在的情况下是必须加这句的
-_gaq.push(['_setDomainName', 'meituan.com']);
+_gaq.push(['_setDomainName', 'domain.com']);
  
 // 发送浏览量，当然还有很多其他的东西。
 // 在有些场景下，需要更换现在的URI，那只要这样：_gaq.push(['_trackPageview', '/xxx/xx']);

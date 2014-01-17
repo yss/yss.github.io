@@ -59,3 +59,6 @@ tags: [API, 规范]
 ### Ajax的URL规范
 
 Ajax的URL地址必须以**“.json”**结尾。除非特殊情况，比如：列表页要兼容SEO
+
+### Controller中传的参数
+ccontrller中传给模板的数据名字首字母必须大写。
