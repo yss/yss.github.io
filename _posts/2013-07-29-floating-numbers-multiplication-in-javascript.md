@@ -1,8 +1,8 @@
 ---
 layout: blog
 title: Javascript中的浮点数相乘
-tags: [js, 浮点数, 相乘]
-categories: [js]
+tags: [javascript, 浮点数, 相乘]
+categories: [javascript]
 summary: 当实际问题摆在面前的时候才知道要去重视这个问题
 ---
 Javascript中的浮点数相乘是个很有意思的事情。
@@ -27,4 +27,5 @@ function FxF(f1, f2) {
 {% endhighlight js %}
 
 ### 基本思想
+
 基本的思想就是把浮点数全部变成整数，然后除以等值的10的N阶次方。N为（两个浮点数的后面长度之和）。

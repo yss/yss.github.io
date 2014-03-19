@@ -2,7 +2,7 @@
 layout: blog
 title: 简单的object to string方法
 tags: [objecttostring]
-categories: [js]
+categories: [javascript]
 summary: 除了JSON.stringify，我们也可以自己简单的写一个
 ---
 

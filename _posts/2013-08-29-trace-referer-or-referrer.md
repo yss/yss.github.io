@@ -1,8 +1,8 @@
 ---
 layout: blog
 title: 追踪Referer
-tags: [http, referer, 追踪, referrer, js]
-categories: [http, js]
+tags: [http, referer, 追踪, referrer, javascript]
+categories: [http, javascript]
 summary: 在跳转的情况下或者说中转页面的情况下，在跳到下个目标页面时不丢失referer，就是本文要探讨的。。。
 ---
 ### 背景
