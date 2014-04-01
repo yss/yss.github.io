@@ -3,7 +3,7 @@ layout: blog
 title: 使用Application Cache
 tags: [Application Cache]
 categories: [js]
-summary: 新的缓存机制带来了全新的开始。
+summary: 新的缓存机制带来了全新的开始
 ---
 
 什么是Application Cache？
@@ -48,7 +48,7 @@ http:://xxx/x http://xxx/xx
 
 ### 两个问题
 
-看似华丽的外表却又隐藏一个又一个的坑。
+看似华丽的外表却又隐藏着一个又一个的坑。
 
 1. 加入manifest属性的页面，默认也加入到缓存中，如果缓存文件没有更新，页面也不会更新。
 2. manifest文件更新不会立即生效，需要下次载入页面后生效。
