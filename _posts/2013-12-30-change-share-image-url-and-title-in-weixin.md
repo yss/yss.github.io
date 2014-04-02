@@ -31,8 +31,8 @@ var config = {
     // 如果是正常的网页分享，则不要添加。否则会出现未审核应用
     appid: 'APP_ID', // 公共账号ID？
     img_url: 'http://IMG_URL',
-    img_width: 'IMG_WIDTH',
-    img_height: 'IMG_HEIGHT',
+    img_width: 'IMG_WIDTH', // 可不设
+    img_height: 'IMG_HEIGHT', // 可不设
     link: location.href,
     desc: 'DESCRIPTION',
     title: 'TITLE'
