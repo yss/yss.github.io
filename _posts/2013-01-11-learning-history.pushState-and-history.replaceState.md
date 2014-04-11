@@ -69,6 +69,7 @@ Chrome | FireFox | Internet Explorer | Opera | Safari
 5 | 4.0 | 10 | 11.5 | 5.0
 
 ### 七、参考
-[http://www.welefen.com/use-ajax-and-pushstate.html](使用ajax和history.pushState无刷新改变页面URL)
 
-[https://developer.mozilla.org/en-US/docs/DOM/window.history](window.history)
+[使用ajax和history.pushState无刷新改变页面URL](http://www.welefen.com/use-ajax-and-pushstate.html)
+
+[window.history](https://developer.mozilla.org/en-US/docs/DOM/window.history)

@@ -146,7 +146,7 @@ exports.putSetapp = function(req, res, next, page, second) {
 
 {% endhighlight %}
 
-看到上面你会发现，其他还有一个[VERB]的处理。
+看到上面你会发现，其实还有一个[VERB]的处理。
 
 ### VERB处理
 

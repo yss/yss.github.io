@@ -30,7 +30,8 @@ layout: default
 <script src="http://yansong.disqus.com/embed.js" async></script>
 <script>
     // if (~window.location.host.indexOf('yansong.me')) {
-        var commentBox = document.getElementById('comment-box');
+        var $ = document.getElementById,
+            commentBox = $('comment-box');
         commentBox.onclick = function (e) {
             e = e || window.event;
             var target = e.target || e.srcElement,
@@ -38,9 +39,11 @@ layout: default
             if (target.className === 'uyan') {
                 target.style.display = 'none';
                 url = 'http://v1.uyan.cc/js/iframe.js?UYUserId=1681855';
+                $('disqus_thread').style.display = 'none';
             } else if (target.className === 'disqus') {
                 target.style.display = 'none';
                 url = 'http://yansong.disqus.com/embed.js';
+                $('uyan_frame').style.display = 'none';
             }
             if (url) {
                 var script = document.createElement('script');
