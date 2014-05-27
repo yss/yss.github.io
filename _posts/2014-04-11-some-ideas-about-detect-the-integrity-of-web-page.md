@@ -50,3 +50,5 @@ summary: 保证上线不出bug是不可能的，但是我们可以第一时间�
 ### 最后
 
 try it.
+
+<https://github.com/yss/webDetect>

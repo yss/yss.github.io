@@ -6,6 +6,7 @@ auto: true
 markdown: kramdown
 pygments: true
 paginate: 12
+baseurl: http://yansong.me
 
 production_url: http://yansong.me
 excerpt_separator: ""
