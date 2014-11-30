@@ -21,11 +21,11 @@ summary: confluence是我见到过的最好用的企业内部wiki系统。
 ### 安装步骤：
 
 1. 下载Confluence，官网地址是：https://www.atlassian.com/software/confluence/download. 但是，我建议是在国内找一个可供下载的地址（比如百度云盘），因为下载很慢。
-2. 准备好两个东西：一个是mysql-datadriver（数据库驱动），比如：mysql-connector-java-5.1.26-bin.jar，二是破解文件：atlassian-extras-2.4.jar
-额外的：中文语言包。中文语言包是要付费才能使用，但其实如果你知道语言包的地址的话，很容易就download下来啦。
-这里我给出这个中文语言包地址：https://translations.atlassian.com/download/Confluence/5.4.4/zh_CN/Confluence-5.4.4-language-pack-zh_CN.jar
-看到这里，其实任何一个版本的语言包都是可以正常下载的，不信你试试？
-3. 创建confluence数据库和对应用户：     
+2. 准备好两个东西：一个是mysql-datadriver（数据库驱动），比如：mysql-connector-java-5.1.26-bin.jar，二是破解文件：atlassian-extras-2.4.jar    
+    额外的：中文语言包。中文语言包是要付费才能使用，但其实如果你知道语言包的地址的话，很容易就download下来啦。    
+    这里我给出这个中文语言包地址：<https://translations.atlassian.com/download/Confluence/5.4.4/zh_CN/Confluence-5.4.4-language-pack-zh_CN.jar>    
+    看到这里，其实任何一个版本的语言包都是可以正常下载的，不信你试试？
+3. 创建confluence数据库和对应用户：    
     {% highlight sh %}
     # 创建confluence数据库，且需要保证内容也为utf8（默认是latin）
     create database confluence character set utf8 COLLATE utf8_bin;
@@ -35,7 +35,7 @@ summary: confluence是我见到过的最好用的企业内部wiki系统。
 4. 安装confluence: chmod +x ./atlassian-confluence-5.4.4-x64.bin && ./atlassian-confluence-5.4.4-x64.bin    
     默认安装在：/opt/atlassian/confluence下。
 5. 把mysql-connector-java-5.1.26-bin.jar和atlassian-extras-2.4.jar，Confluence-5.4.4-language-pack-zh_CN.jar（如果有的话）放到：/opt/atlassian/confluence/confluence/WEB-INF/lib/目录下
-6. 更改confluence下的：conf/server.xml  
+6. 更改confluence下的：conf/server.xml    
     {% highlight xml %}
     <!--<Context path="" docBase="../confluence" debug="0" reloadable="false" useHttpOnly="true">--> 
     # 把上面这句话注释掉，然后变成下面的这个样子：
