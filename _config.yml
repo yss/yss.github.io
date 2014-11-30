@@ -4,7 +4,8 @@ permalink: /:year/:month/:day/:title.html
 auto: true
 # markdown: rdiscount
 markdown: kramdown
-pygments: true
+#pygments: true
+highlighter: pygments
 paginate: 12
 baseurl: http://yansong.me
 url: http://yansong.me
