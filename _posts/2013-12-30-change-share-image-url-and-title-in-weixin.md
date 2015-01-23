@@ -54,10 +54,17 @@ document.addEventListener('WeixinJSBridgeReady', function() {
         });
     });
 
+    // 发送到QQ
+    WJ.on('menu:share:qq', function() {
+        WJ.invoke('shareQQ', config, function(res) {
+            // _report('shareQQ', res.err_msg);
+        });
+    });
+
     // 发送到微博
-    WJ.on('menu:share:weibo', function() {
-        WJ.invoke('shareWeibo', config, function(res) {
-            // _report('shareWeibo', res.err_msg);
+    WJ.on('menu:share:weiboApp', function() {
+        WJ.invoke('shareWeiboApp', config, function(res) {
+            // _report('shareWeiboApp', res.err_msg);
         });
     });
 });
@@ -108,5 +115,4 @@ document.addEventListener('WeixinJSBridgeReady', function() {
 
 ### 参考
 
-1. <http://mp.weixin.qq.com/qa/index.php?qa=3163&qa_1=%E5%BE%AE%E4%BF%A1%E5%88%86%E4%BA%AB%E7%BD%91%E9%A1%B5%E7%9A%84%E7%BC%A9%E7%95%A5%E5%9B%BE-%E9%93%BE%E6%8E%A5-%E6%A0%87%E9%A2%98%E5%92%8C%E6%91%98%E8%A6%81>
-2. <http://mp.weixin.qq.com/wiki/index.php>
+1. <http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html>
