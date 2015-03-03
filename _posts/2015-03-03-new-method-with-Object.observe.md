@@ -17,11 +17,11 @@ summary: 每一个新方式的出现都是有其固在原因，那我们看看Ob
 
 ### 使用
 
-```js
+{% highlight js %}
 Object.observe(obj, function(changes) {
     console.log(changes);
 });
-```
+{% endhighlight %}
 #### 回调函数参数说明
 
 上面那段代码可以看出，回调函数只有一个参数，就是changes。
@@ -44,7 +44,7 @@ changes是一个Object。包含4个属性，分别是：
 
 给几个例子，说明一下：
 
-```js
+{% highlight js %}
 var obj = {a:1};
 Object.observer(obj, callback);
 
@@ -56,16 +56,16 @@ obj.c = [1,2,3];
 // 承接上文，以下内容都是不会触发回调的
 obj.b.c = 1;
 obj.c.push(4);
-```
+{% endhighlight %}
 
 ### 解除监听
 
-```js
+{% highlight js %}
 Object.unobserver(obj, callback);
 // 注意：
 // callback为必填项，不等同于之前我们所接触到的不填callback就是解除当前对象的全部监听
 
-```
+{% endhighlight %}
 
 ### 同族兄弟
 
