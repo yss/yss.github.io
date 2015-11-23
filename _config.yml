@@ -7,10 +7,10 @@ markdown: kramdown
 #pygments: true
 highlighter: pygments
 paginate: 12
-#baseurl: http://yansong.me
-url: http://yansong.me
+baseurl: http://yssbox.com
+url: http://yssbox.com
 
-#production_url: http://yansong.me
+production_url: http://yssbox.com
 excerpt_separator: ""
 
 author:
@@ -19,4 +19,4 @@ author:
     github : https://github.com/yss
     weibo: http://weibo.com/yssnelson
 
-#domain: yansong.me
+domain: yssbox.com
