@@ -1,7 +1,7 @@
 /* yansong.css */
 /* 10->2 100->4 1000->8 ... */
 /* reset.css */
-html { color:#000; background:#DCE0E4 url(i/bg-body.png); }
+html { height:100%; color:#000; background:#DCE0E4 url(i/bg-body.png); }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td { margin:0; padding:0; }
 table { border-collapse:collapse; border-spacing:0; }
 td, th { padding:5px 10px; border:1px solid #888; background:#ddd; }
@@ -28,8 +28,8 @@ a:hover { color:#369; text-decoration:underline; }
 .hidden { display:none; }
 .tri { position:absolute; width:0; height:0; line-height:0; font-size:0; border:5px dashed transparent; }
 p code { padding:0 8px; border:1px solid #ccc; border-radius:5px; box-shadow:1px 1px 2px rgba(0,0,0, .6) white-space:nowrap; background-color:#f0f0f0; color:gray; }
-body { font:16px/1.5625 "Helvetica Neue",Helvetica,Arial,'Microsoft Yahei',sans-serif; }
-#doc-mask { position:absolute; left:0; top:0; width:100%; height:320px; background:#000; filter:Alpha(opacity=94); opacity:.94;
+body { height:100%; font:16px/1.5625 "Helvetica Neue",Helvetica,Arial,'Microsoft Yahei',sans-serif; }
+#doc-mask { position:fixed; left:0; top:0; width:100%; height:50%; background:#000; filter:Alpha(opacity=94); opacity:.94;
 background-image:-webkit-linear-gradient(top, #000, #444);
 background-image:-moz-linear-gradient(top, #000, #444);
 background-image:linear-gradient(top, #000, #444);
