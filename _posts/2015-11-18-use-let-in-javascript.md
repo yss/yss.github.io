@@ -3,7 +3,7 @@ layout: blog
 title: 在js中使用let
 tags: [let]
 categories: [js]
-summary: 让我们一起来了解一下js中let的用法吧
+summary: 让我们一起来了解一下ES6中let的用法吧
 ---
 
 ### 前言
@@ -55,11 +55,20 @@ let foo = 1;
 let foo = 2; // TypeError thrown;
 {% endhighlight %}
 
-2. `let`定义的变量只在执行到它之后才生效。例子：
+2. 区块内，`let`定义的变量，不能在`let`之前被使用。例子：
 
 {% highlight js %}
 console.log(foo); // Error 'foo' is undefined
 let foo = 1;
+
+// Or
+
+var tmp = 1;
+
+if (true) {
+    tmp = 2; // ReferenceError
+    let tmp;
+}
 {% endhighlight %}
 
 3. `let`如果定义在条件表达式中，外层依旧不能读取。例子：
