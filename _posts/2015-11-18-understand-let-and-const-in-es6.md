@@ -1,9 +1,9 @@
 ---
 layout: blog
-title: 在js中使用let
-tags: [let]
+title: ES6中新的变量声明：let和const
+tags: [let, const]
 categories: [js]
-summary: 让我们一起来了解一下ES6中let的用法吧
+summary: 让我们一起来了解一下ES6中let和const的用法吧
 ---
 
 ### 前言
@@ -82,8 +82,22 @@ for (let a = i; a < 5; a++) {
 console.log(a); // 'a' is not defined
 {% endhighlight %}
 
+### 关于const
+
+之所以在最后介绍const，是因为const和let本质上是一直的，根本性的差别在于，const是常量也就是不可用被改变的，而且需要立刻被赋值。
+
+也就是说只能这么使用：`const a = 10;`
+
+当然，如果作用的是一个对象，那么存储的就是它的引用值，比如：Array, Object, Function。
+
+如果真想冻结的话，应该使用`Object.freeze({})`。
+
 ### 最后
 
 如果不是需要额外存储，还是慎用`let`。
 
+如果真是赋予常亮，则请使用：`const`。
+
 关于`let`支持情况可以看这里：<http://caniuse.com/#search=let>
+
+关于`let`支持情况可以看这里：<http://caniuse.com/#search=const>
