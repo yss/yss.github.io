@@ -26,7 +26,7 @@ linux安装比较简单，就是把.tar.gz的包下载下来，然后通过 tar 
 
 具体参考：https://github.com/creationix/nvm
 
-{% highlight shell %}
+{% highlight sh %}
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
 nvm install 0.12
 # 这一步很重要，不然每次新开tab都将不能直接使用node
