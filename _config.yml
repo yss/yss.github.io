@@ -1,22 +1,40 @@
+title: the blog for yss
+emall: yss.nelson@gmail.com
+description: focus on technology by a front-end development
+
+baseurl: ""
+url: "http://blog.yssbox.com"
+github_username: yss
+
+markdown: kramdown
+
+production_url: http://blog.yssbox.com
+
+gems: 
+    - jekyll-paginate
+    - jekyll-sitemap
+paginate: 12
+paginate_path: "/page:num"
+
 permalink: /:year/:month/:day/:title.html
 
 # 当修改文件时重新生成站点
-auto: true
-# markdown: rdiscount
-markdown: kramdown
-#pygments: true
-highlighter: pygments
-paginate: 12
-baseurl: http://blog.yssbox.com
-url: http://blog.yssbox.com
-
-production_url: http://blog.yssbox.com
-excerpt_separator: ""
-
-author:
-    name : yss
-    email : yss.nelson@gmail.com
-    github : https://github.com/yss
-    weibo: http://weibo.com/yssnelson
-
-domain: blog.yssbox.com
+#auto: true
+## markdown: rdiscount
+#markdown: kramdown
+##pygments: true
+#highlighter: pygments
+#paginate: 12
+#baseurl: http://blog.yssbox.com
+#url: http://blog.yssbox.com
+#
+#production_url: http://blog.yssbox.com
+#excerpt_separator: ""
+#
+#author:
+#    name : yss
+#    email : yss.nelson@gmail.com
+#    github : https://github.com/yss
+#    weibo: http://weibo.com/yssnelson
+#
+#domain: blog.yssbox.com
