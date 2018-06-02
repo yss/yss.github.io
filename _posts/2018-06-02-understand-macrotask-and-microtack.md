@@ -3,7 +3,7 @@ layout: blog
 title: 理解macrotask和microtask
 tags: []
 categories: [js]
-summary: 
+summary: 通过这篇文章你可以清晰的理解macrotask和microtask的区别
 
 ---
 
