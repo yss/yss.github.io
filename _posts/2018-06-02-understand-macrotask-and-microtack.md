@@ -19,8 +19,9 @@ summary: 通过这篇文章你可以清晰的理解macrotask和microtask的区�
 
 macrotask和microtask是在event loops下定义的。从上面定义可以得知：
 
-1. 每一个event loop有一个或多个task queue。一个task queue是一个有序的task列表。
-2. 每个event loop都有一个microtask queue。一个microtask是直接放到microtask queue里的，而不是放到task queue里。
+1. 每个浏览器环境，至多有一个event loop。
+2. 每一个event loop有一个或多个task queue。一个task queue是一个有序的task列表。
+3. 每个event loop都有一个microtask queue。一个microtask是直接放到microtask queue里的，而不是放到task queue里。
 
 也就是说一个event loop = task queues + microtask queue。
 
