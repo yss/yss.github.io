@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>空调遥控</title>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <form name="airForm">
+                <div class="checkbox">
+                    <label>
+                        <input name="cold" type="checkbox"> 选中为制冷模式
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="Interval">定时时间：</label>
+                    <input type="number" class="form-control" id="Interval" name="interval" placeholder="设定定时时间，默认30分钟">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">确定设置</button>
+                    <button type="button" class="btn btn-danger" id="J_Close">关闭空调</button>
+                </div>
+            </form>
+            <div id="J_Tips"></div>
+        </div>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./sw.js?v=5').then(()=>setOk('ok'), ()=>setError(arguments));
+            }
+            (function (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    sendMessage({
+                        interval: form.interval.value || 30,
+                        isCold: form.cold.checked
+                    }).then(setOk, setError);
+                }, false);
+            })(document.forms.airForm);
+
+            document.getElementById('J_Close').addEventListener('click', function (e) {
+                e.preventDefault();
+                sendMessage({
+                    type: 'close'
+                }).then(setOk, setError);
+            }, false);
+
+            function sendMessage (msg) {
+                return new Promise(function (resolve, reject) {
+                    const messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = function (event) {
+                        if (event.data.error) {
+                            reject(event.data.error);
+                        } else {
+                            resolve(event.data);
+                        }
+                    }
+                    navigator.serviceWorker.controller.postMessage(msg, [messageChannel.port2]);
+                });
+            }
+            const $tips = document.getElementById('J_Tips');
+            function setOk(msg) {
+                $tips.innerHTML = '<div class="alert alert-info">' + (typeof msg === 'string' ? msg : JSON.stringify(msg)) + '</div>';
+            }
+            function setError(msg) {
+                $tips.innerHTML = '<div class="alert alert-danger">' + (typeof msg === 'string' ? msg : JSON.stringify(msg)) + '</div>';
+            }
+        </script>
+    </body>
+</html>
