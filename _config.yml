@@ -7,6 +7,9 @@ url: "http://blog.yssbox.com"
 github_username: yss
 
 markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
 
 production_url: http://blog.yssbox.com
 
@@ -23,7 +26,7 @@ permalink: /:year/:month/:day/:title.html
 ## markdown: rdiscount
 #markdown: kramdown
 ##pygments: true
-highlighter: rouge
+#highlighter: pygments
 #paginate: 12
 #baseurl: http://blog.yssbox.com
 #url: http://blog.yssbox.com
