@@ -11,7 +11,7 @@ summary: 不懂Babel的编译原理，但我们需要知道怎么去用Babel
 
 套用官网的一句话：
 
-	Babel is a JavaScript compiler. Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in old browsers or environments.
+> Babel is a JavaScript compiler. Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in old browsers or environments.
 
 就是说，Babel是一个JavaScript编译器，是一个能把ES6及以上的代码编译成ES5代码的工具链。
 
