@@ -227,7 +227,7 @@ if (!window.Promise) {
 
 另一种是，通过User-Agent判断，一般情况下只要判断User-Agent有没有Chrome/并且不是iOS即可：
 
-```pug
+```html
 // xx.pug
 - const userAgent = (Context.get('User-Agent') || '');
 unless userAgent.includes('Chrome/') && !userAgent.includes('iOS')
