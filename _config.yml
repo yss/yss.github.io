@@ -23,7 +23,7 @@ permalink: /:year/:month/:day/:title.html
 ## markdown: rdiscount
 #markdown: kramdown
 ##pygments: true
-#highlighter: pygments
+highlighter: pygments
 #paginate: 12
 #baseurl: http://blog.yssbox.com
 #url: http://blog.yssbox.com

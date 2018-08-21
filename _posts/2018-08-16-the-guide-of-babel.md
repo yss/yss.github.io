@@ -148,8 +148,8 @@ Promise.resolve().then(()=> {
 1. 在代码第一行或打包配置里引入`babel-polyfill`。
 2. 配置.babelrc或package.json
 
-```plain
-//.babelrc
+.babelrc:
+```json
 {
   "presets": [
     "env",
@@ -160,6 +160,7 @@ Promise.resolve().then(()=> {
   ]
 }
 ```
+package.json:
 ```json
 {
   "babel": {
