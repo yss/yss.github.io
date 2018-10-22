@@ -123,13 +123,19 @@ Promise.resolve().then(()=> {
 
 通过模块引入的方式来替代之前的直接行内输出的帮助方法（inline Babel helpers），像编译class关键字的classCallCheck，关键字extends。
 
-默认是true，即使用模块引入的方式。
+默认是true，即使用模块引入的方式。总的来说，这样做主要还是考虑到能减少代码的。
 
 #### polyfill
 
-如果引入了babel-polyfill，新的静态方法和全局变量就不需要再做对应的编译了。
+判断是否要引入了core-js，设置为true的话，新的静态方法和全局变量就会做对应的编译。
 
-默认为true，即默认我们已经引入了babel-polyfill，不需要编译新的全局变量和静态方法。
+可以理解为按需加载需要的东西。但是对某些原型链上的方法，也只能说无能无力了。
+
+为什么呢？主要还是因为js是弱语言，可以随时改变类型，这样一来就无法正确分析当前调用的方法名是你自己定义的，还是原型上的。
+
+如果你已经在全局引入了babel-polyfill的话，这块就需要设置为false。当然，babel-polyfill体量是非常的大。
+
+默认为true。
 
 #### regenerator
 
