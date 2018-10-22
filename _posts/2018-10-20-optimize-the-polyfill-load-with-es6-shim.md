@@ -85,6 +85,23 @@ if (!window.Promise && !window.fetch) {
 }
 ```
 
+### 实际
+
+实践中发现：
+
+1. async的支持是有问题的。即使你设置为false，也依旧是异步加载。
+2. 部分浏览器是支持Promise，但是其他特性是不支持的。
+
+最后，变成：
+
+```js
+// load es6 shim if not support
+if (!win.Promise || !win.Set) {
+    document.write('<script src="https://yfd1.fbcontent.cn/s/vendor/es6-shim/es6-shim.min.js"><\/script>');
+}
+```
+简单而且粗暴！
+
 ### 最后
 
 看到Babel升级到7版本后，形势一片大好。找个机会再看看Babel@7下是不是有更好的解决方式。
