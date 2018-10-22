@@ -181,26 +181,40 @@ const runShrink = function () {
 ```js
 // 扩容，预防突发的大量请求
 const runScale = function () {
-    if (runScale.isRunning) {
-        return;
-    }
     // 最多7个
     if (Object.keys(Cluster.workers).length > 6) {
         Logger.fatal('[Master] too many workers...');
+        runShrink();
         return;
     }
-    runScale.isRunning = true;
 
     Cluster.fork().on('message', handleMessage);
-    setTimeout(function () {
-        runScale.isRunning = false;
-    }, 64).unref();
 
     Logger.error('[WWW] run scale. Current workers count is ' + Object.keys(Cluster.workers).length);
 
     runShrink();
 };
-``` 
+```
+
+throttle的处理放到了发送的时候处理：
+
+```js
+let isScaling = false;
+
+// 限制3秒才可以再次触发一次
+function sendScale () {
+    if (isScaling) {
+        return;
+    }
+    isScaling = true;
+    Cluster.worker.send({
+        act: 'scale'
+    });
+    setTimeout(function () {
+        isScaling = false;
+    }, 3000).unref();
+}
+```
 
 #### 第三个问题
 
@@ -230,12 +244,25 @@ const EVENT_FINISH = 'finish';
 const EVENT_CLOSE = 'close';
 const MAX_REQUEST = 72;
 let requestCount = 0; // 积压的请求数
+let isScaling = false;
+
+// 限制3秒才可以再次触发一次
+function sendScale () {
+    if (isScaling) {
+        return;
+    }
+    isScaling = true;
+    Cluster.worker.send({
+        act: 'scale'
+    });
+    setTimeout(function () {
+        isScaling = false;
+    }, 3000).unref();
+}
 
 module.exports = async function scaleOut(ctx, next) {
     if (++requestCount > MAX_REQUEST && Cluster.isWorker) {
-        Cluster.worker.send({
-            act: 'scale'
-        });
+        sendScale();
     }
     const res = ctx.res;
 
@@ -250,6 +277,7 @@ module.exports = async function scaleOut(ctx, next) {
 
     await next();
 };
+
 ```
 如果大家也想尝试的话，告诉大家一个应急方法就是，提供一个http入口，可以去动态改变这个阈值。
 
