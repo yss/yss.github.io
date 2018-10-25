@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 防范node.js瞬间大流量
+title: 防范node.js服务瞬间大流量请求
 tags: []
 categories: [node]
 summary: 本身阐述的是如何尽可能的避免自己的服务被瞬间的大流量搞垮
@@ -102,7 +102,7 @@ summary: 本身阐述的是如何尽可能的避免自己的服务被瞬间的�
 
 但是，发现整个文档<https://nodejs.org/dist/latest-v8.x/docs/api/cluster.html>都没有相关的描述。
 
-然后去看源码，有处理，但是没有
+然后去看了源码，发现这个是无法做到的。后面会详细讲它的过程。
 
 #### 第二种方案
 
@@ -133,7 +133,20 @@ Cluster的运行模式，跟nginx是类似的。
 
 Master负责对外，通过监听端口，一旦有请求过来会自动分发给底下的 Worker，最后 Worker处理完后直接响应（Response）。
 
-内部调用机制，默认是用的RR（round-robin）模式，即轮询。
+具体选择哪个worker是由内部调用机制实现的，默认是用的RR（round-robin）模式，即轮询。
+
+来一张详情的请求和转发图：
+
+![cluster时序图](/static/img/cluster_flow.png)
+
+简述一下大致过程就是：
+
+1. 用户来了一个请求，被Master接收到了。
+2. Master询问Worker是否可以处理。
+3. Worker回答可以处理。
+4. Worker告诉Master我开始正式处理这个请求。
+5. Master告诉Worker说，我知道了。
+6. Worker处理完后直接返回给用户。
 
 #### 第一个问题
 
