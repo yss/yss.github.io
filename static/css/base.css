@@ -78,6 +78,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endC
 #sidebar .tags .tag-big { font-size:24px; font-weight:bold; color:orange; }
 #sidebar .tags .tag-bob { font-size:32px font-weight:bold; color:#CA0101; }
 #sidebar .tags sub { padding-left:2px; vertical-align:text-bottom; text-decoration:none; }
+#sidebar>.profile .highlight{ margin:0 }
 /* 博客页面 */
 #blog h3 { padding:12px 0; }
 #sidebar h3:before,
