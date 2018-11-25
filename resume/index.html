@@ -37,6 +37,9 @@ table{border-collapse:collapse;border-spacing:0;}
 #content .mod .desc{margin:10px 0 10px 90px;list-style:circle outside none;color:#101010;}
 #content .mod .desc .focus{font-weight:bold;}
 #content .mod .desc h4{padding:3px 0 5px 0;}
+#content .mod .desc h5{font-size:inherit;}
+#content .mod .desc ol{padding-left:0;list-style:decimal inside;}
+#content .mod .desc li{margin: 5px 0;}
 #content .mod p{padding:5px 0;}
 #content .mod .hd h5:before{float:left;margin-top:15px;margin-right:10px;content:'';height:5px;width:120px;background-color:#3060c0;}
 #content .mod .hd h5{font-size:16px;height:30px;line-height:30px;color:#36c;}
@@ -80,30 +83,33 @@ table{border-collapse:collapse;border-spacing:0;}
 					<div class="hd"><h5>个人画像</h5></div>
 					<div class="bd">
 						<div class="cell">
-							<div class="c-title">前端技能</div>
+							<div class="c-title">专业技能</div>
 							<ul class="desc">
-								<li>个人发展比较全面，经历过从PC Web到移动H5，写过一些php、java，后期主要折腾node.js。</li>
+								<li>个人发展比较全面，经历过从PC Web到移动H5，写过一些php、java，后期主要折腾node.js；</li>
 								<!-- <li>深入了解html语义，注重html代码书写，习惯手写HTML+CSS+Javascript代码；</li> -->
 								<li>懂页面构架及布局，崇尚更少的HTML&&更少的CSS、JS；</li>
 								<!-- <li>熟悉并了解框架的基本原理，读过底层相关源码，并有基于框架开发组件的实践，<br />从事并使用过以下几种框架开发：jQuery, YUI2&3；</li> -->
-								<li>理解JS运行机制，有点代码洁癖，注重一个易读，清晰，可维护性强的代码；</li>
+								<li>理解JS运行机制，有点代码洁癖，注重一个清晰、易读、可维护性强的代码；</li>
 								<!-- <li>对原生JS较为了解，有手写原生JS的习惯；</li> -->
 								<!-- <li>流畅处理Photoshop切图（sprite图）、Fireworks的Alpha操作和一些图片优化处理；</li> -->
-                                <li>一直在写、在用Node.js解决</li>
-								<li>承担过网站性能优化，SEO。</li>
+								<!-- <li>一直在写、在用Node.js解决</li> -->
+								<li>读过Vue源码；</li>
+								<li>承担网站各方面性能优化，SEO。</li>
 							</ul>
-                            <ul class="desc">
+                            <!-- <ul class="desc">
                                 <li>懂Node，用js，也算半个后端。<br />
                                 详细读过Nodejs大部分API文档。常用Node写点脚本提高效率。他颠覆了前端。
-                                <!-- 给我们前端带来了许多的便利和想象空间，让我们可能更好更出色的完成我们的工作。-->
+                                给我们前端带来了许多的便利和想象空间，让我们可能更好更出色的完成我们的工作。
                                 </li>
-                            </ul>
+                            </ul> -->
 						</div>
 						<div class="cell">
 							<div class="c-title">其他技能</div>
 							<ul class="desc">
-								<li>熟悉PHP，JAVA。会写SQL命令。用Vim写代码，Git管理代码。</li>
-                                <li>会Linux基本操作及应用，也会那么点Shell。</li>
+								<!-- <li>熟悉PHP，JAVA。会写SQL命令。用Vim写代码，Git管理代码。</li>
+								<li>会Linux基本操作及应用，也会那么点Shell。</li> -->
+								<li>读过Pro Git。</li>
+								<li>善于处理复杂交互项目。</li>
 							</ul>
 						</div>
 					</div>
@@ -116,11 +122,31 @@ table{border-collapse:collapse;border-spacing:0;}
 					<div class="bd">
                         <div class="cell">
                             <div class="desc">
-                                <h4>一、2015.12 - 至今 猿辅导</h4>
-                                <p>从0到1带领团队搭建和完善整个猿辅导用户端所有Web端产品</p>
-                                <p>搭建cnpm，内部好几个基础库都是自己做的，并在全公司推广并运用，成体系。</p>
-                                <p>负责整个PC(<a href="https://www.108tian.com/">www.108tian.com/</a>)和H5(<a href="https://m.108tian.com/">m.108tian.com/</a>)端项目开发。</p>
-                                <p>以及整个后台管理系统开发(基于bootstrap搭建)。其中产出了一个解析表单的方法库：<a href="https://github.com/yss/jQuery.serializeDeepObject.js">jQuery.serializeDeepObject.js</a></p>
+								<h4>一、2015.12 - 至今 猿辅导 猿辅导Web端负责人</h4>
+								<h5>基础建设</h5>
+								<ol>
+									<li>迁移私有npm源到cnpm，组织全公司前端分享会，确定公司私有前缀，开发了全公司通用的两个底层库：@fenbi/webivew, @fenbi/frog。</li>
+									<li>使用sentry作为前端错误日志收集系统，再之后增加资源错误收集，性能数据收集，并逐步推广到其他部门一起使用。</li>
+									<li>优化node层面的开发，从最开始的express，到koa。从追踪一个服务挂掉问题，到内部服务瘫痪，再到解决瞬间大流量请求，才有现在比较稳定node服务。</li>
+									<li>搭建通用前端数据服务系统、微信access_token统一获取服务。</li>
+									<li>打包从grunt+browserify 到 gulp+webpack 再到 全webpack，并持续优化打包速度，从7min到现在的2min。</li>
+									<li>持续优化H5在App的体验，从H5独立页，到H5单页，再到新开WebView去打开，最后到现在的离线Zip包。</li>
+									<li>开辟主要流程的流程测试，再到每次发布后自动化的跑流程测试及发送报告。</li>
+									<li>搭建node项目的脚手架，eslint项目规范及自动化校验提交代码，本地不同模式自动化打包发布到测试环境，通过代理优化线上及测试环境调试。</li>
+								</ol>
+								<h5>团队合作</h5>
+								<ol>
+									<li>制定WebView接口、URL Scheme规范、公共参数的定义及实现。</li>
+									<li>统一制定后端API接口错误定义，到统一的Scheme处理语法定义。</li>
+								</ol>
+								<h5>跨部门合作</h5>
+								<ol>
+									<li>制定和推动全公司的WebView UserAgent定义、统一WebView接口及实现。</li>
+									<li>持续推荐运营工具开发：从简单的scheme跳转封装js，到通用的market.js，再到通用模板系统，到最后基地1.0以及现在的基地2.0（通过拖拽加配置自动化生成H5页面）</li>
+								</ol>
+								<h5>负责的项目</h5>
+								<p><a href="https://www.yuanfudao.com/">猿辅导官网</a>，<a href="https://m.yuanfudao.com/">猿辅导M站</a>，<a href="https://www.yuanfudao.com/tutor-web-chat">基于腾讯通信SDK的聊天系统</a>，<a href="https://m.yuanfudao.com/tutor-web-market">基地2.0</a>，通用的前端数据服务</p>
+								<p>总结：从0到1搭建和完善整个辅导Web端，并持续改进整个项目和工作流程，一点点提高整个团队开发效率。</p>
                             </div>
                         </div>
                         <div class="cell">
@@ -182,20 +208,20 @@ table{border-collapse:collapse;border-spacing:0;}
 		</div>
 		<div class="col-sub">
 			<section id="basic-info">
-				<div class="hd"><strong>应聘：</strong><span class="job">Web前端高级开发工程师</span></div>
+				<div class="hd"><strong>应聘方向：</strong><span class="job">Web前端相关</span></div>
 				<div class="bd">
 					<ul>
-						<li>目前就职：<span class="company">108天</span></li>
+						<li>目前就职：<span class="company">猿辅导</span></li>
                         <li>希望：<span class="expect">从事偏向于移动、数据、管理方面的工作，特别喜欢交互性很强的事情。</span></li>
-						<li>手机：<span class="phone">13366542210</span></li>
+						<li>手机：<span class="phone">17319000813</span></li>
 						<li>邮箱：<a href="mailto:yansong1989@qq.com" class="email">yansong1989@qq.com</a></li>
 						<li>微信：<span class="weixin">yssnelson</span></li>
                         <li>Github：<a href="https://github.com/yss?tab=repositories" class="github">https://github.com/yss</a></li>
-                        <li>博客：<a href="http://yssbox.com" class="blog">http://yssbox.com</a></li>
+                        <li>博客：<a href="https://blog.yssbox.com" class="blog">https://blog.yssbox.com</a></li>
 						<li>学校：<span class="school">大连理工大学 | 本科</span></li>
 						<li>专业：<span class="major">网络工程（软件学院）</span></li>
-						<li>爱好：<span class="fav">游泳 | 骑行</span></li>
-                        <li>兴趣：<span class="interest" title="三国杀：什么都懂一点，生活更多彩一些！（吕蒙）">略懂略懂</span></li>
+						<li>爱好：<span class="fav">游泳 | 读书 | 骑行 </span></li>
+                        <!-- <li>兴趣：<span class="interest" title="三国杀：什么都懂一点，生活更多彩一些！（吕蒙）">略懂略懂</span></li> -->
 						<li>格言：<span class="saying">有得必有失，我只是不想得不偿失。</span></li>
 					</ul>
 				</div>
@@ -204,11 +230,8 @@ table{border-collapse:collapse;border-spacing:0;}
 	</div>
 	
 	<div id="ft">
-		<span>&copy; <a href="http://yansong.me" target="_blank">YSS</a>;<br />Compatibility: IE6+ and others.</span>
+		<span>&copy; <a href="https://blog.yssbox.com" target="_blank">YSS</a>;<br />Compatibility: IE6+ and others.</span>
 	</div>
 </div>
-<script src="http://hm.baidu.com/h.js?d925e33e4b349e3a29ea4b89a0bfe15b" async></script>
-<script>_gaq = [['_setAccount', 'UA-31716874-1'],['_trackPageview']]</script>
-<script src="http://www.google-analytics.com/ga.js" async></script>
 </body>
 </html>
