@@ -17,7 +17,7 @@ gems:
     - jekyll-paginate
     - jekyll-sitemap
 paginate: 16
-paginate_path: "/page:num"
+paginate_path: "/page:num/"
 
 permalink: /:year/:month/:day/:title.html
 
