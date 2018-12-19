@@ -25,9 +25,9 @@ title : 博客列表
         <span class="curr">{{ paginator.page }}</span>
         {% if paginator.next_page %}
             {% if paginator.next_page == paginator.total_page %}
-                <a href="/page{{paginator.next_page}}" class="next">最后一步 &#8674</a>
+                <a href="/page{{paginator.next_page}}/" class="next">最后一步 &#8674</a>
             {% else %}
-                <a href="/page{{paginator.next_page}}" class="next">向后一步 &#8674</a>
+                <a href="/page{{paginator.next_page}}/" class="next">向后一步 &#8674</a>
             {% endif %}
         {% else %}
             <span class="next">&#9792; 完结</span>
