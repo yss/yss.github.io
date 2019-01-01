@@ -15,7 +15,7 @@ summary: 做一个笔迹算法看到的一个判断点在多边形区域内的�
 
 那非零环绕规则是什么呢？
 
-## 已有实现
+### 已有实现
 
 其实在canvas API里有一个方法：`CanvasRenderingContext2D.isPointInPath()
 `可以去判断一个点是否在一条路径上。<https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D/isPointInPath>
@@ -26,7 +26,7 @@ summary: 做一个笔迹算法看到的一个判断点在多边形区域内的�
 2. x,y是点的坐标。
 3. fillRule：默认是`nonzero`非零环绕规则，`evenodd`奇偶环绕规则。
 
-## 具体实现原理
+### 具体实现原理
 
 首先使多边形的边变为矢量。
 
@@ -38,7 +38,7 @@ summary: 做一个笔迹算法看到的一个判断点在多边形区域内的�
 
 处理完多边形的所有相关边之后，若环绕数为非零，则p为内部点，否则，p是外部点。
 
-## 具体代码
+### 具体代码
 
 ```js
 function isPointInPath (point, path) {
@@ -55,14 +55,14 @@ function isPointInPath (point, path) {
 		if (path[i].y > y) {
 			if (path[j].y <= y) {
 				// 如果是向下的线段的右边，那就是逆时针方向
-				if (isLeft(path[i], path[j], point) < 0) {
+				if (getPosition(path[i], path[j], point) < 0) {
 					wn--;
 				}
 			}
 		} else {
 			if (path[j].y > y) {
 				// 如果是向上的线段的左边，那就是顺时针方向
-				if (isLeft(path[i], path[j], point) > 0) {
+				if (getPosition(path[i], path[j], point) > 0) {
 					wn++;
 				}
 			}
@@ -74,7 +74,7 @@ function isPointInPath (point, path) {
 
 // 判断点是线的左边还是右边，
 // 小于零就是右边，大于零就是左边
-function isLeft (p1, p2, p) {
+function getPosition (p1, p2, p) {
 	// 在p点画x轴方向的线，跟p1组成的矩形面积
 	// 减去
 	// 在p点画y轴方向的先，跟p2组成的矩形面积
@@ -89,7 +89,7 @@ function isLeft (p1, p2, p) {
 3. 当然，实现的时候你也可以是向下方向的左边就加1，向下方向的右边就减1去做。
 4. 最后，得出最终的值。不为0则在区域内，否则区域外。
 
-## 最后
+### 最后
 
 其实非零环绕不是很好理解。只有真实的去看代码的时候，然后多画一画才能比较清楚的去理解。
 
