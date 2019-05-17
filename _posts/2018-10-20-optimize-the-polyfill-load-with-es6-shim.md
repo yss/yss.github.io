@@ -53,7 +53,7 @@ require('core-js/es6/object');
 if (!window.Promise && !window.fetch) {
     (function (src) {
         var elem = doc.createElement('script');
-        elem.src = 'https://yfd1.fbcontent.cn/s/vendor/es6-shim/es6-shim.min.js';
+        elem.src = 'PATH_TO_es6-shim';
         elem.async = false;
         document.getElementsByTagName('head')[0].appendChild(elem);
     })();
@@ -96,8 +96,8 @@ if (!window.Promise && !window.fetch) {
 
 ```js
 // load es6 shim if not support
-if (!win.Promise || !win.Set) {
-    document.write('<script src="https://yfd1.fbcontent.cn/s/vendor/es6-shim/es6-shim.min.js"><\/script>');
+if (!win.Promise || !win.Set || !Array.from) {
+    document.write('<script src="PATH_TO_es6-shim"><\/script>');
 }
 ```
 简单而且粗暴！
