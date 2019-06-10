@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 解决同一个工程里并行开发问题
+title: 团队并行开发问题及解决
 tags: []
 categories: [project]
 summary: 并行开发的问题是每个团队变大后都必须考虑的
