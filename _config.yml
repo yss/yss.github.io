@@ -3,7 +3,7 @@ emall: yss.nelson@gmail.com
 description: focus on technology by a front-end development
 
 baseurl: ""
-url: "https://blog.yssbox.com"
+url: "https://yss.github.com"
 github_username: yss
 
 markdown: kramdown
@@ -11,7 +11,7 @@ kramdown:
     input: GFM
     syntax_highlighter: rouge
 
-production_url: https://blog.yssbox.com
+production_url: https://yss.github.com
 
 gems: 
     - jekyll-paginate
@@ -20,24 +20,3 @@ paginate: 16
 paginate_path: "/page:num/"
 
 permalink: /:year/:month/:day/:title.html
-
-# 当修改文件时重新生成站点
-#auto: true
-## markdown: rdiscount
-#markdown: kramdown
-##pygments: true
-#highlighter: pygments
-#paginate: 12
-#baseurl: http://blog.yssbox.com
-#url: http://blog.yssbox.com
-#
-#production_url: http://blog.yssbox.com
-#excerpt_separator: ""
-#
-#author:
-#    name : yss
-#    email : yss.nelson@gmail.com
-#    github : https://github.com/yss
-#    weibo: http://weibo.com/yssnelson
-#
-#domain: blog.yssbox.com
