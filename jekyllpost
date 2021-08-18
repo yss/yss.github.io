@@ -40,7 +40,8 @@ if (!fs.existsSync(postPath)) { // 不存在时执行
     fs.mkdirSync(postPath);
 }
 
-filename = path.join(postPath, [year, month, day, filename].join('-') + '.md');
+if () {
+filename = path.join(postPath, filename.startsWith('20') ? '' : [year, month, day, ''].join('-'), filename + ''.md');
 
 fs.writeFile(filename, tplData, 'utf-8', function(err) {
     if (err) {
