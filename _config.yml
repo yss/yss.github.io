@@ -3,7 +3,7 @@ emall: yss.nelson@gmail.com
 description: focus on technology by a front-end development
 
 baseurl: ""
-url: "https://yss.github.com"
+url: "https://yss.github.io"
 github_username: yss
 
 markdown: kramdown
@@ -11,7 +11,7 @@ kramdown:
     input: GFM
     syntax_highlighter: rouge
 
-production_url: https://yss.github.com
+production_url: https://yss.github.io
 
 gems: 
     - jekyll-paginate
