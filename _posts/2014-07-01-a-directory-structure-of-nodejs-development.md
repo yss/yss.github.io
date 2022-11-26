@@ -21,11 +21,11 @@ package.json
 --views
 {% endhighlight %}
 
-### app.js
+# app.js
 
 这是入口，用于启动nodejs。
 
-### config.js
+# config.js
 
 虽然很多人不赞同使用全局变量，但是用过之后就感觉很爽。
 
@@ -39,43 +39,43 @@ package.json
 
 防止被修改。
 
-### package.json
+# package.json
 
 这个说白了就是依赖包，类似java的pom.xml
 
-### static
+# static
 
 毋庸置疑，这个就是存放静态资源文件的地方。
 
-### views
+# views
 
 同样，这个就是存放所有前端模板的地方。
 
-### lib
+# lib
 
 最后要说说lib。
 
 lib说白了，就是真正执行层。或者说就是MVC中得MC层。
 
-#### controllers
+## controllers
 
 说是controller，更多指的是router机制。
 
 所有的路由都需要放入到这个文件下面。
 
-#### db
+## db
 
 数据库相关的操作代码都放到这个目录底下。
 
-#### express
+## express
 
 所有的express中间件。调用在app.js中被调用。
 
-#### utils
+## utils
 
 一些必要的组件都放到这里。
 
-### 最后
+# 最后
 
 最后就没有最后了。
 

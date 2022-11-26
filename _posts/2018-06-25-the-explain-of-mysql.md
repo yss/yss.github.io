@@ -11,7 +11,7 @@ mysql的explain命令是查询性能优化非常重要的一点。很多时候�
 
 先看一下，explain输出columns定义：
 
-### EXPLAIN Output Columns
+# EXPLAIN Output Columns
 
 列名|描述
 :----------|:-----------
@@ -26,11 +26,11 @@ ref|显示了之前的表在key列记录的索引中查找值所用的列或常�
 rows|为了找到所需的行而需要读取的行数，估算值，不精确。通过把所有rows列值相乘，可粗略估算整个查询会检查的行数
 Extra|额外信息，如using index、filesort等
 
-#### id
+## id
 
 id是用来顺序标识整个查询中SELELCT 语句的，在嵌套查询中id越大的语句越先执行。该值可能为NULL，如果这一行用来说明的是其他行的联合结果。
 
-#### select_type
+## select_type
 
 表示查询的类型
 
@@ -46,7 +46,7 @@ dependent union|顾名思义，首先需要满足UNION的条件，及UNION中第
 subquery|子查询中第一个SELECT语句
 dependent subquery|和DEPENDENT UNION相对UNION一样
 
-#### table
+## table
 
 对应行正在访问哪一个表，表名或者别名
 
@@ -56,7 +56,7 @@ dependent subquery|和DEPENDENT UNION相对UNION一样
 
 注意：MySQL对待这些表和普通表一样，但是这些“临时表”是没有任何索引的。
 
-#### type
+## type
 
 type显示的是访问类型，是较为重要的一个指标，结果值从好到坏依次是：
 system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range > index > ALL ，一般来说，得保证查询至少达到range级别，最好能达到ref。
@@ -73,19 +73,19 @@ system|这是const连接类型的一种特例，表仅有一行满足条件。
 Null|意味说mysql能在优化阶段分解查询语句，在执行阶段甚至用不到访问表或索引（高效）
 possible_keys|显示查询使用了哪些索引，表示该索引可以进行高效地查找，但是列出来的索引对于后续优化过程可能是没有用的
 
-#### key
+## key
 key列显示MySQL实际决定使用的键（索引）。如果没有选择索引，键是NULL。要想强制MySQL使用或忽视possible_keys列中的索引，在查询中使用FORCE INDEX、USE INDEX或者IGNORE INDEX。
 
-#### key_len
+## key_len
 key_len列显示MySQL决定使用的键长度。如果键是NULL，则长度为NULL。使用的索引的长度。在不损失精确性的情况下，长度越短越好 。
 
-#### ref
+## ref
 ref列显示使用哪个列或常数与key一起从表中选择行。
 
-#### rows
+## rows
 rows列显示MySQL认为它执行查询时必须检查的行数。注意这是一个预估值。
 
-#### Extra
+## Extra
 Extra是EXPLAIN输出中另外一个很重要的列，该列显示MySQL在查询过程中的一些详细信息，MySQL查询优化器执行查询的过程中对查询计划的重要补充信息。
 
 类型|说明
@@ -101,7 +101,7 @@ impossible where|where子句的值总是false，不能用来获取任何元组
 select tables optimized away|在没有GROUP BY子句的情况下，基于索引优化MIN/MAX操作，或者对于MyISAM存储引擎优化COUNT(*)操作，不必等到执行阶段再进行计算，查询执行计划生成的阶段即完成优化。
 distinct|优化distinct操作，在找到第一匹配的元组后即停止找同样值的动作
 
-### 参考资料
+# 参考资料
 
 高性能mysql第三版
 

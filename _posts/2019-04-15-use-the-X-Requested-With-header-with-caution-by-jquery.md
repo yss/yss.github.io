@@ -11,7 +11,7 @@ summary: 一般我们喜欢在服务端使用X-Requested-With头来判断是否�
 
 这种风险不在于逻辑有问题，而在于jQuery.ajax对这个X-Requested-With头的处理。
 
-### 背景
+# 背景
 
 查看服务日志，发现错误日志报了很多这样的错：`this request must be xhr request`。
 
@@ -33,13 +33,13 @@ if ( !options.crossDomain && !headers[ "X-Requested-With" ] ) {
 
 如果是跨域的话，默认就不会设置这个头。
 
-### 处理
+# 处理
 
-#### 前端层
+## 前端层
 
 针对所有请求都强制加上这个头，可以在$.ajaxPrefilter中处理
 
-#### 服务端层
+## 服务端层
 
 1. 后期摒弃在同一个请求里，针对Ajax请求做特殊处理的情况。
 2. 不要通过X-Requested-With来判断是否是Ajax。

@@ -9,7 +9,7 @@ summary: 总所周知，手机浏览器屏幕很小，如果能争取全屏显�
 
 那能不能加载后，屏幕就自动全屏呢？这就是本文要讨论的。
 
-### Add to Home Screen
+# Add to Home Screen
 说到全屏不得不谈iPhone下的safari有一个特别且重要的功能就是“Add to Home Screen”。（就在Safari浏览器最下方，最中间的那个位置，点击选择即可）
 
 这个功能类似于把网页地址作为一个超链接的方式放到手机桌面，并且可以直接访问。不过要注意的是每个链接都需要js进行一次特殊处理，那就是监听页面点击事件，如果是链接，则使用`window.location = this.href;`，这样页面就不会从当前的本地窗口跳到浏览器了。
@@ -41,7 +41,7 @@ summary: 总所周知，手机浏览器屏幕很小，如果能争取全屏显�
 <link rel="apple-touch-icon-precomposed" href="startup/apple-touch-icon-114x114-precomposed.png" />
 {% endhighlight %}
 
-### 全屏
+# 全屏
 {% highlight js %}
 window.addEventListener('DOMContentLoaded', function() {
     var page = document.getElementById('page'),
@@ -61,6 +61,6 @@ window.addEventListener('DOMContentLoaded', function() {
 {% endhighlight %}
 这段代码本质上就是当前窗口的高度 + 导航栏的高度 获取到真实的屏幕高度。最后再调用scrollTo方法。
 
-### 参考
+# 参考
 1. [Configuring Web Applications](https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 2. [Hide the address bar in a fullscreen iPhone or Android web app](https://gist.github.com/1172490)

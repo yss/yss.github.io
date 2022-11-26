@@ -5,10 +5,10 @@ categories: [jekyll]
 tags: [jekyll, _config.yml]
 summary: _config.yml是jekyll的配置文件。具体包括：(...此处省略很多..)。这里之所以没有一一列出来是因为，讲那么多完全没有必要，因为开始的你根本用不上这些个配置
 ---
-### 前言
+# 前言
 在读本文章之前，你需要懂那么一点git的知识。但是不是最重要的。
 
-### 什么是_config.yml
+# 什么是_config.yml
 _config.yml是jekyll的配置文件。具体包括：(...此处省略很多..)。这里之所以没有一一列出来是因为，讲那么多完全没有必要，因为开始的你根本用不上这些个配置。
 
 我们所需要了解的就是以下三个：
@@ -27,7 +27,7 @@ _config.yml是jekyll的配置文件。具体包括：(...此处省略很多..)�
 
     像其他人一样，我使用的是rdiscount，为什么呢？我想是因为maruku不是很灵活，特别是在里面加入html标签，是有问题的。
 
-#### 最后的代码
+## 最后的代码
 {% highlight javascript %}
 permalink: /:year/:month/:day/:title.html
 # 当修改文件时重新生成站点
@@ -35,7 +35,7 @@ auto: true
 markdown: rdiscount
 {% endhighlight %}
 
-### 后记
+# 后记
 其实你不做任何配置也是没有关系的。;)
 
 但是不管怎么样，auto还是很有必要做配置的。

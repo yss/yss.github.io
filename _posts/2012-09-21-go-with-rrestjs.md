@@ -5,7 +5,7 @@ tags: [rrestjs]
 categories: [rrestjs]
 summary: rrestjs是一款基于expressjs代码开发的高性能node.js开发框架，由于重新编写了框架组织架构，比expressjs整体性能提升大约10%，实用功能也更加丰富，API和代码风格相比expressjs更简单易懂。
 ---
-### 开始
+# 开始
 rrestjs是我无意中确是有意接触到的一款类似却又不似express的nodejs开发框架。
 
 为什么这么说呢？
@@ -18,7 +18,7 @@ rrestjs是我无意中确是有意接触到的一款类似却又不似express的
 
 事情的开始就是这样子的了。
 
-### rrestjs路由
+# rrestjs路由
 然后，很有必要说说rrestjs的路由。
 
 rrestjs的路由在包裹在try{...}catch(e){}里的一段代码。非常短小，如下：
@@ -42,7 +42,7 @@ exports.upload = function(req, res) {
 而如果不存在./controller/u.js或者不存在upload方法时，就会报错，然后自动转向了catch的处理模块。
 
 如果你看过其他后端框架的处理模式，比如：PHP类的框架。你就很能明白这种思想理念所在了，以及它的便捷性了。
-### 后记
+# 后记
 说完rrestjs路由，我的主体思想大概就说完了。
 
 非常感谢与rrestjs的作者本人[snoopyxdy](http://snoopyxdy.blog.163.com/)沟通，中间碰到了很多的一些问题，得以很快解决和理解。

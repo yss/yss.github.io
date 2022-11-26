@@ -5,26 +5,26 @@ tags: [Google Analytics]
 categories: [GA]
 summary: Google Analytics是一个很有意思的分享工具，强大，好用！
 ---
-### 简介
+# 简介
 目前Google Analytics有两种类型的统计代码：analytics.js 和 ga.js
 
 在基本功能点上两者都差不多，但analytics.js的配置性更强。
 
 ga.js和analytics.js的很大差别在于ga.js很多东西都是放入到前端页面去做的，但是analytics.js则可以在Google Analytics中的管理去配置。
 
-#### Google给的一个区别：
+## Google给的一个区别：
 ![analytics.js vs ga.js](/static/img/analytics-vs-ga.png)
 
-### 那些个Cookie
+# 那些个Cookie
 ga.js重度依赖于cookie。这跟两者的实现是分不开的。
 
-#### analytics.js中的cookie
+## analytics.js中的cookie
 
 Cookie名|过期时间|描述
 :-------|:-------|:-----
 _ga|2 years|用于区分用户
 
-#### ga.js中的cookie
+## ga.js中的cookie
 
 Cookie名|过期时间|描述
 :-------|:-------|:-----
@@ -36,7 +36,7 @@ __utmv|2 years|存储自定义变量的数据。（对应GA中的自定义变量
 
 *由于目前的业务统计需要，我们都将使用并可能长期使用ga.js。*
 
-### ga.js配置
+# ga.js配置
 
 {% highlight js %}
 var _gaq = _gaq || [];
@@ -68,7 +68,7 @@ _gaq.push(['_setDomainName', 'domain.com']);
 _gaq.push(['_trackPageview']);
 {% endhighlight %}
 
-### GA Event监听
+# GA Event监听
 GA Event一般用来统计点击量，是一个非常实用的方案。
 也是最最常用的布点方式。
 
@@ -102,7 +102,7 @@ var GA = {
 };
 {% endhighlight %}
 
-### 加载位置
+# 加载位置
 以前我们可能对应GA初始化的地方或者说何时去加载，会有很多疑惑。
 
 这里我给出一个说明：

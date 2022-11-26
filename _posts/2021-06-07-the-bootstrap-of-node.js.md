@@ -8,23 +8,23 @@ summary: 这是一篇 node.js 的教学类文章。
 ---
 这是一篇 node.js 的教学类文章。
 
-### 前言
+# 前言
 Node.js 本身涉及到的东西非常的多，不仅仅是前端一些常规的知识，更重要的是操作系统和网络的知识。更是一种全新的开发思维。
 
 我今天能讲的，只会是其中的一小部分，更多的部分就需要靠大家去做了。
 
-### Node.js 的历程
-#### Node.js 的诞生
+# Node.js 的历程
+## Node.js 的诞生
 话说有个叫Ryan Dahl的歪果仁，他的工作是用C/C++写高性能Web服务。对于高性能，异步IO、事件驱动是基本原则，但是用C/C++写就太痛苦了。于是这位仁兄开始设想用高级语言开发Web服务。他评估了很多种高级语言，发现很多语言虽然同时提供了同步IO和异步IO，但是开发人员一旦用了同步IO，他们就再也懒得写异步IO了，所以，最终，Ryan瞄向了JavaScript。 因为JavaScript是单线程执行，根本不能进行同步IO操作，所以，JavaScript的这一“缺陷”导致了它只能使用异步IO。 选定了开发语言，还要有运行时引擎。这位仁兄曾考虑过自己写一个，不过明智地放弃了，因为V8就是开源的JavaScript引擎。让Google投资去优化V8，咱只负责改造一下拿来用，还不用付钱，这个买卖很划算。 于是在2009年，Ryan正式推出了基于JavaScript语言和V8引擎的开源Web服务器项目，命名为Node.js。虽然名字很土，但是，Node第一次把JavaScript带入到后端服务器开发，加上世界上已经有无数的JavaScript开发人员，所以Node一下子就火了起来。
 
-#### Node.js 上的分歧
+## Node.js 上的分歧
 但好景不长，一个是 Ryan 在 2012年离开了社区，一个是 Node.js 并没有如愿在服务端领域蓬勃发展，反而是不温不火的一个状态，另一个是 2015 年 Node.js 贡献者对 ES6 新特性集成问题的分歧，导致分裂出了 iojs。
 
 并且由 iojs 发布了 1.0、2.0、3.0 版本。
 
 这种分歧下弄得大家人心惶惶，大家都开始在质疑 Node.js 能走多久。
 
-#### Node.js 的最终融合
+## Node.js 的最终融合
 以此同时，2015年Node.js基金会的宣告成立，并顺利发布了4.0版本。Node.js基金会的创始成员包括 Google、Joyent、IBM、Paypal、微软、Fidelity 和 Linux基金会，创始成员将共同掌管过去由 Joyent 一家企业掌控的 Node.js 开源项目。
 
 算是终于打消了大家的疑虑。但是在这个背后，不得不说到一个事情，那就是
@@ -43,7 +43,7 @@ Node.js 本身涉及到的东西非常的多，不仅仅是前端一些常规的
 
 Node.js 的出现对我们开发人员，相当于久旱逢甘霖，平台再也不是限制我们的理由了。
 
-### Node.js 的原理
+# Node.js 的原理
 说了这么多，是希望大家能有一个大的背景去理解 Node.js 的一个发展历程。
 
 我们现在说说 Node.js 本身的一个原理，借助这个这个东西可以让大家更好的理解 Node.js 。
@@ -80,7 +80,7 @@ Node.js 的出现对我们开发人员，相当于久旱逢甘霖，平台再也
 3. event loop 相当于负责整体的调度和管理，它按照一个约定的规则，负责把异步逻辑交给主进程去执行。
 4. 上层的 Node Bindings 是针对当前系统的类库封装。
 
-#### noNode.js下的Event Loop
+## noNode.js下的Event Loop
 下面的图表展示了事件循环操作顺序的简化概览
 
 ![node.js event loop](/static/img/node-event-loop.png)
@@ -95,13 +95,13 @@ Node.js 的出现对我们开发人员，相当于久旱逢甘霖，平台再也
 
 具体可以参考：https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
 
-### Node.js 的安装和使用
-#### Node.js 的安装
+# Node.js 的安装和使用
+## Node.js 的安装
 简单的安装方式就是上 Node.js 官网（https://nodejs.org）下载对应平台的安装程序。
 
 高级的方式就是先按照 Node.js 包管理工具再按照对应版本的 Node.js 包，常用的是两个：
 
-##### nvm
+### nvm
 ```sh
 $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
  
@@ -110,12 +110,12 @@ $ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || 
  
 $ nvm install 12.13.0
 ```
-##### n
+### n
 由于 n 本身是用 Node.js 写的，所以推荐先上官网下载 Node.js 安装包。之后再执行 `npm install -g n`
 
 详细安装可以看它的文档：https://www.npmjs.com/package/n#installation
 
-#### Npm 的使用
+## Npm 的使用
 目前我们看到的 Node.js 安装，默认就安装了 Npm。
 
 Npm 源的话，默认是 Node.js 官方的源：https://registry.npmjs.com
@@ -128,7 +128,7 @@ $ npm set registry http://npm.zhenguanyu.com/
 # 加上下面这一行
 registry=http://npm.zhenguanyu.com/
 ```
-##### 一些基本命令
+### 一些基本命令
 
 1. npm init	生成 package.json
 2. npm install	它会根据 package.json 里的依赖信息在 node_modules 文件夹下安装当前项目所需要的所有东西
@@ -199,7 +199,7 @@ package.json
 1. engines 设置了此软件包/应用程序在哪个版本的 Node.js 上运行。
 1. browserslist 用于告知要支持哪些浏览器（及其版本）。
 
-#### IDE和编辑器
+## IDE和编辑器
 本来想拿其他编辑器来对比一下，但发现没有任何的意义，毋庸置疑就是 Visual Studio Code。
 
 Visual Studio Code 本身就是用 Node.js 写的一个应用程序。
@@ -225,14 +225,14 @@ Visual Studio Code 本身就是用 Node.js 写的一个应用程序。
 }
 ```
 
-#### API 介绍
+## API 介绍
 主要对照着 Node.js 的 API 文档，讲讲为什么需要它们，然后它们做了哪些事情。
 
 Cluster Mode
 ![cluster mode](/static/img/cluster_flow.png)
 
-### Node.js 的应用
-#### Node.js 应用场景
+# Node.js 的应用
+## Node.js 应用场景
 
 ![node.js 应用场景](/static/img/node_application.png)
 
@@ -242,9 +242,9 @@ Node.js 使用场景主要分为4大类
 2. Web应用开发：网站、Api、RPC服务等
 3. 前端：三大框架 React \ Vue \ Angular 辅助开发，以及工程化演进过程（使用Gulp /Webpack 构建 Web 开发工具）
 4. 工具：npm上各种工具模块，包括各种前端预编译、构建工具Vite / Webpack / Gulp、脚手架，命令行工具，各种奇技淫巧等
-#### 如何写一个工具
+## 如何写一个工具
 
-##### 简单方式
+### 简单方式
 ```sh
 #!/usr/bin/env node
  
@@ -268,7 +268,7 @@ program.parse();
  
 if (options.debug) console.log(program.opts());
 ```
-##### 常规方式
+### 常规方式
 配合 npm 在 package.json 里定义一个 bin 字段。
 
 ```json
@@ -284,7 +284,7 @@ if (options.debug) console.log(program.opts());
 
 也可以作为包的方式，然后 `npx xxx` 来执行。
 
-#### 服务层面的应用
+## 服务层面的应用
 延伸到 服务层面，node.js 的服务层面其实一直都没有中断，相反一直在缓慢发展，最初主要是以 express 为代表的，后来随着 ES2015 标准的出现，出现了 koa 1.0， 以及 async await 语法糖的出现，有了现在的 koa 2.0。
 
 ```js
@@ -327,15 +327,15 @@ App.use('/test', async function () {
  
 App.listen(3000);
 ```
-#### 中间件
+## 中间件
 Koa 选择了洋葱圈模型。 中间件洋葱图：
 
 ![koa](/static/img/node_koa.png)
 
-#### API 相关
+## API 相关
 讲一下 API 相关的知识。
 
-### 高并发在我们系统里的应用
+# 高并发在我们系统里的应用
 当我们在说高并发的时候，我们在说什么，我们需要关注的是什么？这是我们首先要搞明白的一个事情。
 
 
@@ -390,7 +390,7 @@ App.get('/', async function (ctx, next) {
 
 当然，具体问题要具体分析，实际的场景会遇到各种各样的问题。
 
-### 作业
+# 作业
 写一个使用 Cluster 模式下的并发控制服务，随机生成一个固定格式的 json 数据，最后生成 HTML。
 写一个并发控制的自动爬取服务数据的脚本，读取 HTML 并转换成 json。
 

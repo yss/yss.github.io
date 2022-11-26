@@ -5,13 +5,13 @@ tags: [hashchange]
 categories: [单页应用, hashchange]
 summary: 为什么我们在单页应用中使用hashchange？因为
 ---
-### 前言
+# 前言
 
 hashchange在正常的网页开发中可能应用得很少。但是单页应用下，却显得额外显眼。
 
 在我看到的大部分单页应用，基本上都使用了hashchange，比如：Google Analytics。
 
-### hashchange
+# hashchange
 
 什么是hashchange？
 
@@ -19,7 +19,7 @@ hashchange说的其实是一个事件。
 
 这个事件会在页面URL中的片段标识符(第一个#号开始到末尾的所有字符,包括#号)发生改变时触发。
 
-### 好处
+# 好处
 
 那使用hashchange有什么好处呢？
 
@@ -31,7 +31,7 @@ hashchange说的其实是一个事件。
 
 因为hashchange可以兼容目前所有浏览器，但history.pushState不能。
 
-### 兼容性
+# 兼容性
 
 这里我们谈谈兼容性。
 
@@ -56,7 +56,7 @@ Safari Mobile|5.0
 
 具体代码实现，请参考MDN：[hashchange事件](https://developer.mozilla.org/zh-CN/docs/Mozilla_event_reference/hashchange)
 
-### 注意的一点
+# 注意的一点
 
 1. 浏览器可以带有hashchange事件，但事件中的event对象不一定带有oldURL/newURL。
 
@@ -83,7 +83,7 @@ HashChange.prototype.getEvent = function(e) {
 };
 {% endhighlight %}
 
-### 参考
+# 参考
 
 <https://developer.mozilla.org/zh-CN/docs/Mozilla_event_reference/hashchange>
 

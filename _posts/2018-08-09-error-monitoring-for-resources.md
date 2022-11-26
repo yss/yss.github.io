@@ -21,7 +21,7 @@ summary: 关于错误监控网上有很多文章，今天我也来说，只是�
 
 那么，今天我们要讲的就是怎么去监控资源加载失败的。
 
-### 监控资源加载失败
+# 监控资源加载失败
 
 其实，如果细心的话，可以看到上面的第2条最后一句话：`不过（至少在Firefox中）能被单一的window.addEventListener捕获。`
 
@@ -29,7 +29,7 @@ summary: 关于错误监控网上有很多文章，今天我也来说，只是�
 
 那更具体一点呢？我们可以从DOM Level 3定义中找到：<https://www.w3.org/TR/DOM-Level-3-Events/#event-type-error>
 
-#### error 说明
+## error 说明
 说明|描述
 :----|:-----
 类型|error
@@ -41,7 +41,7 @@ summary: 关于错误监控网上有很多文章，今天我也来说，只是�
 默认动作|没有
 上下文|Event.target: 目标即哪些发送错误的元素。
 
-#### error 描述
+## error 描述
 
 ```plain
 A user agent MUST dispatch this event when a resource failed to load, or has been loaded but cannot be interpreted according to its semantics, such as an invalid image, a script execution error, or non-well-formed XML.
@@ -50,7 +50,7 @@ A user agent MUST dispatch this event when a resource failed to load, or has bee
 当一个资源加载失败，或者加载成功但是不能被正确解析，比如一个非法的图片，或者脚本执行出错，也或者一个不当格式的XML。这个时候，用户代理（浏览器）必须把这个错误事件分发出来。
 
 ```
-### 实现
+# 实现
 
 ```js
 window.addEventListener('error', function (e) {

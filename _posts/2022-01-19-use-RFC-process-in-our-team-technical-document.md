@@ -6,12 +6,12 @@ categories: [application]
 summary: 解读 RFC，理解 RFC，应用 RFC
 
 ---
-### RFC 是什么
+# RFC 是什么
 作为一名技术人员，看到 RFC 的第一印象就是它是一个庞大的文档库，里面包含了计算机领域方方面面的规范。
 
 RFC 的全称是 Request For Comments，即请求意见稿。初衷是为了方便大家一起讨论和交流，后来慢慢变成了互联网协议草案及标准。
 
-### RFC 的发布过程
+# RFC 的发布过程
 
 ![rfc-1](/static/img/rfc-1.png)
 
@@ -26,13 +26,13 @@ IETF互联网工程任务小组，英文全称 Internet Engineering Task Force�
 
 但是，我们今天说的 RFC 流程并不是 RFC 本身发布流程，而是借鉴了它的文档发布流程思想。
 
-### 开源项目中 RFC 流程应用
+# 开源项目中 RFC 流程应用
 
 现在已经有非常多的开源项目在采用了 RFC 流程来帮助和指导项目的设计，比如：React RFC 流程（https://github.com/reactjs/rfcs/blob/master/README.md）、Vue RFC 流程（https://github.com/vuejs/rfcs/blob/master/README.md）、Rust RFC 流程（https://github.com/rust-lang/rfcs/blob/master/README.md）等。
 
 这里我们拿 Vue RFC 流程来着重说明。
 
-### Vue RFC 流程
+# Vue RFC 流程
 
 最初接触到 RFC 流程是通过尤大发布的 Vue 3.0 计划里提到的通过 RFC 征集公众反馈。
 
@@ -64,7 +64,7 @@ IETF互联网工程任务小组，英文全称 Internet Engineering Task Force�
 
 **每个人都不再是旁观者，而是决策的参与者。**
 
-### Vue RFC 流程生命周期
+# Vue RFC 流程生命周期
 当然，Vue RFC 本身的灵感是来源于 React RFC Process 、Rust RFC Process 和 Ember RFC Process。
 
 并且它明确了一个生命周期的概念：Pending、Active、Landed、Rejected。
@@ -82,7 +82,7 @@ IETF互联网工程任务小组，英文全称 Internet Engineering Task Force�
 
 这样一来，整个 RFC 流程就清晰明了。
 
-### 团队技术文档下的 RFC 流程
+# 团队技术文档下的 RFC 流程
 
 同样的，换到我们正常的文档里，我们拿到一个文档是不是也会有各种疑问：
 
@@ -96,10 +96,10 @@ IETF互联网工程任务小组，英文全称 Internet Engineering Task Force�
 
 那就是在我们的文档里引入 RFC 流程。
 
-#### 概述
+## 概述
 对于需要讨论的重要内容，我们应当创建一份 RFC 文档，描述问题的背景和解决方案并征求大家的意见。对于 RFC 文档的可以通过 comment 或者会议的方式来充分讨论后再确定最终方案。
 
-#### RFC 的状态
+## RFC 的状态
 RFC 的流转状态是生命周期的基础，按照历史经验，我们可以状态来定义 RFC 的生命周期。
 
 1. WIP: 当一份 RFC 处于构思阶段，内容尚不完整时，可以标记状态为 WIP。标记为 WIP 状态的 RFC，不会邀请大家进行 Review。
@@ -111,24 +111,24 @@ RFC 的流转状态是生命周期的基础，按照历史经验，我们可以�
 
 这其中 WIP 状态已经有很多团队在用了，本意是 work in process。
 
-#### RFC 的顺序
+## RFC 的顺序
 除了状态还需要标识各个 RFC 文档的创建顺序，我们可以在标题上加上，比如：RFC [WIP-0001] xxxx
 
-#### RFC 的 Reviewer
+## RFC 的 Reviewer
 我们的 RFC 更重要的事是指明需要哪些人来 review 我们写的。
 
 所以，需要一栏表述这个 RFC 都需要哪些人来 Review，并且还需要加上一些说明，比如：打勾就代表已经认同当前方案并充分表达。名单人员可能不齐，可自行添加。
 
 因为你的 RFC 可以给任意感兴趣的人 Review 的。
 
-#### 其他需求
+## 其他需求
 同时，一个技术团队，除了正常的需求和技术文档，也需要更多的其他想法和建议。
 
 特别像一些流程、团队协作之类的。都可以放到 RFC 中去讨论。
 
 让每个人都有一个渠道去表达自己的一些看法和想法，或者是针对某个具体问题的疑问及解决。
 
-#### 最后一点
+## 最后一点
 讨论即文档。
 
 一个 RFC 文档，不仅仅只是文档，更多的还有讨论。讨论的过程，就是大家相关沟通经验和想法的过程，所谓千人千面，不同的人对不同事情有不一样的看法和想法，本身也是一个相互学习的过程。

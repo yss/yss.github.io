@@ -7,7 +7,7 @@ summary: nginx下location是怎么处理的呢？这篇文章会给你一个准�
 
 ---
 
-### 前言
+# 前言
 
 工作中一直在用nginx，但用得不多，主要是在测试环境增加或修改一下配置。
 
@@ -15,7 +15,7 @@ summary: nginx下location是怎么处理的呢？这篇文章会给你一个准�
 
 但是随着配置文件越来越大，然后出现了各种各样的location写法，这个时候就特别困惑，特别想了解一下location背后是怎么处理的。所以有了这篇文章。
 
-### 基础知识
+# 基础知识
 
 在看这篇文章之前先大致了解一下location的基础知识：
 
@@ -23,7 +23,7 @@ summary: nginx下location是怎么处理的呢？这篇文章会给你一个准�
 2. 不同的location使用自己的配置来处理不同的请求。
 3. location是有顺序的。
 
-### 语法规则及例子
+# 语法规则及例子
 
 ```plain
 location [ = | ~ | ~* | ^~ ] uri { ... }
@@ -31,7 +31,7 @@ location [ = | ~ | ~* | ^~ ] uri { ... }
 location @name { ... }
 ```
 
-#### 修饰符含义
+## 修饰符含义
 location后面跟的修饰符含义：
 
 1. `=` 表示精准匹配，即请求路径完全相同。
@@ -40,7 +40,7 @@ location后面跟的修饰符含义：
 4. `^~` 可以理解为不要进行后续的正则匹配。这个在后续的匹配过程再详细讲。
 5. `@name` 别名的作用，方便内部其他location直接使用这个规则。
 
-#### 一些例子
+## 一些例子
 
 ```nginx
 # 正常匹配，以 /test 开头的路径
@@ -64,7 +64,7 @@ location /img/ {
 location @err {}
 ```
 
-#### 匹配过程
+## 匹配过程
 
 匹配的过程大致会分两种类型分别处理：非正则和正则。
 
@@ -80,6 +80,6 @@ location @err {}
 
 总结一点就是正则匹配的优先级更高，除非遇到`^~`或`=`。 
 
-### 参考
+# 参考
 
 <https://docs.nginx.com/nginx/admin-guide/web-server/web-server/#configuring-locations>

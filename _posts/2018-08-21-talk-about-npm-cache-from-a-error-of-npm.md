@@ -26,7 +26,7 @@ npm ERR!     /home/maintain/.npm/_logs/2018-08-16T02_32_21_947Z-debug.log
 
 这个其实是npm升级到@5版本之后的一个改进。
 
-### npm cache
+# npm cache
 
 npm cache有三个方法
 

@@ -10,13 +10,13 @@ summary: 有一天你发现，你不能在Grunt的任务里使用\*\*/，\*\*/\*
 
 答案是：肯定不是。
 
-### 理解Grunt里的通配符
+# 理解Grunt里的通配符
 Grunt中只有两个通配符：\*\* 和 \*。
 
 1. \*\*代表的是文件夹匹配
 2. \* 代表的是文件匹配
 
-### 构建动态的文件对象（Building the files object dynamically）
+# 构建动态的文件对象（Building the files object dynamically）
 在Grunt的官方文档里有这么一小标题，将的就是我今天要说的内容。
 
 当然，你可以不用看我下面说的，直接移步到：<http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically>
@@ -40,7 +40,7 @@ grunt.initConfig({
 });
 {% endhighlight %}
 
-### LESS例子
+# LESS例子
 这里给一个真实的，关于less的例子：
 {% highlight js %}
 var STATIC_PATH = 'static/';
@@ -66,5 +66,5 @@ grunt.initConfig({
 {% endhighlight %}
 上面的例子就是把static目录下所有的less编译成对应的css文件。
 
-### 最后
+# 最后
 如果您有任何疑问，可以留言跟我交流。

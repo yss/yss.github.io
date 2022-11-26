@@ -8,8 +8,8 @@ summary: 使用LESS是为了更好更方便的进行我们的前端开发
 一不经意就发现可以在平时开发中使用LESS。
 
 想详细了解JAVA下的LESS插件请看：<http://www.asual.com/lesscss/>
-### 在JAVA中的配置
-#### 一、首先在开发根目录下的pom.xml中加入如下代码：
+# 在JAVA中的配置
+## 一、首先在开发根目录下的pom.xml中加入如下代码：
 {% highlight xml %}
 <dependency>
     <groupId>com.asual.lesscss</groupId>
@@ -18,7 +18,7 @@ summary: 使用LESS是为了更好更方便的进行我们的前端开发
 </dependency>
 {% endhighlight %}
 
-#### 二、然后在web.xml(src/main/webapp/WEB-INF/web.xml)中加入如下代码：
+## 二、然后在web.xml(src/main/webapp/WEB-INF/web.xml)中加入如下代码：
 {% highlight xml %}
 <servlet>
     <servlet-name>less</servlet-name>
@@ -44,9 +44,9 @@ summary: 使用LESS是为了更好更方便的进行我们的前端开发
 
 另外，开发环境下，一定要记得将cache值设为false。
 
-#### 最后，重启你的idea吧。
+## 最后，重启你的idea吧。
 
-### 注意一点：
+# 注意一点：
 url-pattern只支持三种格式：
 
 1. 绝对路径名：/static/touch/css/base.less
@@ -57,7 +57,7 @@ url-pattern只支持三种格式：
 
 所以，如果你发现没有正常输出对应的css代码，请检查一下url-pattern是否被处理了。
 
-### 最后
+# 最后
 如果真要在项目用LESS，还是必须在打包上线的时候有对应的编译成css的处理，并把静态资源发布到CDN上。
 
 当然，小的项目或者说不在乎性能之类的直接用就可以。而且LESS插件也做了缓存处理。

@@ -12,7 +12,7 @@ summary: 我们都知道HTTP的304状态码代表的是Not Modified，但是它�
 
 这里需要谈谈HTTP中的几个HEADER。
 
-### 第一个：Cache-Control
+# 第一个：Cache-Control
 顾名思义就是缓存控制。有四个对应的值，分别为：
 
 1. public 指代的是响应数据可以被任何客户端缓存。
@@ -20,5 +20,5 @@ summary: 我们都知道HTTP的304状态码代表的是Not Modified，但是它�
 3. no-cache 指示响应数据不能被任何接受响应的客户端所缓存
 4. max-age 数据经过max-age设置的秒数后就会失效，相当于HTTP/1.0中的Expires头。如果在一次响应中同时设置了max-age和 Expires，那么max-age将具有较高的优先级。
 
-### 参考
+# 参考
 <http://alicsd.iteye.com/blog/814276>

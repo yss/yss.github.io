@@ -6,7 +6,7 @@ categories: [js]
 summary: 每一个新方式的出现都是有其固在原因，那我们看看Object.observe吧
 ---
 
-### 背景
+# 背景
 
 有这么一个场景，就是监听一个对象的变动，然后做对应的改变。目前的方式有两种：
 
@@ -15,14 +15,14 @@ summary: 每一个新方式的出现都是有其固在原因，那我们看看Ob
 
 在这里不细说上面的一些个明显缺点了，直接切入正题。
 
-### 使用
+# 使用
 
 {% highlight js %}
 Object.observe(obj, function(changes) {
     console.log(changes);
 });
 {% endhighlight %}
-#### 回调函数参数说明
+## 回调函数参数说明
 
 上面那段代码可以看出，回调函数只有一个参数，就是changes。
 
@@ -33,7 +33,7 @@ changes是一个Object。包含4个属性，分别是：
 3. `type`当前改变是什么操作。有：add, update, delete共三种。
 4. `oldValue`当前属性未改变时的值。
 
-#### 基本原则
+## 基本原则
 
 这里面有误区的就属`update`操作。
 
@@ -58,7 +58,7 @@ obj.b.c = 1;
 obj.c.push(4);
 {% endhighlight %}
 
-### 解除监听
+# 解除监听
 
 {% highlight js %}
 Object.unobserver(obj, callback);
@@ -67,6 +67,6 @@ Object.unobserver(obj, callback);
 
 {% endhighlight %}
 
-### 同族兄弟
+# 同族兄弟
 
 同理，还有一个数组的改变监听：`Array.observer`。基本就是一样的，区别就在于，改变的类型`type`有所不同。

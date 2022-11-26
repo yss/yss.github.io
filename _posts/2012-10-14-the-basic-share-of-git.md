@@ -5,7 +5,7 @@ tags: [git, 分享]
 categories: [git, 分享]
 summary: 本文着重于分享什么是git，git的一些个命令，以及如何使用git。
 ---
-### 前言
+# 前言
 git是什么，如果你了解svn的话，你可以把它看做是svn的进化版。
 
 回归问题，git的定义就是：分布式的版本控制软件。
@@ -13,7 +13,7 @@ git是什么，如果你了解svn的话，你可以把它看做是svn的进化�
 *  首先一点是：版本控制。
 *  然后第二点是：分布式。
 
-### windows下安装git
+# windows下安装git
 PS：我个人是不建议在windows下使用git的。
 
 因为大部分用户还依旧是windows用户，所以很有必要讲讲windows下安装git。
@@ -26,14 +26,14 @@ PS：我个人是不建议在windows下使用git的。
 3. 创建一个文件夹，命名为git(the name you want named)
 4. （如果是要clone远程分支，则忽略这行）进入文件夹，右键，选中git init here
 
-#### 以下是用于ssh login without password
+## 以下是用于ssh login without password
 
 1. 然后右键，选中git bash
 2. 输入：ssh-keygen -t rsa（创建rsa密钥），然后一直回车即可。
 3. 输入：vim ~/.ssh/id_rsa.pub 把里面的内容复制到远程git服务器的.ssh/authorized_key里即可。 
     如果你用的是Github，那你可以把id_rsa.pub里的内容拷贝到Github的SSH KEY里。具体是在这个页面：<https://github.com/settings/ssh>增加。
 
-### git的一些个命令
+# git的一些个命令
 
 1. git init ： 初始化代码仓库
 2. git status ：当前代码的状态，会显示出你现在改动的文件信息，如,modify , delete, new file
@@ -44,7 +44,7 @@ PS：我个人是不建议在windows下使用git的。
 7. git push: 把你本地提交的代码推送到远程代码仓库
 8. git clone: 克隆别人的代码
 
-### git的基本使用
+# git的基本使用
 
 1. 找到你代码的文件目录（cd ~/project/）
 2. 输入git init（初始化，这个时候就相当于创建了一个.git文件夹） 
@@ -53,9 +53,9 @@ PS：我个人是不建议在windows下使用git的。
 4. 输入git add .（增加所有的文件到待提交区，这里的“.”指代的是所有文件，当然你也可以以目录或文件的形式提交，如：git add css/ js/, git add css/a.css css/b.css）
 5. 输入git commit -m ‘your commit message’（提交代码到本地的git仓库，其实就是存放对应代码片段到.git文件目录里）
 
-### 针对Github的使用
+# 针对Github的使用
 
 1. 
 
-### 后记
+# 后记
 Git是一个很强大的工具，特别适合多人协同开发。而且可以直接在本地使用和操作，非常便捷。

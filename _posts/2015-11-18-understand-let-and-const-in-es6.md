@@ -6,11 +6,11 @@ categories: [js]
 summary: 让我们一起来了解一下ES6中let和const的用法吧
 ---
 
-### 前言
+# 前言
 
 `let`一个新的变量定义，在`ECMAScript 6`中被增加。一个新东西的出现总是在解决某些东西，那我们看看它具体给我们带来了什么样的好处。
 
-### 理解let
+# 理解let
 
 `let`跟`var`非常相似，而且正常情况下你可以认为他们是一致的，但是大多数情况下他俩其实是截然不同的两个东西，而且需要慎重使用`let`。
 
@@ -46,7 +46,7 @@ for (var i = 0; i < 5; i++) {
 console.log(j); // 'j' is undefined
 {% endhighlight %}
 
-### 注意
+# 注意
 
 1. `let`定义的变量只能定义一次。比如：
 
@@ -82,7 +82,7 @@ for (let a = i; a < 5; a++) {
 console.log(a); // 'a' is not defined
 {% endhighlight %}
 
-### 关于const
+# 关于const
 
 之所以在最后介绍const，是因为const和let本质上是一直的，根本性的差别在于，const是常量也就是不可用被改变的，而且需要立刻被赋值。
 
@@ -92,7 +92,7 @@ console.log(a); // 'a' is not defined
 
 如果真想冻结的话，应该使用`Object.freeze({})`。
 
-### 最后
+# 最后
 
 如果不是需要额外存储，还是慎用`let`。
 

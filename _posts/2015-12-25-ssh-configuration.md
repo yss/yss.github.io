@@ -6,13 +6,13 @@ categories: [linux]
 summary: 本文主要是说明如何在同一台电脑里使用不同的ssh-key
 ---
 
-### 背景
+# 背景
 
 我们希望在不同的工程下使用不同的ssh-key。比如，在公司环境下使用专门针对公司的ssh-key，然后自己同步github代码时使用专门针对github的ssh-key。
 
 那么我们如何才能做到呢？
 
-### ssh-key生成
+# ssh-key生成
 
 首先，我们需要先生成两个不同ssh-key：`ssh-keygen -t rsa -f 'id_rsa_yss' -C 'yss.nelson@gmail.com'`
 
@@ -20,7 +20,7 @@ summary: 本文主要是说明如何在同一台电脑里使用不同的ssh-key
 
 上面这个命令中的`-f`参数可以不加，会在执行的过程中输入。`-C`参数，指的是描述，加入后，会在生成的公钥最后一段加上，可以用于区分不同的ssh-key。
 
-### .ssh/config
+# .ssh/config
 
 现在就到了正式的配置环节。配置对应的文件路径为：`.ssh/config`。
 

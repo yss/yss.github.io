@@ -9,7 +9,7 @@ summary:
 
 最近发现node服务的access日志中referrer字段都没有打出来。然后本地模拟后，发现node使用的竟然是referer字段。这是为什么呢？
 
-### HTTP中的Referer
+# HTTP中的Referer
 
 一切的一切都必须向标准看齐。以下是在RFC2616(<https://tools.ietf.org/html/rfc2616#section-14.36>)中定义的：
 
@@ -33,12 +33,12 @@ The Referer[sic] request-header field allows the client to specify,
 
 这就要回归到浏览器了。
 
-### Document中的Referrer
+# Document中的Referrer
 
 我们在浏览器中要去读取Referrer，就必须这么取：`document.referrer`。
 
 发现么？这就是差异。
 
-### 最后
+# 最后
 
 node服务本质还是服务端。开发服务端和浏览器端本质上还是有很大差异的，特别是体现两者的思维上。服务端偏重的是稳定、性能、负载。

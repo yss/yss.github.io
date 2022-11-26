@@ -23,7 +23,7 @@ var router = express.Router();
 router.use('/user', require('./routes/user'));
 {% endhighlight %}
 
-### 言归正传
+# 言归正传
 
 说了这些，我想引入一个我写的express router插件：[express-route-tree](https://github.com/yss/express-route-tree)
 
@@ -31,7 +31,7 @@ router.use('/user', require('./routes/user'));
 
 如果你很恶心推广的话，请止步。
 
-### 核心思想
+# 核心思想
 
 以文件目录的形式去看待url的路径。
 
@@ -47,7 +47,7 @@ router.use('/user', require('./routes/user'));
 
 说到这里就需要谈及到一个路径查询的机制。
 
-### 路径查询机制
+# 路径查询机制
 
 express-route-tree是这么做的：
 
@@ -148,7 +148,7 @@ exports.putSetapp = function(req, res, next, page, second) {
 
 看到上面你会发现，其实还有一个[VERB]的处理。
 
-### VERB处理
+# VERB处理
 
 这里要区分get方式，非get方式。
 
@@ -158,7 +158,7 @@ get方式不做任何处理。
 
 比如：POST /user/detail => postDetail
 
-### 最后
+# 最后
 
 设计这个路由的初衷：
 

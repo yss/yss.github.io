@@ -11,7 +11,7 @@ summary: 有没有想过有一天，我们也可以自己去自定义DOM事情�
 
 下面就说一说，自定义DOM事件。
 
-### 创建自定义DOM事件
+# 创建自定义DOM事件
 
 浏览器帮我们定义好了一个叫Event的类，它其实是所有我们现在使用的DOM事件的基类。
 
@@ -41,7 +41,7 @@ element.dispatchEvent(event);
 
 那如果我们希望自定义的事件能带来数据传递呢？
 
-### 增加自定义数据
+# 增加自定义数据
 
 那这个时候，Event类就不满足我们现在的需求了。
 
@@ -58,7 +58,7 @@ element.addEventListener('test', function (e) {
 	console.log('data is ' + e.detail);
 });
 ```
-### 触发原生事件
+# 触发原生事件
 
 我们拿click事件来做例子：
 
@@ -81,7 +81,7 @@ const nativeClick = new MouseEvent('click', {
 });
 ```
 
-### 最后
+# 最后
 
 有了自定义DOM事件后，你就可以做很多以前意想不到的事情。
 

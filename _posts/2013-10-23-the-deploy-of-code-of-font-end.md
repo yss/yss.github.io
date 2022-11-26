@@ -12,21 +12,21 @@ summary: 前端代码发布已从shell方式转向了node+grunt。这是一小�
 
 最初的shell脚本方式还可以在我们的代码仓库中看到哦~(wink)
 
-### 细节说明
+# 细节说明
 
 ####核心
 前端代码发布的核心，其实就是对我们的静态资源进行压缩，增加版本号。
 
 之后所有的处理都是围绕这一点去做的。
 
-#### 使用的压缩库
+## 使用的压缩库
 
 目前，
 
 css的压缩使用的是cssmin；
 js的压缩使用的是uglify2。
 
-#### 版本号计算规则
+## 版本号计算规则
 
 版本号默认使用的是文件的md5值的前八位。
 
@@ -36,7 +36,7 @@ js的压缩使用的是uglify2。
 
 先对less文件进行编译，然后计算编译后的css文件的md5值。
 
-#### 域名
+## 域名
 
 目前静态资源的域名有：
 
@@ -54,7 +54,7 @@ combo链接：https://mc0.meituan.com
 
 原因很简单，就是因为我们有些页面是https访问的，比如：i版的登录页和注册页。所以，我们需要对应的HTTPS地址的静态资源。
 
-#### 服务器
+## 服务器
 
 目前我们这边静态资源服务器是：mobile-static01 和 mobile-static02。
 
@@ -62,26 +62,26 @@ combo链接：https://mc0.meituan.com
 
 每天服务器都跑两个服务：前端的combo服务和静态资源。
 
-### 具体实现
+# 具体实现
 
-#### 目前牵扯到的文件：
+## 目前牵扯到的文件：
 
-##### package.json
+### package.json
 主要存放grunt依赖包的信息。
 
 具体的包信息，请参看：Nodejs环境搭建及对应的包管理
 
-##### Gruntfile.js
+### Gruntfile.js
 真正的发布处理地方，也是真正的发布代码核心实现。
 
-##### static.ftl
+### static.ftl
 所在的地方：.../view/xxx/lib/static.ftl
 
 是存放静态资源对应关系的地方。
 
 上线过程中需要替换的文件。
 
-##### pre-deploy-static.sh
+### pre-deploy-static.sh
 所在的地方：src/main/resources/pre-deploy-static.sh
 
 上线时真正调用的脚本代码。
@@ -94,7 +94,7 @@ combo链接：https://mc0.meituan.com
 写入最新构建好的static.ftl；
 将静态资源发布到服务器上。
 
-### 对应关系的代码片段
+# 对应关系的代码片段
 开发环境中的static.ftl
 {% highlight js %}
 <#assign                                                                     
@@ -191,14 +191,14 @@ combo链接：https://mc0.meituan.com
     <link rel="stylesheet" href="${url}" />
 </#macro>
 {% endhighlight %}                                                                   
-#### 这里需要说明的是：
+## 这里需要说明的是：
 在开发环境下更改static.ftl，在上线后是不会有任何效果。
 
 因为static.ftl在上线过程中，是直接被替换掉。
 
 要改的话，需要一并更改Gruntfile.js。
 
-#### 具体调用
+## 具体调用
 在正式开发中，我们都有对应的方法调用：
 
 例如，我们要取Css文件，则：${ScriptHelper.getCssUrl('base')}

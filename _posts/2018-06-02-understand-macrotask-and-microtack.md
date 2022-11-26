@@ -11,7 +11,7 @@ summary: 通过这篇文章你可以清晰的理解macrotask和microtask的区�
 
 随着疑问的加深，就很有必要探究一下这两个是什么，有什么区别。
 
-### 规范文档
+# 规范文档
 
 我们先看定义：https://html.spec.whatwg.org/multipage/webappapis.html#event-loops
 
@@ -46,14 +46,14 @@ macrotask和microtask是在event loops下定义的。从上面定义可以得知
 
 1. 每个 macrotask 执行完后都会执行一下 microtask queue。
 
-### 两者的具体实现：
+# 两者的具体实现：
 
 1. macrotask: setTimeout, setInterval, setImmediate, I/O, UI渲染，Event，Ajax。
 2. microtask：Promise, process.nextTick, Object.observe, MutationObserver。
 
 PS：记住 microtask 有哪些就好 ;)
 
-### 一道题目
+# 一道题目
 
 我们再来看一道题目：
 

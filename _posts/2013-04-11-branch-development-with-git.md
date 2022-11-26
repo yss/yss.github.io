@@ -14,7 +14,7 @@ summary: 是时候使用git进行分支开发
 
 那今天要说的就是怎么在git下进行分支开发。
 
-### 创建远程分支
+# 创建远程分支
 
 {% highlight sh %}
 git clone yansong@git:touch
@@ -25,7 +25,7 @@ git co -b test # master => test
 git push origin test:test
 {% endhighlight %}
 
-### 具体实现
+# 具体实现
 这里我自己用代码展示了：
 {% highlight sh %}
 git clone yansong@git:touch # 把源服务器分支下下来

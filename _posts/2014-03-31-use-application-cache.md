@@ -10,14 +10,14 @@ summary: 新的缓存机制带来了全新的开始
 
 Application Cache是浏览器级的缓存机制，用来缓存资源文件。
 
-### 如何使用？
+# 如何使用？
 
 1. 在页面的html标签上加manifest="xxx.appache"属性，xxx.appache为缓存列表的路径，可以是相对的也可以是绝对的。但路径不能跨域。比如：`<html manifest="/maoyan.appcache">`
 2. xxx.appache的HTTP头中的Content-Type必须为：text/cache-manifest。
 
 当然，.appache后缀不是必须的，名字可以任意命名。
 
-### manifest文件格式
+# manifest文件格式
 
 manifest文件格式包含四部分：
 
@@ -42,11 +42,11 @@ http:://xxx/x http://xxx/xx
 
 {% endhighlight %}
 
-#### 关于网络记录
+## 关于网络记录
 
 如果当前状态是离线状态，那么之前访问过的页面依旧可以访问。
 
-### 两个问题
+# 两个问题
 
 看似华丽的外表却又隐藏着一个又一个的坑。
 
@@ -55,13 +55,13 @@ http:://xxx/x http://xxx/xx
 
 那我们如何使用才能达到我们需要的一个完美效果呢？
 
-### 解决方案
+# 解决方案
 
 1. 在页面中iframe嵌入引入manifest页面，并且这个页面只有manifest。   
     *这样一来我们就可以保证manifest的更新与否不会影响正常的页面*。
 2. 每个资源文件是带版本号的，比如我们这边静态上线会去计算文件的版本号，然后生成对应的文件：`a.js -> a.xxxxxx.js`。     
     *这样一来每次有资源文件更新，在页面引入的时候相当于一个新的文件，这样也就不影响正常访问*。
 
-### 参考
+# 参考
 
 <https://developer.mozilla.org/zh-CN/docs/HTML/Using_the_application_cache>

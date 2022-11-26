@@ -11,7 +11,7 @@ npm是前端最常用的一个工具，有了它你就有了整个前端的生�
 
 今天主要是谈谈其中的dependencies。
 
-### 版本号
+# 版本号
 
 node或者说前端这边版本号一般都是基于：[Semantic Versioning Specification](https://semver.org/)
 
@@ -27,7 +27,7 @@ node或者说前端这边版本号一般都是基于：[Semantic Versioning Spec
 
 另外就是规定：1.0.0是初始版本号，每一位的最大值是 9999。
 
-#### 单个版本比较：
+## 单个版本比较：
 
 ```js
 {
@@ -42,7 +42,7 @@ node或者说前端这边版本号一般都是基于：[Semantic Versioning Spec
 
 需要注意的是，符号后面不能有空格。
 
-#### 单个版本的特殊标识
+## 单个版本的特殊标识
 
 ```js
 {
@@ -59,7 +59,7 @@ node或者说前端这边版本号一般都是基于：[Semantic Versioning Spec
 
 因为按照正常约定的话，最后一位代表的是bugfix，一旦有修复，非常有必要及时更新。
 
-#### 多个版本
+## 多个版本
 
 ```js
 {
@@ -71,7 +71,7 @@ node或者说前端这边版本号一般都是基于：[Semantic Versioning Spec
 }
 ```
 
-#### 非版本号
+## 非版本号
 
 ```js
 {
@@ -86,7 +86,7 @@ node或者说前端这边版本号一般都是基于：[Semantic Versioning Spec
 }
 ```
 
-#### 最特别的本地路径
+## 最特别的本地路径
 
 ```js
 {
@@ -100,7 +100,7 @@ node或者说前端这边版本号一般都是基于：[Semantic Versioning Spec
 
 有了它后，如果有bug的话，就可以直接在本地项目里调试了，非常方便本地开发和测试工作。
 
-#### vs devDependencies
+## vs devDependencies
 
 正常，在我们自己的项目中，通过`npm install`的话，两者都会安装在node_modules下。
 
@@ -110,7 +110,7 @@ node或者说前端这边版本号一般都是基于：[Semantic Versioning Spec
 
 如果是纯前端的项目，一般我们会打包到 dist/ 下，那么就更应该都放在devDependencies下了。
 
-#### peerDependencies
+## peerDependencies
 
 		In some cases, you want to express the compatibility of your package with a host tool or library, while not necessarily doing a require of this host. This is usually referred to as a plugin. Notably, your module may be exposing a specific interface, expected and specified by the host documentation.
 		大致意思就是：某些情况下，你想让自己依赖的这个库能和使用者的工具或库保持兼容，你就可以直接在peerDependencies上设置这个依赖。这通常是一个插件的做法。不过值得注意的是，你写的这个模块相当于暴露一个具体的接口，需要使用者去具体设置。

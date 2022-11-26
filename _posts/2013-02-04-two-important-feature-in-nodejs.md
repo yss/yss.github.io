@@ -5,7 +5,7 @@ tags: [nodejs, 异步, 功能]
 categories: [nodejs]
 summary: Nodejs最重要的一点是什么？异步！说来说去都逃不了这一点。所以
 ---
-### 导言
+# 导言
 异步是nodejs中最最重要的一个特点。
 
 那什么是异步呢？
@@ -15,13 +15,13 @@ summary: Nodejs最重要的一点是什么？异步！说来说去都逃不了�
 
 这样一来就可以充分利用服务器端的资源了。
 
-### 事件机制
+# 事件机制
 在说正题之前必须谈到一点就是事件机制（EventEmitter）。
 
 写JS的人都明白，JS的事件是非常有意思的一个事情，同理Node。
 但是透过事物看本质，我们会发现，其实所谓的事件机制就是一个任务执行完后进行的一次回调（calback）而已。
 
-#### 使用事件
+## 使用事件
 Nodejs的官方文档里给出了这么一个例子，告诉我们如何使用事件机制，请看：
 
 {% highlight js %}
@@ -46,10 +46,10 @@ util.inherits(AsyncProxy, events.EventEmitter);
 
 一个是事件的监听：``this.on(eventName, function(data) { ... }``
 
-### 正题
+# 正题
 今天我们要说的就是这个异步功能的两个非常实用的特性。
 
-#### 并发执行
+## 并发执行
 所谓的并发执行，跟异步是有着千丝万缕的关系。这里面我们给出一个实际案例：
 
 {% highlight js%}
@@ -126,7 +126,7 @@ asyncProxy.prototype.proxy = function() {
 });
 {% endhighlight %}
 
-#### 抗压能力
+## 抗压能力
 当一个时间点有成百上千的用户访问你的网站，这个时候传统的做法就是缓存以及静态化。
 
 但是Nodejs呢？又有什么神奇的地方呢？
@@ -187,7 +187,7 @@ AsyncProxy.prototype.wait = function(evtname, callback) {
 };
 {% endhighlight %}
 
-### 后记
+# 后记
 这两个特性都集中在异步上面。
 
 异步有好亦有坏。好处的话，上面已经非常能体现出来了。
@@ -196,6 +196,6 @@ AsyncProxy.prototype.wait = function(evtname, callback) {
 
 希望这篇文章对你有帮助。
 
-### 参考
+# 参考
 1. <http://www.infoq.com/cn/articles/tyq-nodejs-event>
 2. <https://github.com/DoubleSpout/node.js---AsyncProxy>

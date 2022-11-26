@@ -7,7 +7,7 @@ summary: 不懂Babel的编译原理，但我们需要知道怎么去用Babel
 
 ---
 
-### Babel是什么
+# Babel是什么
 
 套用官网的一句话：
 
@@ -21,7 +21,7 @@ summary: 不懂Babel的编译原理，但我们需要知道怎么去用Babel
 
 对应起来，就是：`Babel = babel-core + babel-plugin-xx`
 
-#### babel-core
+## babel-core
 
 babel-core就是babel的编译器。
 
@@ -29,11 +29,11 @@ babel-core就是babel的编译器。
 
 就是把我们代码转换成一个对象，这个对象包含：生成的代码，Source Map，AST。
 
-#### babel-plugin
+## babel-plugin
 
 babel-plugin非常多，为了方便使用，babel引入一个概念叫babel-preset。
 
-##### babel-preset
+### babel-preset
 
 babel-preset本质就是插件的集合，比如有：babel-preset-es2015, babel-preset-es2016, babel-preset-es2017。
 
@@ -41,7 +41,7 @@ babel-preset本质就是插件的集合，比如有：babel-preset-es2015, babel
 
 上面这些都是ECMA标准定义好的。
 
-##### babel-stage
+### babel-stage
 
 但是同时，又有一些很实用的草案，或者非常大几率会被ECMA采用的一些标准或者规范。
 
@@ -51,13 +51,13 @@ babel-preset本质就是插件的集合，比如有：babel-preset-es2015, babel
 
 比如：直接使用`babel-stage-0`，就相当于使用了babel-stage-0, ..., babel-stage-3，也就相当于使用了所有的babel-stage。
 
-##### 其他
+### 其他
 
 之外，还有babel-preset-flow, babel-preset-react, babel-preset-minify。
 
 这个重要是配合社区需要，针对某种特别的语法，做的转换处理。
 
-### Babel-Polyfill
+# Babel-Polyfill
 
 但是，Babel并不能转换所有的新特性，主要是原型链上的方法。比如：`"footbar".includes("foo")`，这个babel是无法转换的。
 
@@ -74,7 +74,7 @@ Babel-Polyfill的本质就是实现在ES6,ES7规范里定义的原型链方法�
 
 最后，需要指出的是，Babel-Polyfill并不能实现所有的新特性和新方法。比如：`Reflect`。
 
-### Babel-Runtime
+# Babel-Runtime
 
 通过上面的介绍，看着是所有的问题都已经解决了。
 
@@ -119,13 +119,13 @@ Promise.resolve().then(()=> {
 
 我们先来看看babel-runtime的配置：
 
-#### helpers
+## helpers
 
 通过模块引入的方式来替代之前的直接行内输出的帮助方法（inline Babel helpers），像编译class关键字的classCallCheck，关键字extends。
 
 默认是true，即使用模块引入的方式。总的来说，这样做主要还是考虑到能减少代码的。
 
-#### polyfill
+## polyfill
 
 判断是否要引入了core-js，设置为true的话，新的静态方法和全局变量就会做对应的编译。
 
@@ -137,17 +137,17 @@ Promise.resolve().then(()=> {
 
 默认为true。
 
-#### regenerator
+## regenerator
 
 是否直接使用全局的生成器函数。也就是说，已经在全局里定义了生成器函数。
 
 默认为ture，即不使用全局生成器函数。
 
-#### moduleName
+## moduleName
 
 自定义这个runtime的名字，这样可以在代码里直接引用（主要是使用helpers），默认`babel-runtime`。
 
-### 最佳实践
+# 最佳实践
 
 如果不是特别关心代码大小的话，最好的方式是直接用`babel-polyfill + babel-runtime`模式。即：
 
@@ -175,7 +175,7 @@ package.json:
 }
 ```
 
-#### 简单优化版
+## 简单优化版
 
 因为babel-polyfill确实非常的大，如果想做优化的话，考虑只引入自己需要的那部分。
 
@@ -203,12 +203,12 @@ babel配置：
   ]
 }
 ```
-##### 不足
+### 不足
 会造成必要的冗余，主要体现在静态方法上。
 
 比如：`Array.from`，其实我们已经引入了，但是在代码里依旧会编译。
 
-#### 高级优化版
+## 高级优化版
 
 说到这一点，必须说一下，以前我们在IE8的ES5兼容里的做法。
 
@@ -240,6 +240,6 @@ unless userAgent.includes('Chrome/') && !userAgent.includes('iOS')
 	script(src="./path/to/es6.js")
 ```
 
-### 参考
+# 参考
 
 <https://babeljs.io/docs/en>

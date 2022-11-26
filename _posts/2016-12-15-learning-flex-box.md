@@ -5,7 +5,7 @@ tags: [flex]
 categories: [css]
 summary: 随着弹性布局的支持越来越广泛，使用的场景会越来越多
 ---
-### 概念
+# 概念
 
 认识盒子之前需要捋清几个概念：
 
@@ -16,14 +16,14 @@ summary: 随着弹性布局的支持越来越广泛，使用的场景会越来�
 
 ![弹性盒子](/static/img/flexbox.png)
 
-### 盒子容器
+# 盒子容器
 
-#### 主体定义
+## 主体定义
 
 1. display: flex;  定义块状弹性盒子
 2. display: inline-flex; 定义行内弹性盒子
 
-#### 盒子项的定义
+## 盒子项的定义
 
 1. flex-direction: row \| row-reverse \| column \| column-reverse;
   定义盒子内容项的对齐方式。默认row，也就是水平方向左对齐，column就是垂直方向上对齐。当内容挤满了，reverse与否都一样。
@@ -37,7 +37,7 @@ summary: 随着弹性布局的支持越来越广泛，使用的场景会越来�
 6. align-content: flex-start \| flex-end \| center \| space-between \| space-around \| stretch;
   默认stretch。设置容器内“每行”沿侧轴的对齐方式。和justify-content类似，单行无效。主要是对可能的换行的补充。
 
-#### 盒子内容项的定义
+## 盒子内容项的定义
 
 1. order: number; 定义显示的顺序。number值越小越靠前。默认为0.
 2. flex-grow: number; 增长因子，默认为0，也可以理解为内容多的时候可以额外在占据别人的空间
@@ -48,6 +48,6 @@ summary: 随着弹性布局的支持越来越广泛，使用的场景会越来�
   默认 auto, 定义弹性元素在侧轴的对齐方式。默认会覆盖父级的align-items属性。
 
 
-### 参考
+# 参考
 
 1. <https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes>

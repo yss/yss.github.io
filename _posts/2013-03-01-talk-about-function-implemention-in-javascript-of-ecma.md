@@ -22,7 +22,7 @@ t();
 
 好了，我们就开始讲讲在Javascript中，函数执行前到底做了写什么。
 
-### 作用域链(scope chain)
+# 作用域链(scope chain)
 每个函数在创建之初都构造一个自己的作用域链。
 {% highlight js %}
 SC = {
@@ -35,7 +35,7 @@ SC = {
 }
 {% endhighlight %}
 
-### 预解析
+# 预解析
 也有人叫预编译。
 就是在函数执行前写解析前按顺序存储三种类型的变量。
 
@@ -49,5 +49,5 @@ SC = {
 
 我讲的可能不够好。强烈推荐去阅读下面的一个参考文章。
 
-### 参考
+# 参考
 <http://dmitrysoshnikov.com/ecmascript/chapter-5-functions/>

@@ -5,17 +5,17 @@ tags: [http, referer, 追踪, referrer, javascript]
 categories: [http, javascript]
 summary: 在跳转的情况下或者说中转页面的情况下，在跳到下个目标页面时不丢失referer，就是本文要探讨的。。。
 ---
-### 背景
+# 背景
 有这么个场景，你需要创建一个中转地址，让外来的链接通过这个这个中转地址跳转到你需要它到达的真正地方。
 
 那么就会有好多种做法，比如：http 302，http 301，html javascript，html meta
 
-#### HTTP 302跳转
+## HTTP 302跳转
 这种跳转在http的协议里定义是请求的资源限制临时从不同的URI响应请求。
 
 说白了就是，暂时跳转到另外一个链接。这也是大部分程序重定向的做法。
 
-#### HTTP 301跳转
+## HTTP 301跳转
 这种跳转在http的协议里定义的是请求的资源永久的移动到了新的位置。
 
 说白了就是，这个链接其实是没有用的。
@@ -26,7 +26,7 @@ summary: 在跳转的情况下或者说中转页面的情况下，在跳到下�
 
 *搜索引擎如果发现是302还是会收录，但是如果是301的话就不会对它进行收录。*
 
-#### HTML Javascript
+## HTML Javascript
 简单的一句话就完成了：
 {% highlight js %}
 <script>
@@ -36,20 +36,20 @@ summary: 在跳转的情况下或者说中转页面的情况下，在跳到下�
     // 两者的区别在于是否可回退
 </script>
 {% endhighlight %}
-#### HTML meta
+## HTML meta
 直接看代码：
 `<meta http-equiv="refresh" content="5; url=http://xxxx">`
 
-### 实验
+# 实验
 
-#### 假设
+## 假设
 
 * S：开始页面
 * D：结束页面
 * Tn：不同跳转类型的中转页面
 * 测试浏览器：Chrome 29
 
-#### 测试代码
+## 测试代码
 {% highlight js %}
 // app.js
 // run: node app.js
@@ -100,7 +100,7 @@ app.listen(3000);
 {% endhighlight %}
 *test.html里的内容就是5个链接：/testN*
 
-#### 结果
+## 结果
 
 中转类型|Referer|回退的地址是S
 ----|----|----
@@ -110,7 +110,7 @@ js href|T3|是
 js replace|T4|是
 html meta|T5|是
 
-### 结论
+# 结论
 从上面结果可以得到两个结果：
 
 一是，要保持refer就需要在服务器上进行302或301跳转。而非其他方式。

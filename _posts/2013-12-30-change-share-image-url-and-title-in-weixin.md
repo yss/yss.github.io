@@ -6,7 +6,7 @@ categories: [微信]
 summary: 从客户端分享到微信后，进入到页面再次分享时，图片就没了。
 ---
 
-### 请注意
+# 请注意
 
 自2015年1月1日后，新版的微信客户端已全部做了限制。以下的接口都不可用！！
 
@@ -16,7 +16,7 @@ summary: 从客户端分享到微信后，进入到页面再次分享时，图�
 
 ××××××××××××××××××××××××××××××××××××××××××××××Over
 
-### 背景
+# 背景
 
 正确情况下，分享一个链接到微信后，进入到页面后再次分享时，微信的抓取策略一般是这样子的：
 
@@ -26,7 +26,7 @@ summary: 从客户端分享到微信后，进入到页面再次分享时，图�
 
 但是微信抓取策略是不透明的，意味着如果我们要自定义固定的分享的话，就做不到了。
 
-### 内部方法
+# 内部方法
 
 网上找了很久，终于在微信的论坛上找到了答案。
 
@@ -82,9 +82,9 @@ document.addEventListener('WeixinJSBridgeReady', function() {
 
 这样一来就达到了自定义分享了。
 
-### 其他接口
+# 其他接口
 
-#### 隐藏微信中网页右上角按钮
+## 隐藏微信中网页右上角按钮
 
 某些时候，在有需要时（如不需要用户分享某个页面），可在网页中通过JavaScript代码隐藏网页右上角按钮。
 
@@ -95,7 +95,7 @@ document.addEventListener('WeixinJSBridgeReady', function() {
 });
 {% endhighlight %}
 
-#### 隐藏微信中网页底部导航栏
+## 隐藏微信中网页底部导航栏
 
 某些时候，在有需要时（如认为用户在该页面不会用到浏览器前进后退功能），可在网页中通过JavaScript代码隐藏网页底部导航栏。
 
@@ -106,7 +106,7 @@ document.addEventListener('WeixinJSBridgeReady', function() {
 });
 {% endhighlight %}
 
-#### 网页获取用户网络状态
+## 网页获取用户网络状态
 
 这个接口可以让我们在网页中使用JavaScript代码调用来获取网络状态，可以方便我们根据用户的网络状态来提供不同质量的服务。
 
@@ -123,6 +123,6 @@ document.addEventListener('WeixinJSBridgeReady', function() {
 
 {% endhighlight %}
 
-### 参考
+# 参考
 
 1. <http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html>

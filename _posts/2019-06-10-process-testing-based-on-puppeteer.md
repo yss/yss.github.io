@@ -7,7 +7,7 @@ summary: puppeteer在目前看来是一个比较好的自动化测试工具
 
 ---
 
-### Puppeteer是什么
+# Puppeteer是什么
 
 Puppeteer 是一个提供高级别API来控制Chrome或者Chromium的Node库。默认使用的是headless模式。
 
@@ -15,9 +15,9 @@ Puppeteer 是一个提供高级别API来控制Chrome或者Chromium的Node库。�
 
 另外，非常重要的一点就是，Puppeteer是Google Chrome官方维护的。这意味着可靠性是非常有保障的。
 
-### 为什么选择Puppeteer
+# 为什么选择Puppeteer
 
-#### 前期做法
+## 前期做法
 
 在选择Puppeteer之前，我们最初使用的是 selenium-standalone + webdriverIO 来做的。
 
@@ -31,15 +31,15 @@ Puppeteer 是一个提供高级别API来控制Chrome或者Chromium的Node库。�
 
 基于以上问题，我们一度中断了之前的自动化测试。
 
-#### Puppeteer的优势
+## Puppeteer的优势
 
 1. 首先Puppeteer是官方维护的，每版Chrome发布都会同步更新并升级Puppeteer。
 2. Puppeteer执行的chromium是作为包的模式引入，没有之前版本号不一致的问题。
 3. Puppeteer执行完后可以随启随用，不用担心引入后没有退出的问题。可以理解为以前测试进程和chrome进程是同级关系，现在变成了父子关系。
 
-### 存在的问题
+# 存在的问题
 
-#### 下载问题
+## 下载问题
 
 目前Puppeteer引入的最大问题就是要下载Google Chrome完成包。
 
@@ -56,11 +56,11 @@ Puppeteer 是一个提供高级别API来控制Chrome或者Chromium的Node库。�
 
 1. 在~/.npmrc文件里或者npm install之前加上：`PUPPETEER_DOWNLOAD_HOST=https://npm.taobao.org/mirrors/chromium-browser-snapshots/`
 
-#### 环境限制
+## 环境限制
 
 因为Puppeteer是基于devtools protocol的封装，只能用于Chrome，所以不能测试其他浏览器。
 
-### 最后
+# 最后
 
 Puppeteer提供的绝不仅仅只是自动化测试功能。
 
@@ -73,7 +73,7 @@ Puppeteer提供的绝不仅仅只是自动化测试功能。
 5. 为你的网站捕获加载及运行时间线，用来分析性能问题。
 6. 测试Chrome插件。
 
-### 参考
+# 参考
 
 <https://chromedevtools.github.io/devtools-protocol/>
 

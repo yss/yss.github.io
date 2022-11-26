@@ -9,16 +9,16 @@ summary: confluence是我见到过的最好用的企业内部wiki系统。
 
 闲话少说，我们切入正题。开始内部安装wiki的步骤啦～
 
-### 说明
+# 说明
 
 以下是我个人的安装经验。我安装的是Confluence版本是：5.4.4。
 
-### 前提：
+# 前提：
 
 1. 你要会翻墙，不然就会卡在密钥那边了。
 2. 你要有耐心以及持续google的动力。根据一个线索一直向下查找。
 
-### 安装步骤：
+# 安装步骤：
 
 1. 下载Confluence，官网地址是：https://www.atlassian.com/software/confluence/download. 但是，我建议是在国内找一个可供下载的地址（比如百度云盘），因为下载很慢。
 2. 准备好两个东西：一个是mysql-datadriver（数据库驱动），比如：mysql-connector-java-5.1.26-bin.jar，二是破解文件：atlassian-extras-2.4.jar    
@@ -57,7 +57,7 @@ summary: confluence是我见到过的最好用的企业内部wiki系统。
 10. 然后你还需要申请一下atlassian的评估版密钥（需要完全翻墙）
 11. ok，应该没有需要继续讲的了。
 
-### 注意
+# 注意
 
 如果之前安装过confluence，你需要先删除掉：
 

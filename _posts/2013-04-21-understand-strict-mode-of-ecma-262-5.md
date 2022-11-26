@@ -8,12 +8,12 @@ summary: ECMA 5中的严格模式到底是怎么回事呢
 
 严格模式是区分ECMA3和ECMA5的一个重要标识，也是对Javascript语法要求更严的一种表现。
 
-### 其中的区别
+# 其中的区别
 
-#### 定义
+## 定义
 ECMA5中只允许，有且只有一个定义，那就是：`"use strict";`。
 
-#### 作用域
+## 作用域
 当你郑重的写下：`"use strict";`后，你之后的代码将采用严格模式。而我这里所说的之后是指的当前作用域（或者说当前函数内）你这条语句之后;
 
 如果你超出当前作用域则不采用严格模式。如：
@@ -37,20 +37,20 @@ function c() {
 }
 {% endhighlight %}
 不建议把`"use strict";`写在中间位置，应该写在每个函数的最上方。
-#### 限制
+## 限制
 严格模式下，有一些变量是不允许被定义，有一些调用是不被允许的。
 
-##### 关键字
+### 关键字
 未来可能使用到的关键字，如：implements, interface, let, package, private, protected, public, static, yield.
 
 他们是不可以做变量被声明，且不能作为函数参数名。
 
-##### 8进制数字
+### 8进制数字
 以0开头的数字且0后的每个数字不能超过7，如：007 => 7。
 
 当然，这也是为什么要强调，在使用parseInt的时候，后面加载转换的进制类型，如：`parseInt('08aa', 10);`
 
-##### 没有声明的变量
+### 没有声明的变量
 定义一个没有声明的变量（一般指代的是定义了一个全局变量），如： 
 {% highlight js %}
 "use strict";
@@ -66,7 +66,7 @@ this.declared = 10; // OK
 declared = 20; // OK，全局作用域下，this === window，换句话说，本质上这个也是局部变量
 {% endhighlight %}
 
-##### 定义一个read-only属性
+### 定义一个read-only属性
 {% highlight js %}
 "use strict";
 var foo = Object.defineProperty({}, {
@@ -112,7 +112,7 @@ Object.defineProperty(newFoo, 'bar', {
     value: 20
 });
 {% endhighlight %}
-##### 创建一个没有扩展的对象
+### 创建一个没有扩展的对象
 {% highlight js %}
 "use strict";
 var foo = {
@@ -124,7 +124,7 @@ Object.preventExtensions(foo);
 foo.bar = 20; // TypeError
 {% endhighlight %}
 
-##### eval 和 arguments
+### eval 和 arguments
 当然，在严格模式下，eval和arguments也被当做关键字。
 
 就像第一条讲的一样，她俩是不能作为变量声明的。当然，作为对象的属性是可以的，比如：`var foo = {}; foo.eval = 10;`
@@ -183,7 +183,7 @@ ECMA5下eval其实是一个子函数环境（你可以理解为里面又嵌套�
 同样，看到上面的例子后，我们就知道，在ECMA5中arguments的不同点就在于，
 arguments其实相当于一个静态拷贝，不再是以前的引用了。也就是说，修改arguments不会影响变量。
 
-##### caller 和 callee
+### caller 和 callee
 caller和callee是ES3中函数的标识。
 
 1. arguments.caller指代的是调用当前执行函数的函数。
@@ -203,7 +203,7 @@ arguments.caller在ES3中的定义并不规范。既不是函数的直接属性�
 
 注意一下，另外一个需要提及的ES5变动，ES5中可以使用关键字作为属性名。但是在ES3中不能。比如：`foo = { super:fun.., function: fun.. }`就可以正常使用。
 
-##### 重复
+### 重复
 重复的对象属性名和函数参数是行不通的。如：
 {% highlight js %}
 var foo = { x: 10, x: 20 }; // SyntaxError
@@ -222,9 +222,9 @@ var foo = {
 }
 {% endhighlight %}
 当然，非严格模式下，它们也是行不通的。
-##### with
+### with
 不准用with，;-)。pass...
-##### this值
+### this值
 严格模式下，this值不强制转换为一个对象。当this的值为null或者undefined时，它不会转换成全局对象（global object）。当为原生值（primitive values）时，也不会强制转换为对象。
 
 这样，通过Function.prototype.apply和Function.prototype.call调用的方式的this，可以为任意值。
@@ -257,9 +257,9 @@ if (isStrictMode()) {
     // ...
 }
 {% endhighlight %}
-### 后记
+# 后记
 以上是我个人的理解，仅供参考，不一定讲得很对，欢迎指出我其中的错误，本人不甚感激。
 
-### 参考
+# 参考
 <http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/>
 

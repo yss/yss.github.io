@@ -26,7 +26,7 @@ Markdown是不支持表格的，之所以说不支持，是因为它没有提到
 </table>
 {% endhighlight %}
 然而，真实情况是：很多Markdown解析器是支持表格的Markdown写法。
-### 实例
+# 实例
 我拿我自己博客所使用的Markdown解析器：rdiscount作为例子。
 
 下面我这段内容是摘自：[CSS vertical-align 属性](http://www.w3school.com.cn/css/pr_pos_vertical-align.asp)
@@ -61,7 +61,7 @@ length|相对基准线的偏移
 %|使用 "line-height" 属性的百分比值来排列此元素允许使用负值
 inherit|规定应该从父元素继承 vertical-align 属性的值*（所有的IE都不支持？！）*
 
-### 使用说明
+# 使用说明
 通过上面的例子，我想大家都可以亲手尝试一下啦。
 具体注意两点：
 
@@ -70,7 +70,7 @@ inherit|规定应该从父元素继承 vertical-align 属性的值*（所有的I
 3. 符号“**----:**”，指代的是右对齐
 4. 符号“**:---:**”，指代的是居中对齐
 
-### 注意点
+# 注意点
 
 1. 对齐符号有且只有一行，且在头部下方。
 2. 必须要有头部。

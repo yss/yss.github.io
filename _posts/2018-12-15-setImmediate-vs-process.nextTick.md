@@ -11,7 +11,7 @@ summary: setImmediate和process.nextTick差异在哪里呢
 
 要理解两个的差异，首先要谈的node.js的事件循环。
 
-### node.js事件循环
+# node.js事件循环
 
 通过官方博客<https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/>，我们可以得知，node的事件循环是这么一个过程：
 
@@ -22,13 +22,13 @@ summary: setImmediate和process.nextTick差异在哪里呢
 5. check阶段：setImmediate回调。
 6. close阶段：主要是socket关闭事情。
 
-### 很好理解的setImmediate
+# 很好理解的setImmediate
 
 通过上面列举的6个阶段，清晰明了的指出了setImmediate的状态就是，单独作为一个阶段去执行。也相当于是整个node.js事件循环最后阶段去执行。
 
 那么，nextTick呢？
 
-### 无处不在的nextTick
+# 无处不在的nextTick
 
 官方文档给的说明是：
 
@@ -36,7 +36,7 @@ summary: setImmediate和process.nextTick差异在哪里呢
 
 所以，他们的适用场景是不一样的。
 
-### 使用场景
+# 使用场景
 
 官方推荐是尽可能去使用setImmediate去做的。
 

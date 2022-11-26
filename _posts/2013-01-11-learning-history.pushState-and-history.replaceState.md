@@ -5,7 +5,7 @@ tags: [history, pushState, replaceState, 分享, 理解]
 categories: [javascript]
 summary: history.pushState和history.replaceState的存在解决了什么问题呢
 ---
-### 一、说明
+# 一、说明
 history.pushState和history.replaceState的存在都是为了改变浏览器的会话历史。
 
 * history.pushState是增加浏览器的会话历史。
@@ -21,7 +21,7 @@ window.history.forward();
 window.history.go(1);
 {% endhighlight %}
 
-#### 参数说明
+## 参数说明
 history.pushState和history.replaceState使用的是相同的参数。
 
 history.pushState(data, title[, url]);
@@ -30,7 +30,7 @@ history.pushState(data, title[, url]);
 * title {String} 
 * url {String} 
 
-### 二、目的
+# 二、目的
 简单概括history.pushState的目的有：
 
 * SEO优化
@@ -39,7 +39,7 @@ history.pushState(data, title[, url]);
 
 history.pushState更有点是为了单页面浏览网页而孕育而生的。
 
-### 三、响应事件
+# 三、响应事件
 每次改变会话历史都会触发一次onpopstate事件。上面的data参数就会作为event对象的一个参数信息。
 {% highlight js %}
 window.addEventListener('popstate', function(e) {
@@ -50,7 +50,7 @@ window.addEventListener('popstate', function(e) {
 });
 {% endhighlight %}
 
-### 四、应用场景
+# 四、应用场景
 非常适合应用在完全是数据请求和解析的页面。另外配合localStorage可以有更好的效果。如：
 
 * 页面分页数据展示
@@ -59,16 +59,16 @@ window.addEventListener('popstate', function(e) {
 
 像Github这样的网站的目录和内容展示就应用了这个技术。
 
-### 五、不适合场景
+# 五、不适合场景
 当应用场景需要额外的js处理情况，还有其他很多。
 
-### 六、浏览器兼容情况
+# 六、浏览器兼容情况
 
 Chrome | FireFox | Internet Explorer | Opera | Safari
 ----|-----|----|------|-----
 5 | 4.0 | 10 | 11.5 | 5.0
 
-### 七、参考
+# 七、参考
 
 [使用ajax和history.pushState无刷新改变页面URL](http://www.welefen.com/use-ajax-and-pushstate.html)
 

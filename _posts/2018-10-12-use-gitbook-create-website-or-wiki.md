@@ -9,14 +9,14 @@ summary: 介绍如何在github中使用gitbook创建一个网站或wiki
 
 本文主要是谈及在github中使用gitbook。
 
-### 前言
+# 前言
 我们知道gitbook初衷是希望帮助他人快速创建文档，特别是技术类文档。
 
 当然，确实很多开源软件都使用gitbook写文档。但还有很多人在上面写书，写博客等等。
 
 本质上，它就是工具，提供了一个很方便快捷的方式，让人们搭建一个文档系统。
 
-### 用法
+# 用法
 
 对于前端来说，安装起来也非常的简单。就是一个命令：`npm install gitbook-cli -g`
 
@@ -26,7 +26,7 @@ summary: 介绍如何在github中使用gitbook创建一个网站或wiki
 
 最后，只需要修改`SUMMARY.md`文件，按照它的格式要求，具体可以参考：<https://toolchain.gitbook.com/pages.html>
 
-### 在github中使用
+# 在github中使用
 
 我们知道github提供一个方式，就是通过创建一个分支`gh-pages`，然后就可以把你这个分支（gh-pages）发到一个专门的静态服务上。
 
@@ -40,7 +40,7 @@ summary: 介绍如何在github中使用gitbook创建一个网站或wiki
 
 这个时候，你就可以直接在网上看到你的网站了：http://yourname.github.io/gitbook-example
 
-### 最后
+# 最后
 
 gitbook在使用上和github提供的jekins很像。但差别就在于，jekins需要你自己去找模板然后自己配置。
 
@@ -50,7 +50,7 @@ gitbook在使用上和github提供的jekins很像。但差别就在于，jekins�
 
 当你只需要自己写文档，写一些文章的时候，我是强烈推荐直接使用gitbook来生成你的网站。
 
-### 参考
+# 参考
 
 <https://toolchain.gitbook.com/>
 
