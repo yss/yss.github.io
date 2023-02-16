@@ -41,7 +41,7 @@ hotfix 大部分时候都是一个小提交，通过 squash 或者直接合都�
 master 和 release 是一个相互合并的过程。
 
 # 对比
- |优势|缺点
+| |优势|缺点
 :----|:-----
 merge directly 方式	| 能保留各个需求的提交记录 |
 merge with squash 方式 | | 发 hotfix 后 merge 回来可能会产生非常大的冲突。

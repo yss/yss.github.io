@@ -3,7 +3,7 @@ layout: blog
 title: 要敢于麻烦别人
 tags: []
 categories: []
-summary: 事实上，向人求助是一种交易。
+summary: 不要怕麻烦别人
 
 ---
 

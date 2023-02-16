@@ -70,7 +70,7 @@ en.zip.7z  |  1372
 
 使用正则：,"p":"[^"]+" 搜索出，总共有 9 个图片，删除后得到如下数据（au -sk xx.json）：
 
- | 大小（KB）
+| | 大小（KB）
 :---|:---
 正常大小  |  2176
 剔除图片后的大小  |  36
@@ -83,7 +83,7 @@ en.zip.7z  |  1372
 
 然后，再剔除一些细微的差异（En 文件多了一个 ,"l":2）和一个不相同的图片，我们发现：
 
- | 大小（KB）
+| | 大小（KB）
 :---|:---
 正常大小  |  1897060
 剔除不相同后的大小  |  1885786
@@ -126,18 +126,18 @@ single.7z  |  1372
 ```js
 const glob = require('glob')
 const sevenBin = require('7zip-bin').path7za
-const execa = require('@shopee-rn/deployment-fns').execa
+const execa = require('@xx-rn/deployment-fns').execa
 const Path = require('path')
  
 const DIR = 'same'
   const contents = glob
-    .sync('/Users/song.yan/tmp/7z/' + DIR + '/*')
-    .map(p => Path.relative('/Users/song.yan/tmp/' + DIR, p));
+    .sync('/Users/xx/tmp/7z/' + DIR + '/*')
+    .map(p => Path.relative('/Users/xx/tmp/' + DIR, p));
  
     console.log('Contents', JSON.stringify(contents))
      
-    compressFiles('/Users/song.yan/tmp/7z/build/' + DIR + '.7z', contents, undefined, {
-      cwd: '/Users/song.yan/tmp/7z',
+    compressFiles('/Users/xx/tmp/7z/build/' + DIR + '.7z', contents, undefined, {
+      cwd: '/Users/xx/tmp/7z',
     });
 async function compressFiles(
   dest,
@@ -239,7 +239,7 @@ en.7z  |  1372
 得到的结果出乎意料：
 
 文件 | 大小（KB）| 说明
-:---|:---|:-------
+:---|:----|:-------
 55a68962e6a9c28b78caaaeed1621935.plugin.7z  |  10MB  |  线上的 plugin 大小
 55a68962e6a9c28b78caaaeed1621935.plugin  |  19.2MB  |  解压后的大小
 55a68962e6a9c28b78caaaeed1621935.plugin.new.7z  |  3.5MB  |  把 -mx=5 后压缩 55a68962e6a9c28b78caaaeed1621935.plugin
@@ -276,6 +276,8 @@ Level | Method | Dictionary | FastBytes | MatchFinder | Filter | Description
 5  |  LZMA2  |  16 MB  |  32  |  BT4  |  BCJ  |  Normal compressing
 7  |  LZMA2  |  32 MB  |  64  |  BT4  |  BCJ  |  Maximum compressing
 9  |  LZMA2  |  64 MB  |  64  |  BT4  |  BCJ2  |  Ultra compressing
+
+
 这里面 3 和 5 的差异主要是两个点：Dictionary 和 MatchFinder。
 
 
@@ -292,13 +294,13 @@ BT4：具有 4 字节散列的二叉树，加上具有 3 字节散列的表（bi
 
 带着这个疑问，我分别试了一个实验，使用两份一样的 862KB 大小的文件，然后分别使用 -mx=1、-mx=3、-mx=5 和 -mx=7 压缩。
 
- | 两个 862KB 原始文件 | -mx=1 | -mx=3 | -mx=5 | -mx=7
+| | 两个 862KB 原始文件 | -mx=1 | -mx=3 | -mx=5 | -mx=7
 :---|:---|:---|:---|:---|:---
 大小  |  862KB x 2 = 1724 KB  |  1.3MB  |  664KB  |  629KB  |  629KB
 
 在找了一个文件相似率在 90% 以上的两个文件：
 
- | 两个相似率 90% 原始文件 | -mx=1 | -mx=3 | -mx=5 | -mx=7
+| | 两个相似率 90% 原始文件 | -mx=1 | -mx=3 | -mx=5 | -mx=7
 :---|:---|:---|:---|:---|:---
 大小  |  862KB x 2 = 1724 KB  |  1.3MB  |  670KB  |  634KB  |  634KB
 
